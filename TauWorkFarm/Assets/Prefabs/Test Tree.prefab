@@ -102,6 +102,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
   itemCountInOneDrop: 1
   dropCount: 3
+  nodeType: 1
 --- !u!61 &3922367167693983662
 BoxCollider2D:
   m_ObjectHideFlags: 0

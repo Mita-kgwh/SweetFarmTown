@@ -14,6 +14,8 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] float maxDistance = 1.5f;
     [SerializeField] CropsManager cropsManager;
     [SerializeField] TileData plowableTiles;
+    [SerializeField] ToolsBarController toolsBarController;
+    [SerializeField] Animator animator;
 
     Vector3Int selectedTilePosition;
     bool selectable;
@@ -54,18 +56,16 @@ public class ToolsPController : MonoBehaviour
     private bool UseToolWorld() // interact with physical object
     {
         Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
-        foreach (Collider2D c in colliders)
-        {
-            ToolHit hit = c.GetComponent<ToolHit>();
-            if (hit != null)
-            {
-                hit.Hit();
-                return true;
-            }
-        }
 
-        return false;
+        Item item = toolsBarController.GetItem;
+
+        if (item == null) { return false; }
+        if (item.onAction == null) { return false; }
+
+        animator.SetTrigger("Act");
+        bool complete = item.onAction.OnApply(position);
+
+        return complete;
     }
 
     private void UseToolGrid()

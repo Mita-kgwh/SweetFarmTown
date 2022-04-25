@@ -16,15 +16,15 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
     count: 1
     maxAllowed: 99
-  - item: {fileID: 0}
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    count: 0
-    maxAllowed: 0
+  - item: {fileID: 11400000, guid: 73b04df9cb0cc2443b61a2313ee9d4d4, type: 2}
+    count: 1
+    maxAllowed: 99
+  - item: {fileID: 11400000, guid: cdd9679568c37c54fa1f70847720b33a, type: 2}
+    count: 1
+    maxAllowed: 99
+  - item: {fileID: 11400000, guid: 73555ccf56e865944825c022b176d405, type: 2}
+    count: 1
+    maxAllowed: 99
   - item: {fileID: 0}
     count: 0
     maxAllowed: 0
