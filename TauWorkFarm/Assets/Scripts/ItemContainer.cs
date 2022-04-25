@@ -39,4 +39,30 @@ public class ItemContainer : ScriptableObject
 
         }
     }
+
+    public void Remove(Item itemToRemove, int count = 1)
+    {
+        if (itemToRemove.stackable)
+        {
+            Slot slot = slots.Find(x => x.item == itemToRemove);
+            if (slot == null) { return; }
+
+            slot.count -= count;
+            if (slot.count <= 0 )
+            {
+                slot.Clear();
+            }
+        }
+        else
+        {
+            while (count > 0)
+            {
+                count -= 1;
+                Slot slot = slots.Find(x => x.item == itemToRemove);
+                if (slot == null) { return; }
+
+                slot.Clear();
+            }
+        }
+    }
 }

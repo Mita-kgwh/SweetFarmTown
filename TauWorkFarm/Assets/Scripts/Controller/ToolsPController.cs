@@ -12,8 +12,8 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
-    [SerializeField] CropsManager cropsManager;
-    [SerializeField] TileData plowableTiles;
+    //[SerializeField] CropsManager cropsManager;
+    //[SerializeField] TileData plowableTiles;
     [SerializeField] ToolsBarController toolsBarController;
     [SerializeField] Animator animator;
 
@@ -65,27 +65,36 @@ public class ToolsPController : MonoBehaviour
         animator.SetTrigger("Act");
         bool complete = item.onAction.OnApply(position);
 
+        if (complete)
+        {
+            if (item.onItemUsed != null)
+            {
+                item.onItemUsed.OnItemUsed(item, GamesManager.Instance.toolsBarContainer);
+            }
+        }
+
         return complete;
     }
 
     private void UseToolGrid()
     {
-        TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
-        TileData tileData = tileMapReadController.GetTileData(tileBase);
-        
-        if (tileData != plowableTiles) { return; }
-
         if (selectable)
         {
-            if (cropsManager.CheckIsPlowed(selectedTilePosition))
+            Item item = toolsBarController.GetItem;
+            if (item == null) { return; }
+            if (item.onTileMapAction == null) { return; }
+
+            animator.SetTrigger("Act");
+         
+            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
+
+            if (complete)
             {
-                cropsManager.Seed(selectedTilePosition);
+                if (item.onItemUsed != null)
+                {
+                    item.onItemUsed.OnItemUsed(item, GamesManager.Instance.toolsBarContainer);
+                }
             }
-            else
-            {
-                cropsManager.Plow(selectedTilePosition);
-            }
-            
         }
     }
 
