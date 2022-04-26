@@ -12,10 +12,10 @@ public class PlowTile : ToolsAction
         TileMapReadController tileMapReadController,
         Item item)
     {
-        Debug.Log("OnApplyToTileMap");
+        //Debug.Log("OnApplyToTileMap");
         if (canPlow == null)
         {
-            Debug.Log("canPlow null");
+            //Debug.Log("canPlow null");
             return true;
         }
         TileBase tileToPlow = tileMapReadController.GetTileBase(gridPosition);
