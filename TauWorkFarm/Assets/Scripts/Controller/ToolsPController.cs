@@ -8,7 +8,7 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] PlayerController player;
     [SerializeField] Rigidbody2D rgbd2d;
     [SerializeField] float offsetDis = 1f;
-    [SerializeField] float sizeOfInteractableArea = 0.7f;
+    //[SerializeField] float sizeOfInteractableArea = 0.7f;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
@@ -21,7 +21,7 @@ public class ToolsPController : MonoBehaviour
     bool selectable;
 
     private void Update()
-    {
+    { 
         SelectTile();
         CanSelectCheck();
         Marker();

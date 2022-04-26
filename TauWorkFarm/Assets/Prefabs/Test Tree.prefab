@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3922367167693983661}
   - component: {fileID: 3922367167693983660}
   - component: {fileID: 3922367167693983663}
+  - component: {fileID: 6888328634726409080}
+  - component: {fileID: 8351631169048267497}
   - component: {fileID: 3922367167693983662}
   m_Layer: 0
   m_Name: Test Tree
@@ -103,6 +105,35 @@ MonoBehaviour:
   itemCountInOneDrop: 1
   dropCount: 3
   nodeType: 1
+--- !u!114 &6888328634726409080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922367167693983657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a60a2977e6fdb0428e37c3dfeb474d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8351631169048267497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922367167693983657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5de2cda317fcf344889ef34495f1e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToSpawn: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
+  count: 1
+  spread: 2
+  probability: 0.5
+  thisTimeAgent: {fileID: 6888328634726409080}
 --- !u!61 &3922367167693983662
 BoxCollider2D:
   m_ObjectHideFlags: 0
