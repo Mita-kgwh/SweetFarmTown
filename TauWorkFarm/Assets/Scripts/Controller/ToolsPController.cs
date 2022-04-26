@@ -86,7 +86,9 @@ public class ToolsPController : MonoBehaviour
 
             animator.SetTrigger("Act");
          
-            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
+            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, 
+                tileMapReadController, 
+                item);
 
             if (complete)
             {

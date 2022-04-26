@@ -10,6 +10,12 @@ public class TimeAgent : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Init(); // vi no bi override o class con CropManager nen k subscribe dc
+                // ta tach rieng de goi rieng o class con
+    }
+
+    public void Init()
+    {
         GamesManager.Instance.dayTimeController.Subscribe(this);
     }
 
