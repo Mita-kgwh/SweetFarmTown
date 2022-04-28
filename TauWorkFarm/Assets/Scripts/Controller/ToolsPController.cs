@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,8 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
-    //[SerializeField] CropsManager cropsManager;
-    //[SerializeField] TileData plowableTiles;
+    [SerializeField] ToolsAction onTilePickUp;
+
     [SerializeField] ToolsBarController toolsBarController;
     [SerializeField] Animator animator;
 
@@ -81,7 +82,11 @@ public class ToolsPController : MonoBehaviour
         if (selectable)
         {
             Item item = toolsBarController.GetItem;
-            if (item == null) { return; }
+            if (item == null) 
+            {
+                PickUpTile();
+                return; 
+            }
             if (item.onTileMapAction == null) { return; }
 
             animator.SetTrigger("Act");
@@ -100,4 +105,10 @@ public class ToolsPController : MonoBehaviour
         }
     }
 
+    private void PickUpTile()
+    {
+        if (onTilePickUp == null) { return; }
+
+        onTilePickUp.OnApplyToTileMap(selectedTilePosition, tileMapReadController, null);
+    }
 }
