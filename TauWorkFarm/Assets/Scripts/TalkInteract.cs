@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TalkInteract : Interactable
 {
+    [SerializeField] DialogueContainer dialogue;
     public override void Interact(PlayerController player)
     {
-        Debug.Log("Helloo noi chuyen duoi nay");
+        GamesManager.Instance.dialogueSystem.Initialize(dialogue);
     }
 }

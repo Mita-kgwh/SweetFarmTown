@@ -20,4 +20,5 @@ public class GamesManager : MonoBehaviour
     public ItemContainer toolsBarContainer;
     public ItemDragAndDropController dragAndDropController;
     public DayTimeController dayTimeController;
+    public DialogueSystem dialogueSystem;
 }
