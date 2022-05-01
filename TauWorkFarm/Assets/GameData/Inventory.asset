@@ -13,87 +13,66 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   slots:
+  - item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
+    count: 17
+    maxAllowed: 0
+  - item: {fileID: 11400000, guid: 73b04df9cb0cc2443b61a2313ee9d4d4, type: 2}
+    count: 2
+    maxAllowed: 0
+  - item: {fileID: 11400000, guid: cdd9679568c37c54fa1f70847720b33a, type: 2}
+    count: 2
+    maxAllowed: 0
+  - item: {fileID: 11400000, guid: fcf07ef8d0e721b42a90b9ab4df60b2b, type: 2}
+    count: 2
+    maxAllowed: 0
+  - item: {fileID: 11400000, guid: c80ee6bc202fb1a4997d7840e06ca712, type: 2}
+    count: 2
+    maxAllowed: 0
+  - item: {fileID: 11400000, guid: 73555ccf56e865944825c022b176d405, type: 2}
+    count: 2
+    maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0
   - item: {fileID: 0}
-    type: 0
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    type: 0
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    type: 0
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    type: 0
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    type: 0
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    type: 0
-    count: 0
-    maxAllowed: 0
-  - item: {fileID: 0}
-    type: 0
     count: 0
     maxAllowed: 0

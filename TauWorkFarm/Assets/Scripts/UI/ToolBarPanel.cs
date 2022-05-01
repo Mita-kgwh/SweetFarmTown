@@ -20,6 +20,7 @@ public class ToolBarPanel : ItemPanel
     {
         Init();
         toolsBarController.onChange += HighLight;
+        HighLight(0);
     }
 
     public void HighLight(int id)

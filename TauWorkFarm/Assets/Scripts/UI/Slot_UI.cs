@@ -51,24 +51,19 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //ItemContainer inventory = GamesManager.Instance.inventoryContainer;
-        //GamesManager.Instance.dragAndDropController.OnClick(inventory.slots[myIndex]);
-        //transform.parent.transform.parent.transform.parent.GetComponent<Inventory_UI>().ShowInventory();
-        //inventory_UI.ShowInventory();
+        
         ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
         //Debug.Log(myIndex + " Slot_UI");
-        if (itemPanel != null)
+        //if (itemPanel != null)
         {
             //Debug.Log("itemPanel found");
             itemPanel.OnClick(myIndex);
         }
-        else
-        {
-            //Debug.Log("itemPanel not found");
-        }
+        //else
+        //{
+        //    //Debug.Log("itemPanel not found");
+        //}
             
-
-        //inventory.OnClick(myIndex);
     }
 
     public void HighLight(bool highlight)

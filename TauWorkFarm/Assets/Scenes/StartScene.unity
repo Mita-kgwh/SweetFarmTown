@@ -12359,6 +12359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1002940471}
+  toolBarPanel: {fileID: 966406760}
 --- !u!1001 &620470240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14416,7 +14417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4991c754ef49ce942a0cf73820e52854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemContainer: {fileID: 11400000, guid: 80cb19e5f17112d4da54aa21fc450e32, type: 2}
+  itemContainer: {fileID: 11400000, guid: 4e7a2b1a78acfb44e95786d00d2b7c1b, type: 2}
   slots:
   - {fileID: 504667064}
   - {fileID: 1979576314}
@@ -18157,7 +18158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 960575726165588493, guid: 9d03eae90ee7d114da04fb149bcc0ff2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 960575726165588493, guid: 9d03eae90ee7d114da04fb149bcc0ff2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] GameObject inventoryPanel;
+    [SerializeField] GameObject toolBarPanel;
 
     bool visible;
 
@@ -25,5 +26,6 @@ public class InventoryController : MonoBehaviour
     {
         visible = !visible;
         inventoryPanel.SetActive(visible);
+        toolBarPanel.SetActive(!visible);
     }
 }

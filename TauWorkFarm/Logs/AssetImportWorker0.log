@@ -1,0 +1,1279 @@
+Using pre-set license
+Built from 'trunk' branch; Version is '2021.1.0a2 (37c5ec4c3cb1) revision 3655148'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16260 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.1.0a2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/TaMinhTam/Documents/SweetFarmTown/TauWorkFarm
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52073
+Successfully changed project path to: C:/Users/TaMinhTam/Documents/SweetFarmTown/TauWorkFarm
+C:/Users/TaMinhTam/Documents/SweetFarmTown/TauWorkFarm
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 100.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.0a2 (37c5ec4c3cb1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/TaMinhTam/Documents/SweetFarmTown/TauWorkFarm/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(TM) Pro Graphics 5200 (ID=0xd26)
+    Vendor:   
+    VRAM:     2048 MB
+    Driver:   20.19.15.4531
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004216 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 72.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.374 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001861 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 74.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.454 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2810 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 259.2 MB.
+System memory in use after: 259.3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3262.
+Total: 3.595600 ms (FindLiveObjects: 0.557000 ms CreateObjectMapping: 0.280600 ms MarkObjects: 2.599700 ms  DeleteObjects: 0.156700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005142 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 68.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.543 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002014 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.556 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.3 MB.
+System memory in use after: 200.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3267.
+Total: 5.186600 ms (FindLiveObjects: 0.833900 ms CreateObjectMapping: 0.291500 ms MarkObjects: 3.884200 ms  DeleteObjects: 0.175300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Collectable.cs
+  artifactKey: Guid(7013be2304f75804eaf03c4aa3df3e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.020979 seconds.
+  path: Assets/Scripts/PlowTile.cs
+  artifactKey: Guid(c8eebceef58476f4fa22f5e14c306dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.020271 seconds.
+  path: Assets/Scripts/Crop.cs
+  artifactKey: Guid(6e35f7c0e4ac3f84e942c65da24922fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.020086 seconds.
+  path: Assets/Scripts/ItemSpawner.cs
+  artifactKey: Guid(d5de2cda317fcf344889ef34495f1e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018161 seconds.
+  path: Assets/Scripts/SeedTile.cs
+  artifactKey: Guid(ad0f2288ac7499a4b953731664a06c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.019204 seconds.
+  path: Assets/Scripts/UI
+  artifactKey: Guid(f1c6a26e25b4399448e365a9a19f14c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.023240 seconds.
+  path: Assets/Scripts/Actions
+  artifactKey: Guid(27028a6f10786fe4e9544c80d97f3d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.023180 seconds.
+  path: Assets/Scripts/Objects
+  artifactKey: Guid(0ad251887fb1eff4195cc2d99bff85fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.022981 seconds.
+  path: Assets/Scripts/TalkInteract.cs
+  artifactKey: Guid(f68e87b2ec484724ab6711c9aabd2271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018197 seconds.
+  path: Assets/Scripts/Controller
+  artifactKey: Guid(860423fe237e05c4f9cfc902f0186347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.017342 seconds.
+  path: Assets/Scripts/Occho1_Talk.asset
+  artifactKey: Guid(409c2f88623efa748bd0cf4bf402e7a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.019904 seconds.
+  path: Assets/Scripts/Inventory.cs
+  artifactKey: Guid(d604d5ab8b7f2f246b5cedc1ba1b52c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018960 seconds.
+  path: Assets/Scripts/Abstract
+  artifactKey: Guid(6a036d3c1a2f2374e85aecdec3f28595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.026623 seconds.
+  path: Assets/Scripts/Manager
+  artifactKey: Guid(77423c5a2be578549bed944cbe0c70a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.022205 seconds.
+  path: Assets/Scripts/ItemContainer.cs
+  artifactKey: Guid(7d3574cb9980f84498fc7c3cee7760f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.020404 seconds.
+  path: Assets/Scripts/TimeAgent.cs
+  artifactKey: Guid(2a60a2977e6fdb0428e37c3dfeb474d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.021854 seconds.
+  path: Assets/Scripts/Occho1.asset
+  artifactKey: Guid(eea13e1be9f288442b9cbae8aa3e1e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.020061 seconds.
+  path: Assets/Scripts/TilePickUpAction.cs
+  artifactKey: Guid(b101d6925e616954f89a90427f420e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 22.205153 seconds.
+  path: Assets/GameData/Actions
+  artifactKey: Guid(6a4c467b354e4b84484fb6a3fa1f7fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016173 seconds.
+  path: Assets/GameData/Seed Tile.asset
+  artifactKey: Guid(ea0b02616454212418ebbc2616f653c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.017424 seconds.
+  path: Assets/GameData/Crops
+  artifactKey: Guid(e11057fad9f3137419c81560955159d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016228 seconds.
+  path: Assets/GameData/Tools
+  artifactKey: Guid(4fb2c7c67afdb0844a87dea8bf348563) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016084 seconds.
+  path: Assets/GameData/Inventory.asset
+  artifactKey: Guid(4e7a2b1a78acfb44e95786d00d2b7c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.017143 seconds.
+  path: Assets/GameData/Tiles
+  artifactKey: Guid(1f24b6a4a6a6d2c42b0f987421a4b10b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018098 seconds.
+  path: Assets/GameData/ToolsBar.asset
+  artifactKey: Guid(80cb19e5f17112d4da54aa21fc450e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.019104 seconds.
+  path: Assets/GameData/Items
+  artifactKey: Guid(14f2ed5342489fe439a7562e05743029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 23.034923 seconds.
+  path: Assets/GameData/Actor_Dialogue
+  artifactKey: Guid(3ab9af1f1b237d241b85eb9b1f4f2bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016686 seconds.
+  path: Assets/GameData/Actor_Dialogue
+  artifactKey: Guid(3ab9af1f1b237d241b85eb9b1f4f2bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 146.805516 seconds.
+  path: Assets/Scripts/UI/InventoryPanel.cs
+  artifactKey: Guid(474e0e48ec4511b45a5628aac03685e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016733 seconds.
+  path: Assets/Scripts/UI/Slot_UI.cs
+  artifactKey: Guid(d5cd9d24dccddf74c89833577126b4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.015849 seconds.
+  path: Assets/Scripts/UI/ToolBarPanel.cs
+  artifactKey: Guid(4991c754ef49ce942a0cf73820e52854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018535 seconds.
+  path: Assets/Scripts/UI/ItemPanel.cs
+  artifactKey: Guid(de67c1aa8957df24489e3dfa2b9fc028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002418 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 65.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.527 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002963 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.384 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.9 MB.
+System memory in use after: 201.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3272.
+Total: 3.532300 ms (FindLiveObjects: 0.589100 ms CreateObjectMapping: 0.347800 ms MarkObjects: 2.471300 ms  DeleteObjects: 0.123200 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002428 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 67.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.642 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002052 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.533 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.4 MB.
+System memory in use after: 201.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3277.
+Total: 2.828800 ms (FindLiveObjects: 0.458700 ms CreateObjectMapping: 0.159600 ms MarkObjects: 2.088600 ms  DeleteObjects: 0.120700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003644 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 76.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.163 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001849 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.916 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.9 MB.
+System memory in use after: 201.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3282.
+Total: 4.182300 ms (FindLiveObjects: 0.605300 ms CreateObjectMapping: 0.343400 ms MarkObjects: 2.865700 ms  DeleteObjects: 0.365300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 388.800460 seconds.
+  path: Assets/Scripts/UI/ItemPanel.cs
+  artifactKey: Guid(de67c1aa8957df24489e3dfa2b9fc028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 23.646421 seconds.
+  path: Assets/GameData/Items/Plow.asset
+  artifactKey: Guid(fcf07ef8d0e721b42a90b9ab4df60b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.014935 seconds.
+  path: Assets/GameData/Items/Seeds.asset
+  artifactKey: Guid(c80ee6bc202fb1a4997d7840e06ca712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.015518 seconds.
+  path: Assets/GameData/Items/Tomato_seed.asset
+  artifactKey: Guid(73555ccf56e865944825c022b176d405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.014367 seconds.
+  path: Assets/GameData/Items/Stone.asset
+  artifactKey: Guid(f07860ab1bb8a1c4a969403de745feb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.014992 seconds.
+  path: Assets/GameData/Items/Tomato.asset
+  artifactKey: Guid(cc7e4baf3b7a6604caf8b1cf8fc61caf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 7.934110 seconds.
+  path: Assets/GameData/Tools/Axe.asset
+  artifactKey: Guid(73b04df9cb0cc2443b61a2313ee9d4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016217 seconds.
+  path: Assets/GameData/Tools/Hamer.asset
+  artifactKey: Guid(cdd9679568c37c54fa1f70847720b33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 13.919260 seconds.
+  path: Assets/GameData/Crops/Crop Tomato Info.asset
+  artifactKey: Guid(89de7d4dc5f0eb94b9d6986eb446030f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 20.787983 seconds.
+  path: Assets/GameData/Inventory.asset
+  artifactKey: Guid(4e7a2b1a78acfb44e95786d00d2b7c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 16.338808 seconds.
+  path: Assets/GameData/Inventory.asset
+  artifactKey: Guid(4e7a2b1a78acfb44e95786d00d2b7c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002598 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 69.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.695 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001956 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.628 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.4 MB.
+System memory in use after: 201.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3287.
+Total: 2.850400 ms (FindLiveObjects: 0.468500 ms CreateObjectMapping: 0.146700 ms MarkObjects: 2.100300 ms  DeleteObjects: 0.133800 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002435 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.829 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001868 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.213 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.0 MB.
+System memory in use after: 201.1 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3292.
+Total: 7.056100 ms (FindLiveObjects: 2.078700 ms CreateObjectMapping: 0.960100 ms MarkObjects: 3.888300 ms  DeleteObjects: 0.124500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.209545 seconds.
+  path: Assets/GameData/Inventory.asset
+  artifactKey: Guid(4e7a2b1a78acfb44e95786d00d2b7c1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002530 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 77.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.956 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001801 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.899 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.4 MB.
+System memory in use after: 201.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3297.
+Total: 3.558500 ms (FindLiveObjects: 0.556400 ms CreateObjectMapping: 0.289900 ms MarkObjects: 2.590800 ms  DeleteObjects: 0.120200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.950567 seconds.
+  path: Assets/Editors/ItemContainerEditor.cs
+  artifactKey: Guid(e841af0b2543daf469ad45f47acd9e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 5.629860 seconds.
+  path: Assets/Scripts/Controller/CameraController.cs
+  artifactKey: Guid(01dbf1fc0d9d4054eb7a644cb871b263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016681 seconds.
+  path: Assets/Scripts/Controller/TileMapReadController.cs
+  artifactKey: Guid(45219f0c97a4eff40a3522c53988b5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016400 seconds.
+  path: Assets/Scripts/Controller/DayTimeController.cs
+  artifactKey: Guid(3911f7c69c045dd45b856f3f9c6726ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.017146 seconds.
+  path: Assets/Scripts/Controller/PlayerController.cs
+  artifactKey: Guid(981f8794c1ffb474d844bec2192634f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016960 seconds.
+  path: Assets/Scripts/Controller/ToolsPController.cs
+  artifactKey: Guid(2269eb3c6494b484bb39e7ccc886056f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.017979 seconds.
+  path: Assets/Scripts/Controller/InteractsPController.cs
+  artifactKey: Guid(a345dc7588c4b1a40b0c7b7d44128b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018822 seconds.
+  path: Assets/Scripts/Controller/ToolsBarController.cs
+  artifactKey: Guid(db56885308210284c8bd619a106e8a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016214 seconds.
+  path: Assets/Scripts/Controller/HighlightController.cs
+  artifactKey: Guid(a78bacf18cd23f3459ed05dffd2c27cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.018243 seconds.
+  path: Assets/Scripts/Controller/InventoryController.cs
+  artifactKey: Guid(91f398acbe5e917498bcc93250aa5355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.016261 seconds.
+  path: Assets/Scripts/Controller/ItemDragAndDropController.cs
+  artifactKey: Guid(84924c06b7eb65b45a9c9b9a3ecbc22c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002459 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 67.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.900 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002049 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.889 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.0 MB.
+System memory in use after: 201.2 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3302.
+Total: 3.770200 ms (FindLiveObjects: 0.615200 ms CreateObjectMapping: 0.326500 ms MarkObjects: 2.704200 ms  DeleteObjects: 0.123000 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002689 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 66.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.978 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002027 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.988 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.4 MB.
+System memory in use after: 201.6 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3307.
+Total: 3.103500 ms (FindLiveObjects: 0.504300 ms CreateObjectMapping: 0.221500 ms MarkObjects: 2.246400 ms  DeleteObjects: 0.129900 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002688 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 65.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.088 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001894 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.033 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.1 MB.
+System memory in use after: 201.2 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3312.
+Total: 2.849200 ms (FindLiveObjects: 0.476200 ms CreateObjectMapping: 0.162400 ms MarkObjects: 2.079300 ms  DeleteObjects: 0.130100 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002561 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 65.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.189 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001961 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.156 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.5 MB.
+System memory in use after: 201.6 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3317.
+Total: 3.659200 ms (FindLiveObjects: 0.643600 ms CreateObjectMapping: 0.368000 ms MarkObjects: 2.507500 ms  DeleteObjects: 0.139000 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004182 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.363 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001925 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.234 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.1 MB.
+System memory in use after: 201.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3322.
+Total: 3.268100 ms (FindLiveObjects: 0.585000 ms CreateObjectMapping: 0.160500 ms MarkObjects: 2.381100 ms  DeleteObjects: 0.140300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002501 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 68.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.474 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001920 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.260 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.5 MB.
+System memory in use after: 201.6 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3327.
+Total: 3.072800 ms (FindLiveObjects: 0.473000 ms CreateObjectMapping: 0.152700 ms MarkObjects: 2.318600 ms  DeleteObjects: 0.126900 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002529 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 72.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.689 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001893 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.491 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.2 MB.
+System memory in use after: 201.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3332.
+Total: 3.613100 ms (FindLiveObjects: 0.605100 ms CreateObjectMapping: 0.360800 ms MarkObjects: 2.508200 ms  DeleteObjects: 0.137700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002779 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 63.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.483 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001837 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.596 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.5 MB.
+System memory in use after: 201.6 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3337.
+Total: 3.184100 ms (FindLiveObjects: 0.483900 ms CreateObjectMapping: 0.151200 ms MarkObjects: 2.386700 ms  DeleteObjects: 0.161000 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002533 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 77.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.208 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002589 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.791 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.3 MB.
+System memory in use after: 201.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3342.
+Total: 3.215100 ms (FindLiveObjects: 0.542900 ms CreateObjectMapping: 0.239400 ms MarkObjects: 2.296200 ms  DeleteObjects: 0.135300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002498 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 70.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.030 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002516 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.319 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.5 MB.
+System memory in use after: 201.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3347.
+Total: 3.310600 ms (FindLiveObjects: 0.581500 ms CreateObjectMapping: 0.294600 ms MarkObjects: 2.315000 ms  DeleteObjects: 0.117900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1241.604349 seconds.
+  path: Assets/Scripts/Controller/InventoryController.cs
+  artifactKey: Guid(91f398acbe5e917498bcc93250aa5355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.135374 seconds.
+  path: Assets/Scripts/Controller/InventoryController.cs
+  artifactKey: Guid(91f398acbe5e917498bcc93250aa5355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002562 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 73.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.281 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002840 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.452 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.3 MB.
+System memory in use after: 201.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3352.
+Total: 3.570800 ms (FindLiveObjects: 0.540000 ms CreateObjectMapping: 0.194800 ms MarkObjects: 2.704300 ms  DeleteObjects: 0.130600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 174.302787 seconds.
+  path: Assets/Scripts/Controller/InventoryController.cs
+  artifactKey: Guid(91f398acbe5e917498bcc93250aa5355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.146270 seconds.
+  path: Assets/Scripts/Controller/InventoryController.cs
+  artifactKey: Guid(91f398acbe5e917498bcc93250aa5355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002401 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 76.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.488 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001969 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.804 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.6 MB.
+System memory in use after: 201.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3357.
+Total: 3.016300 ms (FindLiveObjects: 0.495500 ms CreateObjectMapping: 0.167000 ms MarkObjects: 2.217000 ms  DeleteObjects: 0.135600 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003839 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 95.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.001 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001933 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.013 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.4 MB.
+System memory in use after: 201.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3362.
+Total: 3.724400 ms (FindLiveObjects: 0.649400 ms CreateObjectMapping: 0.363300 ms MarkObjects: 2.576800 ms  DeleteObjects: 0.133700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002762 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.234 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001907 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\TaMinhTam\Documents\SweetFarmTown\TauWorkFarm\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.924 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.6 MB.
+System memory in use after: 201.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3367.
+Total: 3.600400 ms (FindLiveObjects: 0.636100 ms CreateObjectMapping: 0.361000 ms MarkObjects: 2.470100 ms  DeleteObjects: 0.132000 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
