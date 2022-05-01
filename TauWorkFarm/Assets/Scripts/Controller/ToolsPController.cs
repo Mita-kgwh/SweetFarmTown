@@ -70,7 +70,7 @@ public class ToolsPController : MonoBehaviour
         {
             if (item.onItemUsed != null)
             {
-                item.onItemUsed.OnItemUsed(item, GamesManager.Instance.toolsBarContainer);
+                item.onItemUsed.OnItemUsed(item, GamesManager.Instance.inventoryContainer);
             }
         }
 
@@ -99,7 +99,8 @@ public class ToolsPController : MonoBehaviour
             {
                 if (item.onItemUsed != null)
                 {
-                    item.onItemUsed.OnItemUsed(item, GamesManager.Instance.toolsBarContainer);
+                    item.onItemUsed.OnItemUsed(item, GamesManager.Instance.inventoryContainer);
+                    //toolsBarController.UpdateQuantity();
                 }
             }
         }

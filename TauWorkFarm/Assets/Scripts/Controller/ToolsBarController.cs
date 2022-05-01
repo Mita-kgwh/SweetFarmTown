@@ -6,6 +6,7 @@ using UnityEngine;
 public class ToolsBarController : MonoBehaviour
 {
     [SerializeField] int toolbarSize = 8;
+    [SerializeField] ToolBarPanel toolBarPanel;
     int selectedTool;
 
     public Action<int> onChange;
@@ -14,7 +15,7 @@ public class ToolsBarController : MonoBehaviour
     {
         get
         {
-            return GamesManager.Instance.toolsBarContainer.slots[selectedTool].item;
+            return GamesManager.Instance.inventoryContainer.slots[selectedTool].item;
         } 
     }
 
@@ -37,6 +38,11 @@ public class ToolsBarController : MonoBehaviour
             onChange?.Invoke(selectedTool);
         }
     }
+    public void UpdateQuantity()
+    {
+        toolBarPanel.Show();
+    }
+
     internal void Set(int id)
     {
         selectedTool = id;

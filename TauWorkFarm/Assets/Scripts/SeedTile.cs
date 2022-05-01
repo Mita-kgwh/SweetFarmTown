@@ -22,6 +22,6 @@ public class SeedTile : ToolsAction
 
     public override void OnItemUsed(Item useItem, ItemContainer toolbar)
     {
-        toolbar.Remove(useItem);
+        toolbar.Remove(useItem); 
     }
 }

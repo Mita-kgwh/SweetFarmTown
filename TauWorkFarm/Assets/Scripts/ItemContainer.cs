@@ -38,6 +38,8 @@ public class ItemContainer : ScriptableObject
             }
 
         }
+        GamesManager.Instance.inventoryController.UpdateQuantity();
+        GamesManager.Instance.toolsBarController.UpdateQuantity();
     }
 
     public void Remove(Item itemToRemove, int count = 1)
@@ -64,5 +66,7 @@ public class ItemContainer : ScriptableObject
                 slot.Clear();
             }
         }
+        GamesManager.Instance.inventoryController.UpdateQuantity();
+        GamesManager.Instance.toolsBarController.UpdateQuantity();
     }
 }

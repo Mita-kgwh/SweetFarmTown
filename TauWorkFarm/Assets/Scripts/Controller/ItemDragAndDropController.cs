@@ -27,7 +27,7 @@ public class ItemDragAndDropController : MonoBehaviour
             {
                 if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Debug.Log("Out");
+                    //Debug.Log("Out");
                     // chuyen mouseposition thanh worldposition de spawn item
                     Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     worldPosition.z = 0; //tranh viec spawn phia sau cameraa

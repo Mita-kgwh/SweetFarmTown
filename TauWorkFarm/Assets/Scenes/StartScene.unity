@@ -12346,6 +12346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolbarSize: 8
+  toolBarPanel: {fileID: 966406765}
 --- !u!114 &564566071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12359,6 +12360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1002940471}
+  inventory: {fileID: 475559665}
   toolBarPanel: {fileID: 966406760}
 --- !u!1001 &620470240
 PrefabInstance:
@@ -15987,10 +15989,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 564566062}
   inventoryContainer: {fileID: 11400000, guid: 4e7a2b1a78acfb44e95786d00d2b7c1b, type: 2}
-  toolsBarContainer: {fileID: 11400000, guid: 80cb19e5f17112d4da54aa21fc450e32, type: 2}
   dragAndDropController: {fileID: 1307524518}
   dayTimeController: {fileID: 1307524516}
   dialogueSystem: {fileID: 633836300}
+  toolsBarController: {fileID: 564566070}
+  inventoryController: {fileID: 564566071}
 --- !u!114 &1307524518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16206,7 +16209,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 195.233, y: 62.918}
-  m_SizeDelta: {x: 390.467, y: 125.834}
+  m_SizeDelta: {x: 390.467, y: 125.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378583728
 MonoBehaviour:
@@ -18099,6 +18102,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 6790902163275402405, guid: 10ed91d960b97db428ccd19526feff6f, type: 3}
+    - target: {fileID: 1780779968752354966, guid: 22fdb89c847e2b840b8d6a90115ffb09, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: c80ee6bc202fb1a4997d7840e06ca712, type: 2}
     - target: {fileID: 1780779968752354984, guid: 22fdb89c847e2b840b8d6a90115ffb09, type: 3}
       propertyPath: m_RootOrder
       value: 4
