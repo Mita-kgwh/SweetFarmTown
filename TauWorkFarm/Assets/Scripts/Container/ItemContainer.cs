@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,12 @@ using UnityEngine;
 public class ItemContainer : ScriptableObject
 {
     public List<Slot> slots;
+    public bool isChanging; //isDirty
 
     public void Add(Item item, int count = 1)
     {
+        isChanging = true;
+
         if (item.stackable)
         {
             Slot itemSlot = slots.Find(x => x.item == item); // kiem xem có item do chua
@@ -38,12 +42,12 @@ public class ItemContainer : ScriptableObject
             }
 
         }
-        GamesManager.Instance.inventoryController.UpdateQuantity();
-        GamesManager.Instance.toolsBarController.UpdateQuantity();
     }
 
     public void Remove(Item itemToRemove, int count = 1)
     {
+        isChanging = true;
+
         if (itemToRemove.stackable)
         {
             Slot slot = slots.Find(x => x.item == itemToRemove);
@@ -66,7 +70,28 @@ public class ItemContainer : ScriptableObject
                 slot.Clear();
             }
         }
-        GamesManager.Instance.inventoryController.UpdateQuantity();
-        GamesManager.Instance.toolsBarController.UpdateQuantity();
+    }
+
+    internal bool CheckFreeSpace()
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].item == null)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    internal bool CheckItem(Slot checkingItem)
+    {
+        Slot slot = slots.Find(x => x.item == checkingItem.item);
+        if (slot == null) { return false; }
+        if (checkingItem.item.stackable)
+        {
+            return slot.count > checkingItem.count;
+        }
+        return true;
     }
 }

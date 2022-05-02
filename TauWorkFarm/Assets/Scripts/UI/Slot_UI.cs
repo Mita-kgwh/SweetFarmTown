@@ -22,16 +22,11 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
     // Start is called before the first frame update
     public void SetItem(Slot slot)
     {
-        //if (slot != null)
-        //{
-        //    itemIcon.sprite = slot.item.icon;
-        //    itemIcon.color = new Color(1, 1, 1, 1);
-        //    quantityText.text = slot.count.ToString();
-        //}     
+        itemIcon.sprite = slot.item.icon;
+        itemIcon.color = new Color(1, 1, 1, 1);
+
         if (slot.item.stackable == true)
-        {
-            itemIcon.sprite = slot.item.icon;
-            itemIcon.color = new Color(1, 1, 1, 1);
+        {          
             quantityText.gameObject.SetActive(true);
             quantityText.text = slot.count.ToString();
         }
@@ -39,7 +34,6 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
         {
             quantityText.gameObject.SetActive(false);
         }
-
     }
 
     public void SetEmpty()

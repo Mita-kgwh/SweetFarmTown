@@ -15,6 +15,16 @@ public class CropTile
     public float damage;
     public Vector3Int position;
 
+    internal void Clear()
+    {
+        growTimer = 0;
+        growStage = 0;
+        crop = null;
+        renderer = null;
+        damage = 0;
+        position = Vector3Int.zero;
+    }
+
     public bool isComplete
     {
         get

@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] GameObject inventoryPanel;
-    [SerializeField] InventoryPanel inventory;
+    [SerializeField] GameObject statusPanel;
     [SerializeField] GameObject toolBarPanel;
 
     bool visible;
@@ -14,6 +14,7 @@ public class InventoryController : MonoBehaviour
     {
         visible = false;
         inventoryPanel.SetActive(visible);
+        statusPanel.SetActive(visible);
     }
     private void Update()
     {
@@ -21,17 +22,18 @@ public class InventoryController : MonoBehaviour
         {
             ToggleInventory();
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            statusPanel.SetActive(!statusPanel.activeInHierarchy);
+        }
 
     }
     public void ToggleInventory()
     {
         visible = !visible;
         inventoryPanel.SetActive(visible);
+        //statusPanel.SetActive(visible);
         toolBarPanel.SetActive(!visible);
     }
 
-    public void UpdateQuantity()
-    {
-        inventory.Show();
-    }
 }

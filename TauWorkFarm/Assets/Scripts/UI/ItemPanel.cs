@@ -23,14 +23,24 @@ public class ItemPanel : MonoBehaviour
         Show();
     }
 
+    private void LateUpdate()
+    {
+        if (itemContainer == null) { return; }
+        if (itemContainer.isChanging)
+        {
+            Show();
+            itemContainer.isChanging = false;
+        }
+    }
+
     public void SetIndex()
     {
-        for (int i = 0; i < itemContainer.slots.Count && i < slots.Count; i++)
+        for (int i = 0; i < slots.Count; i++)
         {
             slots[i].SetIndex(i);
         }
     }
-    public void Show()
+    public virtual void Show()
     {
         for (int i = 0; i < itemContainer.slots.Count && i < slots.Count; i++)
         {

@@ -8,14 +8,14 @@ public class Slot
     public Item item;
     //public CollectableType type;
     public int count;
-    public int maxAllowed;
+    //public int maxAllowed;
     //public Sprite icon;
 
     public Slot()
     {
         //type = CollectableType.NONE;
         count = 0;
-        maxAllowed = 99;
+        //maxAllowed = 99;
     }
 
     public void Copy(Slot _slot)
@@ -36,14 +36,14 @@ public class Slot
         count = 0;
     }
 
-    public bool CanAddItem()
-    {
-        if (count < maxAllowed)
-        {
-            return true;
-        }
-        return false;
-    }
+    //public bool CanAddItem()
+    //{
+    //    if (count < maxAllowed)
+    //    {
+    //        return true;
+    //    }
+    //    return false;
+    //}
     public void AddItem(Collectable _item)
     {
         //this.type = _item.type;
