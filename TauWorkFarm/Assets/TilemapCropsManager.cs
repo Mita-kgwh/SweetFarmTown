@@ -20,6 +20,23 @@ public class TilemapCropsManager : TimeAgent
         GamesManager.Instance.GetComponent<CropsManager>().tilemapCropsManager = this;
         onTimeTick += Tick;
         Init();
+        VisualizeMap();
+    }
+
+    private void VisualizeMap()
+    {
+        for (int i = 0; i < cropsContainer.crops.Count; i++)
+        {
+            VisualizeTile(cropsContainer.crops[i]);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        for (int i = 0; i < cropsContainer.crops.Count; i++)
+        {
+            cropsContainer.crops[i].renderer = null;
+        }
     }
 
     public void Tick()
@@ -72,7 +89,7 @@ public class TilemapCropsManager : TimeAgent
 
     public void Plow(Vector3Int position)
     {
-       
+        if (Check(position)) { return; }
         CreatePlowedTile(position);
     }
 
@@ -90,18 +107,38 @@ public class TilemapCropsManager : TimeAgent
         tile.crop = toSeed;
     }
 
+    public void VisualizeTile(CropTile cropTile)
+    {
+        targetTilemap.SetTile(cropTile.position, cropTile.crop != null ? seeded: plowed);
+
+        if (cropTile.renderer == null)
+        {
+            GameObject gobj = Instantiate(cropsSpritePrefab, transform);
+            gobj.transform.position = targetTilemap.CellToWorld(cropTile.position);
+            gobj.transform.position -= Vector3.forward * 0.01f;
+            //gobj.SetActive(false);
+            cropTile.renderer = gobj.GetComponent<SpriteRenderer>();
+        }
+
+        bool isGrowing =
+            (cropTile.crop != null) &&
+            (cropTile.growTimer >= cropTile.crop.growthStageTime[0]);
+
+        cropTile.renderer.gameObject.SetActive(isGrowing);
+        if (isGrowing)
+        {
+            cropTile.renderer.sprite = cropTile.crop.sprites[cropTile.growStage - 1];
+        }
+    }
+
     private void CreatePlowedTile(Vector3Int position)
     {
         CropTile crop = new CropTile();
         cropsContainer.Add(crop);
 
-        GameObject gobj = Instantiate(cropsSpritePrefab);
-        gobj.transform.position = targetTilemap.CellToWorld(position);
-        gobj.transform.position -= Vector3.forward * 0.01f;
-        gobj.SetActive(false);
-        crop.renderer = gobj.GetComponent<SpriteRenderer>();
-
         crop.position = position;
+        VisualizeTile(crop);
+
         targetTilemap.SetTile(position, plowed);
     }
 
@@ -121,8 +158,8 @@ public class TilemapCropsManager : TimeAgent
                 cropTile.crop.yield,
                 cropTile.crop.count);
 
-            targetTilemap.SetTile(gridPosition, plowed);
             cropTile.Harvested();
+            VisualizeTile(cropTile);
         }
     }
 
