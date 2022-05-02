@@ -16052,10 +16052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e737ed202fdd9954e869f7d3fe84c0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plowed: {fileID: 11400000, guid: 100d86ad076227a46968cf6fe4e3a901, type: 2}
-  seeded: {fileID: 11400000, guid: 93f911ae0e1832c4c8461fee1f87ead9, type: 2}
-  targetTilemap: {fileID: 1429397527}
-  cropsSpritePrefab: {fileID: 143796796526048540, guid: 36af0a488d071754783206f82571d985, type: 3}
+  tilemapCropsManager: {fileID: 1429397528}
 --- !u!1001 &1335416669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16436,6 +16433,7 @@ GameObject:
   - component: {fileID: 1429397525}
   - component: {fileID: 1429397527}
   - component: {fileID: 1429397526}
+  - component: {fileID: 1429397528}
   m_Layer: 0
   m_Name: CropsTileMap
   m_TagString: Untagged
@@ -16544,6 +16542,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1429397528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429397524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a86e4fa6b3424147b789d4c767890a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plowed: {fileID: 11400000, guid: 100d86ad076227a46968cf6fe4e3a901, type: 2}
+  seeded: {fileID: 11400000, guid: 93f911ae0e1832c4c8461fee1f87ead9, type: 2}
+  targetTilemap: {fileID: 1429397527}
+  cropsSpritePrefab: {fileID: 143796796526048540, guid: 36af0a488d071754783206f82571d985, type: 3}
+  cropsContainer: {fileID: 11400000, guid: 33bd2563cd16383489b39672ab9f3751, type: 2}
 --- !u!1 &1438102026
 GameObject:
   m_ObjectHideFlags: 0

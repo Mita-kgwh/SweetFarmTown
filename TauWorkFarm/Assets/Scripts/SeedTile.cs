@@ -10,7 +10,7 @@ public class SeedTile : ToolsAction
         Item item
         )
     {
-        if (tileMapReadController.cropsManager.CheckIsPlowed(gridPosition) == false)
+        if (tileMapReadController.cropsManager.Check(gridPosition) == false)
         {
             return false;
         }
