@@ -1398,7 +1398,7 @@ GameObject:
   - component: {fileID: 351639046}
   - component: {fileID: 351639045}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17663,6 +17663,51 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6130847007781738243, guid: 9d03eae90ee7d114da04fb149bcc0ff2, type: 3}
   m_PrefabInstance: {fileID: 1232113496}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1246253642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246253644}
+  - component: {fileID: 1246253643}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1246253643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246253642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61bacd28b53aeef4f8da8a2090ea6170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeableObjsContainer: {fileID: 11400000, guid: 248668ab18a0fda458ef3b9cb16703a4, type: 2}
+  targetTilemap: {fileID: 351639046}
+--- !u!4 &1246253644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246253642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1256105623
 GameObject:
   m_ObjectHideFlags: 0
@@ -18164,6 +18209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 351639046}
   cropsManager: {fileID: 1307524521}
+  objectsManager: {fileID: 1246253643}
 --- !u!114 &1307524521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22042,11 +22088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9185237259250842400, guid: 5a7d3ce869c430c47aeddeec6e41ba67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.44
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 9185237259250842400, guid: 5a7d3ce869c430c47aeddeec6e41ba67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.24
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 9185237259250842400, guid: 5a7d3ce869c430c47aeddeec6e41ba67, type: 3}
       propertyPath: m_LocalPosition.z

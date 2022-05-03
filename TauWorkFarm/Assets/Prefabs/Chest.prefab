@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 9185237259250842403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.44, y: -1.24, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 9185237258635008953}
   - {fileID: 9185237259965621212}
@@ -132,6 +132,7 @@ MonoBehaviour:
   chestClosed: {fileID: 9185237258635008952}
   chestOpened: {fileID: 9185237259965621215}
   isOpened: 0
+  onOpenAudio: {fileID: 0}
 --- !u!61 &9185237259250842414
 BoxCollider2D:
   m_ObjectHideFlags: 0
