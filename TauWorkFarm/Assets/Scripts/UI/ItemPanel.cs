@@ -25,7 +25,7 @@ public class ItemPanel : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (itemContainer == null) { return; }
+        //if (itemContainer == null) { return; }
         if (itemContainer.isChanging)
         {
             Show();
