@@ -36,4 +36,18 @@ public class InventoryController : MonoBehaviour
         toolBarPanel.SetActive(!visible);
     }
 
+    public void Open()
+    {
+        inventoryPanel.SetActive(true);
+        //statusPanel.SetActive(true);
+        toolBarPanel.SetActive(false);
+    }
+
+    public void Close()
+    {
+        inventoryPanel.SetActive(false);
+        //statusPanel.SetActive(false);
+        toolBarPanel.SetActive(true);
+    }
+
 }
