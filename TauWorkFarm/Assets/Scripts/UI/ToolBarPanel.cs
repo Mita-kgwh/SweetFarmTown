@@ -6,14 +6,6 @@ public class ToolBarPanel : ItemPanel
 {
     public GameObject toolsBarPanel;
     [SerializeField] ToolsBarController toolsBarController;
-
-    public override void OnClick(int id)
-    {
-        toolsBarController.Set(id);
-        HighLight(id);
-        //Debug.Log("Tool Bar Panel here");
-    }
-
     int currentSelectedTool;
 
     private void Start()
@@ -23,6 +15,13 @@ public class ToolBarPanel : ItemPanel
         HighLight(0);
     }
 
+    public override void OnClick(int id)
+    {
+        toolsBarController.Set(id);
+        HighLight(id);
+        //Debug.Log("Tool Bar Panel here");
+    }
+
     public void HighLight(int id)
     {
         slots[currentSelectedTool].HighLight(false);
@@ -30,4 +29,9 @@ public class ToolBarPanel : ItemPanel
         slots[currentSelectedTool].HighLight(true);
     }
 
+    public override void Show()
+    {
+        base.Show();
+        toolsBarController.UpdateHihlightIcon();
+    }
 }

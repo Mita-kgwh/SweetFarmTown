@@ -9,6 +9,8 @@ public class TilePickUpAction : ToolsAction
     {
         tileMapReadController.cropsManager.PickUp(gridPosition);
 
+        tileMapReadController.objectsManager.PickUp(gridPosition);
+
         return true;
     }
 }

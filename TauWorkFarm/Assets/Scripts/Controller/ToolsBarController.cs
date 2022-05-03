@@ -51,7 +51,7 @@ public class ToolsBarController : MonoBehaviour
         selectedTool = id;
     }
 
-    public void UpdateHihlightIcon(int id)
+    public void UpdateHihlightIcon(int id = 0)
     {
         Item item = GetItem;
 
