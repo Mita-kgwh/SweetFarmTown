@@ -57,32 +57,4 @@ public class Inventory
 {
     public List<Slot> slots = new List<Slot>();
 
-    //public Inventory(int numSlots) // chi dung mot cho o Playermanager ma co ve k can thiet
-    //{
-    //    for (int i = 0; i < numSlots; i++)
-    //    {
-    //        Slot slot = new Slot();
-    //        slots.Add(slot);
-    //    }
-    //}
-
-    //public void Add(Collectable _item)
-    //{
-    //    foreach (Slot slot in slots)
-    //    {
-    //        if (slot.type == _item.type && slot.CanAddItem())
-    //        {
-    //            slot.AddItem(_item);
-    //            return;
-    //        }
-    //    }
-    //    foreach (Slot slot in slots)
-    //    {
-    //        if (slot.type == CollectableType.NONE)
-    //        {
-    //            slot.AddItem(_item);
-    //            return;
-    //        }
-    //    }
-    //}
 }

@@ -7,6 +7,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject inventoryPanel;
     [SerializeField] GameObject statusPanel;
     [SerializeField] GameObject toolBarPanel;
+    [SerializeField] GameObject additionalPanel;
 
     bool visible;
 
@@ -38,6 +39,7 @@ public class InventoryController : MonoBehaviour
 
     public void Open()
     {
+        visible = true;
         inventoryPanel.SetActive(true);
         //statusPanel.SetActive(true);
         toolBarPanel.SetActive(false);
@@ -45,9 +47,11 @@ public class InventoryController : MonoBehaviour
 
     public void Close()
     {
+        visible = false;
         inventoryPanel.SetActive(false);
         //statusPanel.SetActive(false);
         toolBarPanel.SetActive(true);
+        additionalPanel.SetActive(false);
     }
 
 }

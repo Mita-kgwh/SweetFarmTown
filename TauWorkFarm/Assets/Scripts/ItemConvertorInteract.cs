@@ -7,7 +7,7 @@ using UnityEngine;
 public class ItemConvertorData
 {
     public Slot itemSlot;
-    public float timer;
+    public int timer;
 
     public ItemConvertorData()
     {
@@ -15,25 +15,46 @@ public class ItemConvertorData
     }
 }
 
+[RequireComponent(typeof(TimeAgent))]
 public class ItemConvertorInteract : Interactable, IPersistant
 {
     [SerializeField] Item convertableItem;
     [SerializeField] Item producedItem;
     [SerializeField] int producedItemCount = 1;
 
-    [SerializeField] float timeToProcess = 5f;
+    [SerializeField] int timeToProcess = 5; //chunk of time
 
     ItemConvertorData data;
 
     [SerializeField] Animator animator;
+    [SerializeField] TimeAgent timeAgent;
 
     private void Start()
     {
+        if (timeAgent == null) { timeAgent = GetComponent<TimeAgent>(); }
+        timeAgent.onTimeTick += ItemConvertProcess;
         if (data == null)
         {
             data = new ItemConvertorData();
         }   
         if (animator == null) { animator = GetComponent<Animator>(); }
+
+        Animate();
+    }
+
+    private void ItemConvertProcess()
+    {
+        if (data.itemSlot == null) { return; }
+
+        if (data.timer > 0)
+        {
+            data.timer -= 1;
+            if (data.timer <= 0)
+            {
+                //Debug.Log("Done");
+                CompleteItemConvertion();
+            }
+        }
     }
 
     public override void Interact(PlayerController player)
@@ -42,10 +63,25 @@ public class ItemConvertorInteract : Interactable, IPersistant
         {
             if (GamesManager.Instance.dragAndDropController.Check(convertableItem))
             {
-                StartItemProcessing();
+                //Debug.Log("Start");
+                StartItemProcessing(GamesManager.Instance.dragAndDropController.slot);
+                return;
+            }
+                
+            ToolsBarController toolsBarController = player.GetComponent<ToolsBarController>();    
+            if (toolsBarController == null) { return; }
+            //Debug.Log("toolbar not null");
+
+            Slot slot = toolsBarController.GetItemSlot;
+
+            if (slot.item == convertableItem)
+            {
+                StartItemProcessing(slot);
+                toolsBarController.UpdateCount();
+                return;
             }
         }
-        if (data.itemSlot.item != null && data.timer < 0f)
+        if (data.itemSlot.item != null && data.timer <= 0)
         {
             GamesManager.Instance.inventoryContainer.Add(data.itemSlot.item, data.itemSlot.count);
             data.itemSlot.Clear();
@@ -53,34 +89,38 @@ public class ItemConvertorInteract : Interactable, IPersistant
 
     }
 
-    private void StartItemProcessing()
+    private void StartItemProcessing(Slot slotToProcess)
     {
-        animator.SetBool("Working", true);
         data.itemSlot.Copy(GamesManager.Instance.dragAndDropController.slot);
         data.itemSlot.count = 1;
-        GamesManager.Instance.dragAndDropController.RemoveItem();
+        //GamesManager.Instance.dragAndDropController.RemoveItem();
 
-        data.timer = timeToProcess;
-    }
-
-    private void Update()
-    {
-        if (data.itemSlot == null) { return; }
-
-        if (data.timer > 0f)
+        if (slotToProcess.item.stackable)
         {
-            data.timer -= Time.deltaTime;
-            if (data.timer <= 0f)
+            //Debug.Log("Da tru");
+            slotToProcess.count -= 1;
+            if (slotToProcess.count < 0)
             {
-                //Debug.Log("Done");
-                CompleteItemConvertion();
+                slotToProcess.Clear();
             }
         }
+        else
+        {
+            slotToProcess.Clear();
+        }
+
+        data.timer = timeToProcess;
+        Animate();
+    }
+
+    private void Animate()
+    {
+        animator.SetBool("Working", data.timer > 0f);
     }
 
     private void CompleteItemConvertion()
     {
-        animator.SetBool("Working", false);
+        Animate();
         data.itemSlot.Clear();
         data.itemSlot.Set(producedItem, producedItemCount);
     }

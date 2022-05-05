@@ -6,11 +6,24 @@ using UnityEngine;
 public class ToolsBarController : MonoBehaviour
 {
     [SerializeField] int toolbarSize = 8;
-    //[SerializeField] ToolBarPanel toolBarPanel;
+    [SerializeField] ToolBarPanel toolBarPanel;
     [SerializeField] IconHighlight iconHighlight;
     int selectedTool;
 
     public Action<int> onChange;
+
+    public void UpdateCount()
+    {
+        toolBarPanel.UpdateCount();
+    }
+
+    public Slot GetItemSlot
+    {
+        get
+        {
+            return GamesManager.Instance.inventoryContainer.slots[selectedTool];
+        }
+    }
 
     public Item GetItem
     {

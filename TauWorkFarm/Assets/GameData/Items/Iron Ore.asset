@@ -19,5 +19,5 @@ MonoBehaviour:
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}
   crop: {fileID: 0}
-  iconHighlight: 1
+  iconHighlight: 0
   itemPrefab: {fileID: 0}

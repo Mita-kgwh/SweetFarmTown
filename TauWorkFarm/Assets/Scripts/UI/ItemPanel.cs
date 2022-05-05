@@ -8,6 +8,11 @@ public class ItemPanel : MonoBehaviour
 
     public List<Slot_UI> slots = new List<Slot_UI>();
 
+    public void UpdateCount()
+    {
+        itemContainer.isChanging = true;
+    }
+
     private void Start()
     {
         Init();

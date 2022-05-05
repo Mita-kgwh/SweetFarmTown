@@ -13622,6 +13622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolbarSize: 8
+  toolBarPanel: {fileID: 966406765}
   iconHighlight: {fileID: 590546101}
 --- !u!114 &564566071
 MonoBehaviour:
@@ -13638,6 +13639,7 @@ MonoBehaviour:
   inventoryPanel: {fileID: 1002940471}
   statusPanel: {fileID: 394351126}
   toolBarPanel: {fileID: 966406760}
+  additionalPanel: {fileID: 160067331}
 --- !u!114 &564566072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23936,6 +23938,14 @@ PrefabInstance:
     - target: {fileID: 4335436869282929930, guid: c0eee35ad826d1a4ca7aab98ca4b71b4, type: 3}
       propertyPath: m_Name
       value: Smelter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872355535547549791, guid: c0eee35ad826d1a4ca7aab98ca4b71b4, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1133437718}
+    - target: {fileID: 8872355535547549791, guid: c0eee35ad826d1a4ca7aab98ca4b71b4, type: 3}
+      propertyPath: timeAgent
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8872355535547549791, guid: c0eee35ad826d1a4ca7aab98ca4b71b4, type: 3}
       propertyPath: producedItem
