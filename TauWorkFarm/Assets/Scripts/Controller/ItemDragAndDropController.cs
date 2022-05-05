@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ItemDragAndDropController : MonoBehaviour
 {
-    [SerializeField] Slot slot;
+    public Slot slot;
     [SerializeField] GameObject dragIcon;
     [SerializeField] Image image;
     [SerializeField] RectTransform iconTransform;
@@ -41,21 +41,61 @@ public class ItemDragAndDropController : MonoBehaviour
         }
     }
 
+    internal void RemoveItem(int count = 1)
+    {
+        if (slot == null) { return; }
+
+        if (slot.item.stackable)
+        {
+            slot.count -= count;
+            if (slot.count <= 0)
+            {
+                slot.Clear();
+            }
+        }
+        else
+        {
+            slot.Clear();
+        }
+        UpdateIcon();
+              
+    }
+
+    public bool Check(Item item, int count = 1)
+    {
+        if (slot == null) { return false; }
+
+        if (item.stackable)
+        {
+            return slot.item == item && slot.count >= count;  
+        }
+
+        return slot.item == item;
+    }
+
     internal void OnClick(Slot _slot)
     {
         //Debug.Log("Click Drag and Drop");
-        if (slot.item == null)  // copy vao slot trong
+        if (slot.item == null)  // copy item tu trong ra ngoai slot dragicon
         {
             slot.Copy(_slot);
             _slot.Clear();
         }
-        else                    // lay tu slot do ra ngoai
+        else                    // them item tu ngoai vao trong inventory 
         {
-            Item item = _slot.item;
-            int count = _slot.count;
+            if (slot.item == _slot.item)
+            {
+                _slot.count += slot.count;
+                slot.Clear();
+            }
+            else
+            {
+                Item item = _slot.item;
+                int count = _slot.count;
 
-            _slot.Copy(slot);
-            slot.Set(item, count);
+                _slot.Copy(slot);
+                slot.Set(item, count);
+            }  
         }
         UpdateIcon();
     }

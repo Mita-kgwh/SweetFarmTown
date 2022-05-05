@@ -45,11 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7013be2304f75804eaf03c4aa3df3e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
   speedPickUp: 5
   pickUpDistance: 1.5
   timeToLive: 10
-  item: {fileID: 11400000, guid: 73555ccf56e865944825c022b176d405, type: 2}
+  item: {fileID: 11400000, guid: c80ee6bc202fb1a4997d7840e06ca712, type: 2}
   count: 1
 --- !u!212 &1780779968752354985
 SpriteRenderer:
