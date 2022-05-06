@@ -3,20 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] Rigidbody2D rigidbody;
     public float speed;
     public Animator animator;
 
     private Vector3 direction;
     public Vector2 lastDirection;
+    private Vector2 motionVector;
 
     public bool ismoving;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+     
     }
 
     // Update is called once per frame
@@ -26,6 +29,11 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         direction = new Vector3(horizontal, vertical);
+
+        motionVector = new Vector2(
+            horizontal,
+            vertical
+            );
 
         ismoving = horizontal != 0 || vertical != 0;
 
@@ -43,7 +51,13 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //move the player
-        transform.position += direction * speed * Time.deltaTime;
+        Move();
+        //transform.position += direction * speed * Time.deltaTime;
+    }
+
+    private void Move()
+    {
+        rigidbody.velocity = motionVector * speed;
     }
 
     void AnimateMovement(Vector3 direction)
