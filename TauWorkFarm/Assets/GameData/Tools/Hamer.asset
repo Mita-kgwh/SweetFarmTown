@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Hamer
   m_EditorClassIdentifier: 
   Name: Hamer
+  id: 8
   stackable: 1
   icon: {fileID: -5210384475397050505, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
   onAction: {fileID: 11400000, guid: 240b6e92cf82ee44cb627b02cfb87d2d, type: 2}
+  onTileMapAction: {fileID: 0}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}
+  iconHighlight: 0
+  itemPrefab: {fileID: 0}

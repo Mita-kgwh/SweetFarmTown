@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Tomato_Seeds
   m_EditorClassIdentifier: 
   Name: Tomato_Seeds
+  id: 6
   stackable: 1
   icon: {fileID: 6790902163275402405, guid: 10ed91d960b97db428ccd19526feff6f, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 11400000, guid: ea0b02616454212418ebbc2616f653c2, type: 2}
   onItemUsed: {fileID: 11400000, guid: ea0b02616454212418ebbc2616f653c2, type: 2}
   crop: {fileID: 11400000, guid: 89de7d4dc5f0eb94b9d6986eb446030f, type: 2}
+  iconHighlight: 0
+  itemPrefab: {fileID: 0}

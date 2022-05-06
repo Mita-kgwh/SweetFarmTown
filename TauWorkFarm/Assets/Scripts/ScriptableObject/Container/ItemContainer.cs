@@ -8,7 +8,15 @@ public class ItemContainer : ScriptableObject
 {
     public List<Slot> slots;
     public bool isChanging; //isDirty
-
+    public int slotCount;
+    internal void Init()
+    {
+        slots = new List<Slot>();
+        for (int i = 0; i < 21; i++) //careful
+        {
+            slots.Add(new Slot());
+        }
+    }
     public void Add(Item item, int count = 1)
     {
         isChanging = true;

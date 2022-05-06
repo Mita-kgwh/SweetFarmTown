@@ -46,3 +46,4 @@ MonoBehaviour:
   - item: {fileID: 0}
     count: 0
   isChanging: 0
+  slotCount: 16

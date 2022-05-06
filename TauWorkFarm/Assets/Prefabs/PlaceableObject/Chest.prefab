@@ -133,7 +133,7 @@ MonoBehaviour:
   chestOpened: {fileID: 9185237259965621215}
   isOpened: 0
   onOpenAudio: {fileID: 8300000, guid: 9868059f20a970146871ed14e86d5a5a, type: 3}
-  itemContainer: {fileID: 11400000, guid: 7e766f7ce5eea0747859718f7b60c8ed, type: 2}
+  itemContainer: {fileID: 0}
 --- !u!61 &9185237259250842414
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: NewStone
   m_EditorClassIdentifier: 
   Name: NewStone
+  id: 3
   stackable: 0
   icon: {fileID: 8333231276030249781, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}
   crop: {fileID: 0}
+  iconHighlight: 0
+  itemPrefab: {fileID: 0}
