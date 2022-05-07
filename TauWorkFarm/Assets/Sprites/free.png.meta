@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -337351728639113470
-    second: free_0
+    second: f_corner_topleft
   - first:
       213: -4965553739594148211
-    second: free_1
+    second: f_bot
   - first:
       213: -2491624659041743377
-    second: free_2
+    second: f_corner_topright
   - first:
       213: -6030434150411226544
     second: free_3
@@ -19,13 +19,13 @@ TextureImporter:
     second: free_4
   - first:
       213: -5501630112818903837
-    second: free_5
+    second: f_center
   - first:
       213: 5306446809137559511
-    second: free_6
+    second: f_center2
   - first:
       213: -1007682015698450451
-    second: free_7
+    second: f_center3
   - first:
       213: -6991641134031357242
     second: free_8
@@ -40,19 +40,19 @@ TextureImporter:
     second: free_11
   - first:
       213: 4308412447922339816
-    second: free_12
+    second: f_right
   - first:
       213: -246151368097011941
-    second: free_13
+    second: f_grass
   - first:
       213: -7617837323195907084
-    second: free_14
+    second: f_left
   - first:
       213: 3467876396792827902
-    second: free_15
+    second: f_topleft
   - first:
       213: 1608922730611987966
-    second: free_16
+    second: f_topright
   - first:
       213: -5033581564710112172
     second: free_17
@@ -76,19 +76,19 @@ TextureImporter:
     second: free_23
   - first:
       213: 2691798299735221653
-    second: free_24
+    second: f_corner_botleft
   - first:
       213: 1638884094671746711
-    second: free_25
+    second: f_top
   - first:
       213: 3588723006960434170
-    second: free_26
+    second: f_corner_botright
   - first:
       213: 7187214194547050748
-    second: free_27
+    second: f_botleft
   - first:
       213: -3773892291479192456
-    second: free_28
+    second: f_botright
   - first:
       213: 1821353447996864191
     second: free_29
@@ -112,7 +112,7 @@ TextureImporter:
     second: free_35
   - first:
       213: -4375937314128963928
-    second: free_36
+    second: f_grass2
   - first:
       213: -6318963139397398117
     second: free_37
@@ -436,7 +436,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: free_0
+      name: f_corner_topleft
       rect:
         serializedVersion: 2
         x: 0
@@ -457,7 +457,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_1
+      name: f_bot
       rect:
         serializedVersion: 2
         x: 16
@@ -478,7 +478,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_2
+      name: f_corner_topright
       rect:
         serializedVersion: 2
         x: 32
@@ -541,7 +541,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_5
+      name: f_center
       rect:
         serializedVersion: 2
         x: 80
@@ -562,7 +562,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_6
+      name: f_center2
       rect:
         serializedVersion: 2
         x: 96
@@ -583,7 +583,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_7
+      name: f_center3
       rect:
         serializedVersion: 2
         x: 112
@@ -688,7 +688,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_12
+      name: f_right
       rect:
         serializedVersion: 2
         x: 0
@@ -709,7 +709,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_13
+      name: f_grass
       rect:
         serializedVersion: 2
         x: 16
@@ -730,7 +730,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_14
+      name: f_left
       rect:
         serializedVersion: 2
         x: 32
@@ -751,7 +751,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_15
+      name: f_topleft
       rect:
         serializedVersion: 2
         x: 48
@@ -772,7 +772,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_16
+      name: f_topright
       rect:
         serializedVersion: 2
         x: 64
@@ -940,7 +940,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_24
+      name: f_corner_botleft
       rect:
         serializedVersion: 2
         x: 0
@@ -961,7 +961,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_25
+      name: f_top
       rect:
         serializedVersion: 2
         x: 16
@@ -982,7 +982,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_26
+      name: f_corner_botright
       rect:
         serializedVersion: 2
         x: 32
@@ -1003,7 +1003,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_27
+      name: f_botleft
       rect:
         serializedVersion: 2
         x: 48
@@ -1024,7 +1024,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_28
+      name: f_botright
       rect:
         serializedVersion: 2
         x: 64
@@ -1192,7 +1192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free_36
+      name: f_grass2
       rect:
         serializedVersion: 2
         x: 192

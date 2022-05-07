@@ -13,15 +13,24 @@ public class PlowTile : ToolsAction
         TileMapReadController tileMapReadController,
         Item item)
     {
-        //Debug.Log("OnApplyToTileMap");
+        Debug.Log("OnApplyToTileMap");
         if (canPlow == null)
         {
-            //Debug.Log("canPlow null");
+            Debug.Log("canPlow null");
             return true;
         }
         TileBase tileToPlow = tileMapReadController.GetTileBase(gridPosition);
+        if (tileToPlow == null)
+        {
+            Debug.Log("tile to plow null");
+        }
+        else
+        {
+            Debug.Log(tileToPlow.name);
+        }
         if (!canPlow.Contains(tileToPlow))
         {
+            Debug.Log("not contains");
             return false;
         }
 
