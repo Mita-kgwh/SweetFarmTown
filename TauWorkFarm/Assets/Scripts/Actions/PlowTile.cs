@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class PlowTile : ToolsAction
 {
     [SerializeField] List<TileBase> canPlow;
+    //[SerializeField] RuleTile canPlowRuleTile;
     [SerializeField] AudioClip onPlowUsed;
 
     public override bool OnApplyToTileMap(Vector3Int gridPosition, 

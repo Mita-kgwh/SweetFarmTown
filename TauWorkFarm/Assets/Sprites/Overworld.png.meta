@@ -709,13 +709,13 @@ TextureImporter:
     second: Overworld_234
   - first:
       213: -2507703458222002964
-    second: Overworld_235
+    second: O_water_topleft
   - first:
       213: 4533340400463798174
-    second: Overworld_236
+    second: O_water_top
   - first:
       213: -1401745000605599216
-    second: Overworld_237
+    second: O_water_topright
   - first:
       213: -8879267608672464926
     second: Overworld_238
@@ -829,13 +829,13 @@ TextureImporter:
     second: Overworld_274
   - first:
       213: -6345048819319619034
-    second: Overworld_275
+    second: O_water_left
   - first:
       213: 2175128215781867153
-    second: Overworld_276
+    second: O_watercenter
   - first:
       213: 8671407746798262563
-    second: Overworld_277
+    second: O_water_right
   - first:
       213: -2894570137055578424
     second: Overworld_278
@@ -934,13 +934,13 @@ TextureImporter:
     second: Overworld_309
   - first:
       213: -2060011999383503334
-    second: Overworld_310
+    second: O_water_botleft
   - first:
       213: -361519778550237697
-    second: Overworld_311
+    second: O_water_bot
   - first:
       213: 729139331109758419
-    second: Overworld_312
+    second: O_water_botright
   - first:
       213: -961450468213938099
     second: Overworld_313
@@ -1048,10 +1048,10 @@ TextureImporter:
     second: Overworld_347
   - first:
       213: 5017012264886179680
-    second: Overworld_348
+    second: O_waterconner_botright
   - first:
       213: 1989496342715276274
-    second: Overworld_349
+    second: O_waterconner_botleft
   - first:
       213: -208334576436962100
     second: Overworld_350
@@ -1063,10 +1063,10 @@ TextureImporter:
     second: Overworld_352
   - first:
       213: -1416914744758396658
-    second: Overworld_353
+    second: O_grass3
   - first:
       213: -4738981650102752995
-    second: Overworld_354
+    second: O_grass2
   - first:
       213: -5856469290916211062
     second: Overworld_355
@@ -1147,25 +1147,25 @@ TextureImporter:
     second: Overworld_380
   - first:
       213: 8915356073363846004
-    second: Overworld_381
+    second: O_waterconner_topright
   - first:
       213: 4057243254486268364
-    second: Overworld_382
+    second: O_waterconner_topleft
   - first:
       213: 5703461117968425983
     second: Overworld_383
   - first:
       213: -8552779481319937432
-    second: Overworld_384
+    second: O_Grass
   - first:
       213: -4516124463063074946
     second: Overworld_385
   - first:
       213: 51892817205249142
-    second: Overworld_386
+    second: O_grass4
   - first:
       213: -3760940450331062176
-    second: Overworld_387
+    second: O_grass5
   - first:
       213: 7138185562584465819
     second: Overworld_388
@@ -8269,7 +8269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_235
+      name: O_water_topleft
       rect:
         serializedVersion: 2
         x: 32
@@ -8290,7 +8290,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_236
+      name: O_water_top
       rect:
         serializedVersion: 2
         x: 48
@@ -8311,7 +8311,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_237
+      name: O_water_topright
       rect:
         serializedVersion: 2
         x: 64
@@ -9109,7 +9109,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_275
+      name: O_water_left
       rect:
         serializedVersion: 2
         x: 32
@@ -9130,7 +9130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_276
+      name: O_watercenter
       rect:
         serializedVersion: 2
         x: 48
@@ -9151,7 +9151,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_277
+      name: O_water_right
       rect:
         serializedVersion: 2
         x: 64
@@ -9844,7 +9844,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_310
+      name: O_water_botleft
       rect:
         serializedVersion: 2
         x: 32
@@ -9865,7 +9865,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_311
+      name: O_water_bot
       rect:
         serializedVersion: 2
         x: 48
@@ -9886,7 +9886,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_312
+      name: O_water_botright
       rect:
         serializedVersion: 2
         x: 64
@@ -10642,7 +10642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_348
+      name: O_waterconner_botright
       rect:
         serializedVersion: 2
         x: 32
@@ -10663,7 +10663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_349
+      name: O_waterconner_botleft
       rect:
         serializedVersion: 2
         x: 48
@@ -10747,7 +10747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_353
+      name: O_grass3
       rect:
         serializedVersion: 2
         x: 112
@@ -10768,7 +10768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_354
+      name: O_grass2
       rect:
         serializedVersion: 2
         x: 128
@@ -11335,7 +11335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_381
+      name: O_waterconner_topright
       rect:
         serializedVersion: 2
         x: 32
@@ -11356,7 +11356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_382
+      name: O_waterconner_topleft
       rect:
         serializedVersion: 2
         x: 48
@@ -11398,7 +11398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_384
+      name: O_Grass
       rect:
         serializedVersion: 2
         x: 80
@@ -11440,7 +11440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_386
+      name: O_grass4
       rect:
         serializedVersion: 2
         x: 112
@@ -11461,7 +11461,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_387
+      name: O_grass5
       rect:
         serializedVersion: 2
         x: 128
