@@ -9,10 +9,11 @@ using UnityEngine.Tilemaps;
 public class PlaceableObjectsManager : MonoBehaviour
 {
     [SerializeField] PlaceableObjectsContainer placeableObjsContainer;
-    [SerializeField] Tilemap targetTilemap;
+    [SerializeField] Tilemap targetTilemap; // base tilemap
 
     private void Start()
     {
+        GamesManager.Instance.GetComponent<PlaceableObjectReferenceManager>().placeableObjectsManager = this;
         VisualizaMap();
     }
 
@@ -25,7 +26,7 @@ public class PlaceableObjectsManager : MonoBehaviour
             IPersistant persistant = placeableObjsContainer.placeableObjects[i].targetObject.GetComponent<IPersistant>();
             if (persistant != null)
             {
-                string jsonString = persistant.Read();
+                string jsonString = persistant.Read(); //data sau khi game thuc thi, dc chuyen lai thanh json, gan ra jsonstring de luu vao container
                 placeableObjsContainer.placeableObjects[i].objectState = jsonString;
             }
 
@@ -57,7 +58,7 @@ public class PlaceableObjectsManager : MonoBehaviour
         IPersistant persistant = gobj.GetComponent<IPersistant>();
         if (persistant != null)
         {
-            persistant.Load(placeableObject.objectState);
+            persistant.Load(placeableObject.objectState); //lay jsonstring gan vao data cua placeobj trc khi dat xuong
         }
 
         placeableObject.targetObject = gobj.transform;
@@ -87,7 +88,7 @@ public class PlaceableObjectsManager : MonoBehaviour
             placedObject.placedItem, 
             1);
 
-        Destroy(placedObject.targetObject.gameObject);
+        Destroy(placedObject.targetObject.gameObject); //destroy obj on scene
 
         placeableObjsContainer.Remove(placedObject);
     }

@@ -10,34 +10,36 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Animator animator;
 
-    private Vector3 direction;
+    //private Vector3 direction;
     public Vector2 lastDirection;
     private Vector2 motionVector;
 
     public bool ismoving;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-    
+        if (rigidbody == null) { rigidbody = GetComponent<Rigidbody2D>(); }
+        if (animator == null) { animator = GetComponent<Animator>(); }
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        if (motionVector == null) { motionVector = new Vector2(); }
+    }
+
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        direction = new Vector3(horizontal, vertical);
 
-        motionVector = new Vector2(
-            horizontal,
-            vertical
-            );
+        motionVector.x = horizontal;
+        motionVector.y = vertical;
+
 
         ismoving = horizontal != 0 || vertical != 0;
 
-        AnimateMovement(direction);
+        AnimateMovement(motionVector);
         if (ismoving)
         {
             lastDirection = new Vector2(horizontal,vertical).normalized;
@@ -60,15 +62,15 @@ public class PlayerController : MonoBehaviour
         rigidbody.velocity = motionVector * speed;
     }
 
-    void AnimateMovement(Vector3 direction)
+    void AnimateMovement(Vector2 motionVector)
     {
         if (animator != null)
         {
             animator.SetBool("IsMoving", ismoving);
             if (ismoving)
             {           
-                animator.SetFloat("horizontal", direction.x);
-                animator.SetFloat("vertical", direction.y);
+                animator.SetFloat("horizontal", motionVector.x);
+                animator.SetFloat("vertical", motionVector.y);
             }
         }
         

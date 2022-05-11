@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 4335436869282929928}
   - component: {fileID: 4335436869282929929}
   - component: {fileID: 8872355535547549791}
+  - component: {fileID: 8636737521728646709}
+  - component: {fileID: 577282372225450175}
   m_Layer: 0
   m_Name: Smelter
   m_TagString: Untagged
@@ -154,3 +156,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede86de2c8718854893fd78a7a0beea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  convertableItem: {fileID: 11400000, guid: 68d2087ee91ed724c9c460ae70693fd5, type: 2}
+  producedItem: {fileID: 11400000, guid: c6a46198b98d7fd42932324f8327e87d, type: 2}
+  producedItemCount: 1
+  timeToProcess: 5
+  animator: {fileID: 577282372225450175}
+  timeAgent: {fileID: 8636737521728646709}
+--- !u!114 &8636737521728646709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4335436869282929930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a60a2977e6fdb0428e37c3dfeb474d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &577282372225450175
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4335436869282929930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e578d24c973ee74a8d36fa82442e36a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

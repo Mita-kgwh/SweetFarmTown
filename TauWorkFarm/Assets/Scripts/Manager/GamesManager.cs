@@ -20,6 +20,7 @@ public class GamesManager : MonoBehaviour
     public ItemDragAndDropController dragAndDropController;
     public DayTimeController dayTimeController;
     public DialogueSystem dialogueSystem;
+    public PlaceableObjectReferenceManager placeableObject;
     //public ToolsBarController toolsBarController;
     //public InventoryController inventoryController;
     public ItemList itemDB;

@@ -81,6 +81,7 @@ public class ItemConvertorInteract : Interactable, IPersistant
                 return;
             }
         }
+        
         if (data.itemSlot.item != null && data.timer <= 0)
         {
             GamesManager.Instance.inventoryContainer.Add(data.itemSlot.item, data.itemSlot.count);
@@ -125,7 +126,7 @@ public class ItemConvertorInteract : Interactable, IPersistant
         data.itemSlot.Set(producedItem, producedItemCount);
     }
 
-    public string Read()
+    public string Read() 
     {
         return JsonUtility.ToJson(data);
     }

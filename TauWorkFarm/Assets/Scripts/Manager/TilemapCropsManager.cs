@@ -8,7 +8,7 @@ public class TilemapCropsManager : TimeAgent
 {
     [SerializeField] TileBase plowed;
     [SerializeField] TileBase seeded;
-    [SerializeField] Tilemap targetTilemap;
+    [SerializeField] Tilemap targetTilemap; // crop tilemap
 
     [SerializeField] GameObject cropsSpritePrefab;
 
@@ -17,6 +17,7 @@ public class TilemapCropsManager : TimeAgent
 
     private void Start()
     {
+        if (targetTilemap == null) { targetTilemap = GetComponent<Tilemap>(); }
         GamesManager.Instance.GetComponent<CropsManager>().tilemapCropsManager = this;
         onTimeTick += Tick;
         Init();
@@ -95,12 +96,10 @@ public class TilemapCropsManager : TimeAgent
 
     public void Seed(Vector3Int position, Crop toSeed)
     {
+        Debug.Log("alo alo");
         CropTile tile = cropsContainer.Get(position);
 
-        if (tile == null)
-        {
-            return;
-        }
+        if (tile == null) { return; }
 
         targetTilemap.SetTile(position, seeded);
 
@@ -140,16 +139,14 @@ public class TilemapCropsManager : TimeAgent
         VisualizeTile(crop);
 
         targetTilemap.SetTile(position, plowed);
+
     }
 
     internal void PickUp(Vector3Int gridPosition)
     {
         Vector2Int position = (Vector2Int)gridPosition;
         CropTile cropTile = cropsContainer.Get(gridPosition);
-        if (cropTile == null)
-        {
-            return;
-        }
+        if (cropTile == null) { return;}
 
         if (cropTile.isComplete)
         {

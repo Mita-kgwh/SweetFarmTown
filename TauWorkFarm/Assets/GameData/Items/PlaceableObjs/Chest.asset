@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d0c68c6d61ec34ea039889ee8fe6c4, type: 3}
+  m_Name: Chest
+  m_EditorClassIdentifier: 
+  Name: Chest
+  id: 0
+  stackable: 0
+  icon: {fileID: 1753205982242350755, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: 45765397f2175d8478e9a265e0214bb9, type: 2}
+  onItemUsed: {fileID: 11400000, guid: 45765397f2175d8478e9a265e0214bb9, type: 2}
+  crop: {fileID: 0}
+  iconHighlight: 1
+  itemPrefab: {fileID: 9185237259250842403, guid: 5a7d3ce869c430c47aeddeec6e41ba67, type: 3}

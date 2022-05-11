@@ -48,7 +48,7 @@ public class ToolsPController : MonoBehaviour
         Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         selectable = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
         markerManager.Show(selectable);
-        iconHighlight.CanSelect = selectable;
+        iconHighlight.CanSelect = selectable; // setter has function setactive
     }
 
     private void Marker()

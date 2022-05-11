@@ -74,7 +74,7 @@ public class ToolsBarController : MonoBehaviour
             return;
         }
 
-        iconHighlight.Show = item.iconHighlight;
+        iconHighlight.Show = item.iconHighlight; // setter has function setactive
         if (item.iconHighlight)
         {
             iconHighlight.Set(item.icon);

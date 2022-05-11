@@ -7,11 +7,17 @@ public class TileMapReadController : MonoBehaviour
 {
     [SerializeField] Tilemap tilemap;
     public CropsManager cropsManager;
-    public PlaceableObjectsManager objectsManager;
+    public PlaceableObjectReferenceManager objectsManager;
 
 
     public Vector3Int GetGridPosition(Vector2 mousePosition, bool isMousePosition)
     {
+        if (tilemap == null)
+        {
+            tilemap = GameObject.Find("Base").GetComponent<Tilemap>();
+        }
+        if (tilemap == null) { return Vector3Int.zero; }
+
         Vector3 worldPosition;
 
         if (isMousePosition)
@@ -32,6 +38,12 @@ public class TileMapReadController : MonoBehaviour
 
     public TileBase GetTileBase(Vector3Int gridPosition)
     {
+        if (tilemap == null)
+        {
+            tilemap = GameObject.Find("Base").GetComponent<Tilemap>();
+        }
+        if (tilemap == null) { return null; }
+
         //va lay duoc tile do ra de check data
         TileBase tile = tilemap.GetTile(gridPosition);
 
