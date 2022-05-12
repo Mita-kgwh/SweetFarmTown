@@ -25,10 +25,10 @@ public class PlowTile : ToolsAction
         {
             Debug.Log("tile to plow null");
         }
-        else
-        {
-            Debug.Log(tileToPlow.name);
-        }
+        //else
+        //{
+        //    Debug.Log(tileToPlow.name);
+        //}
         if (!canPlow.Contains(tileToPlow))
         {
             Debug.Log("not contains");

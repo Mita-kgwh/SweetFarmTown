@@ -15,4 +15,6 @@ public class Item : ScriptableObject
     public Crop crop;
     public bool iconHighlight; //highlight grid to place obj
     public GameObject itemPrefab;
+    public bool isWeapon;
+    public int damage = 10;
 }

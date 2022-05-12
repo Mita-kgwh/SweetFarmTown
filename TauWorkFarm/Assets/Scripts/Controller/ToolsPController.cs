@@ -15,7 +15,7 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] float maxDistance = 1.5f;
     [SerializeField] ToolsAction onTilePickUp;
     [SerializeField] IconHighlight iconHighlight;
-
+    [SerializeField] AttackController attackController;
     [SerializeField] ToolsBarController toolsBarController;
     [SerializeField] Animator animator;
 
@@ -23,7 +23,11 @@ public class ToolsPController : MonoBehaviour
     bool selectable;
 
     private void Update()
-    { 
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            WeaponAction();
+        }
         SelectTile();
         CanSelectCheck();
         Marker();
@@ -35,6 +39,18 @@ public class ToolsPController : MonoBehaviour
             }
             UseToolGrid();
         }
+    }
+
+    private void WeaponAction()
+    {
+        Item item = toolsBarController.GetItem;
+
+        if (item == null) { return; }
+        if (!item.isWeapon) { return; }
+
+        Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;
+
+        attackController.Attack(item.damage, player.lastDirection);
     }
 
     private void SelectTile()

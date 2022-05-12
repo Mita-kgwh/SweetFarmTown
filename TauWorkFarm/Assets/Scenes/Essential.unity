@@ -2919,6 +2919,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 564566063}
+  - component: {fileID: 564566065}
+  - component: {fileID: 564566066}
   - component: {fileID: 564566064}
   - component: {fileID: 564566067}
   - component: {fileID: 564566069}
@@ -2928,8 +2930,7 @@ GameObject:
   - component: {fileID: 564566072}
   - component: {fileID: 564566073}
   - component: {fileID: 564566074}
-  - component: {fileID: 564566065}
-  - component: {fileID: 564566066}
+  - component: {fileID: 564566075}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3058,6 +3059,7 @@ MonoBehaviour:
   maxDistance: 1.5
   onTilePickUp: {fileID: 11400000, guid: 874cee9bbbed9a94f9a57d2f8c3d3eca, type: 2}
   iconHighlight: {fileID: 590546101}
+  attackController: {fileID: 564566075}
   toolsBarController: {fileID: 564566070}
   animator: {fileID: 1272912629}
 --- !u!114 &564566069
@@ -3150,6 +3152,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationary: 0
+--- !u!114 &564566075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564566062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813198d58ba21ff4093e480f2891e229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetDistance: 1.2
+  attackAreaSize: {x: 1, y: 1}
+  rigidbody: {fileID: 564566066}
 --- !u!1 &590546098
 GameObject:
   m_ObjectHideFlags: 0

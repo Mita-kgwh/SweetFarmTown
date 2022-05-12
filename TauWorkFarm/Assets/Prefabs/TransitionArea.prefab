@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64e4d9a51ac72e4a95c4ebc58ac914b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionType: 0
+  sceneNameToTransition: 
+  targetPosition: {x: 0, y: 0, z: 0}
+  confiner: {fileID: 0}
+  destination: {fileID: 6188627575994941798}
 --- !u!1 &6188627575099988745
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +76,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6188627575099988745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.52, y: -6.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6188627574751703249}
