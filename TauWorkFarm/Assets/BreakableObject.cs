@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class BreakableObject : MonoBehaviour, IDamageable
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] int hp = 10;
+    public void ApplyDamage(int damage)
     {
-        
+        hp -= damage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CalculateDamage(ref int damage)
     {
-        
+        //how obj react to damage
+        damage /= 2;
+    }
+
+    public void CheckState()
+    {
+        if (hp <= 0 )
+        {
+            Destroy(gameObject);
+        }
     }
 }

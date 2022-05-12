@@ -24,4 +24,5 @@ public class GamesManager : MonoBehaviour
     //public ToolsBarController toolsBarController;
     //public InventoryController inventoryController;
     public ItemList itemDB;
+    public OnScreenMessageSystem messageSystem;
 }

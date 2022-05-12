@@ -5,10 +5,18 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
+    IDamageable damageable;
     // receive the damage, play animation and stuff
-    // Start is called before the first frame update
     internal void TakeDamage(int damage)
     {
-        Destroy(gameObject);
+        if (damageable == null)
+        {
+            damageable = GetComponent<IDamageable>();
+        }
+
+        damageable.CalculateDamage(ref damage);
+        damageable.ApplyDamage(damage);
+        GamesManager.Instance.messageSystem.PostMessage(transform.position, damage.ToString());
+        damageable.CheckState(); // check if damageable obj iz dead or not
     }
 }
