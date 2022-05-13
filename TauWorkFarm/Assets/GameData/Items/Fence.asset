@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d0c68c6d61ec34ea039889ee8fe6c4, type: 3}
+  m_Name: Fence
+  m_EditorClassIdentifier: 
+  Name: Fence
+  id: 12
+  stackable: 1
+  icon: {fileID: 8876550384976954016, guid: dad7df88d489ac944b779ef938f9bcbc, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: 925397be638126944a79c06cbe54624f, type: 2}
+  onItemUsed: {fileID: 11400000, guid: 925397be638126944a79c06cbe54624f, type: 2}
+  crop: {fileID: 0}
+  iconHighlight: 0
+  itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 10

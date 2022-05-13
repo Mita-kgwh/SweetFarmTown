@@ -15,7 +15,7 @@ public class ItemSpawnManager : MonoBehaviour
         }
     }
 
-    [SerializeField] GameObject pickUpItemPrefab;
+    [SerializeField] public GameObject pickUpItemPrefab;
 
     public void SpawnItem(Vector3 position, Item _item, int _count)
     {

@@ -64,3 +64,5 @@ MonoBehaviour:
   probability: 0.1
   spawnCount: 1
   oneTime: 0
+  targetSaveJSONList: {fileID: 11400000, guid: 2602ed90f314f5e4e8812b7f00cfe6b3, type: 2}
+  idInList: -1

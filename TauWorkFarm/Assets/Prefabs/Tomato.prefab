@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7013be2304f75804eaf03c4aa3df3e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   speedPickUp: 5
   pickUpDistance: 1.5
   timeToLive: 10

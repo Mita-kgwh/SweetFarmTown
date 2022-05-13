@@ -69,15 +69,15 @@ public class CropsManager : MonoBehaviour
         return tilemapCropsManager.Check(position);
     }
 
-    public void Seed(Vector3Int position, Crop toSeed)
+    public bool Seed(Vector3Int position, Crop toSeed)
     {
         if (tilemapCropsManager == null)
         {
             Debug.LogWarning("No tilemapcropmanager are referenced in the crops manager");
-            return;
+            return false;
         }
 
-        tilemapCropsManager.Seed(position, toSeed);
+        return tilemapCropsManager.Seed(position, toSeed);
     }
 
     public void Plow(Vector3Int position)

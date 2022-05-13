@@ -15,9 +15,7 @@ public class SeedTile : ToolsAction
             return false;
         }
         
-        tileMapReadController.cropsManager.Seed(gridPosition, item.crop);
-
-        return true;
+        return tileMapReadController.cropsManager.Seed(gridPosition, item.crop);
     }
 
     public override void OnItemUsed(Item useItem, ItemContainer toolbar)

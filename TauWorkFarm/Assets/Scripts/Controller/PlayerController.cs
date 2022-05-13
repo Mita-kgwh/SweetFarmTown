@@ -7,7 +7,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rigidbody;
-    public float speed;
+    [SerializeField] ParticleSystem dust;
+    [SerializeField] GameObject dustObject;
+    [SerializeField] float speed;
+    [SerializeField] float runspeed;
     public Animator animator;
 
     //private Vector3 direction;
@@ -15,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 motionVector;
 
     public bool ismoving;
+    bool running;
 
     private void Awake()
     {
@@ -25,10 +29,26 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         if (motionVector == null) { motionVector = new Vector2(); }
+        dustObject.SetActive(false);
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            running = true;
+            if (ismoving)
+            {
+                //dust.Play();
+                dustObject.SetActive(true);
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            running = false;
+            dustObject.SetActive(false);
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
@@ -59,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        rigidbody.velocity = motionVector * speed;
+        rigidbody.velocity = motionVector * (running == true? runspeed : speed);
     }
 
     void AnimateMovement(Vector2 motionVector)
@@ -67,6 +87,15 @@ public class PlayerController : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("IsMoving", ismoving);
+            if (running)
+            {
+                Debug.Log("im running");
+            }
+            if (ismoving)
+            {
+                Debug.Log("im movining");
+            }
+            if (ismoving && running) dust.Play();
             if (ismoving)
             {           
                 animator.SetFloat("horizontal", motionVector.x);

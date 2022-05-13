@@ -94,16 +94,20 @@ public class TilemapCropsManager : TimeAgent
         CreatePlowedTile(position);
     }
 
-    public void Seed(Vector3Int position, Crop toSeed)
+    public bool Seed(Vector3Int position, Crop toSeed)
     {
         //Debug.Log("alo alo");
         CropTile tile = cropsContainer.Get(position);
 
-        if (tile == null) { return; }
+        if (tile == null) { return false; }
+
+        if (tile.crop != null) { return false; }
 
         targetTilemap.SetTile(position, seeded);
 
         tile.crop = toSeed;
+
+        return true;
     }
 
     public void VisualizeTile(CropTile cropTile)
@@ -138,7 +142,7 @@ public class TilemapCropsManager : TimeAgent
         crop.position = position;
         VisualizeTile(crop);
 
-        targetTilemap.SetTile(position, plowed);
+        //targetTilemap.SetTile(position, plowed);
 
     }
 

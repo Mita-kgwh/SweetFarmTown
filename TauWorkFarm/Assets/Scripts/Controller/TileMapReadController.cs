@@ -5,18 +5,19 @@ using UnityEngine.Tilemaps;
 
 public class TileMapReadController : MonoBehaviour
 {
-    [SerializeField] Tilemap tilemap;
+    [SerializeField] Tilemap baseTilemap;
     public CropsManager cropsManager;
+    public GroundManager groundManager;
     public PlaceableObjectReferenceManager objectsManager;
 
 
     public Vector3Int GetGridPosition(Vector2 mousePosition, bool isMousePosition)
     {
-        if (tilemap == null)
+        if (baseTilemap == null)
         {
-            tilemap = GameObject.Find("Base").GetComponent<Tilemap>();
+            baseTilemap = GameObject.Find("Base").GetComponent<Tilemap>();
         }
-        if (tilemap == null) { return Vector3Int.zero; }
+        if (baseTilemap == null) { return Vector3Int.zero; }
 
         Vector3 worldPosition;
 
@@ -31,21 +32,21 @@ public class TileMapReadController : MonoBehaviour
         }
 
         // tu do chuyen ve grid cua tilemap
-        Vector3Int gridPosition = tilemap.WorldToCell(worldPosition);
+        Vector3Int gridPosition = baseTilemap.WorldToCell(worldPosition);
 
         return gridPosition;
     }
 
     public TileBase GetTileBase(Vector3Int gridPosition)
     {
-        if (tilemap == null)
+        if (baseTilemap == null)
         {
-            tilemap = GameObject.Find("Base").GetComponent<Tilemap>();
+            baseTilemap = GameObject.Find("Base").GetComponent<Tilemap>();
         }
-        if (tilemap == null) { return null; }
+        if (baseTilemap == null) { return null; }
 
         //va lay duoc tile do ra de check data
-        TileBase tile = tilemap.GetTile(gridPosition);
+        TileBase tile = baseTilemap.GetTile(gridPosition);
 
         //Debug.Log("Tile in position = " + gridPosition + " is " + tile);
 
