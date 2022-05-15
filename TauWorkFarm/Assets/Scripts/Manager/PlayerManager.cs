@@ -77,7 +77,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
         {
             Heal(10);
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             TakeDamage(10);
         }
@@ -127,9 +127,16 @@ public class PlayerManager : MonoBehaviour,IDamageable
 
         if (stamina.curVal < 0)
         {
-            isExhausted = true;
+            Exhausted();
         }
         UpdateStaminaBar();
+    }
+
+    private void Exhausted()
+    {
+        isExhausted = true;
+        disableControls.DisableControl();
+        playerRespawn.StartRespawn();
     }
 
     public void Rest(int amount)

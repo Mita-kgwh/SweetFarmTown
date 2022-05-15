@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0f2288ac7499a4b953731664a06c9d, type: 3}
   m_Name: Seed Tile
   m_EditorClassIdentifier: 
+  energyCost: 2

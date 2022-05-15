@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b101d6925e616954f89a90427f420e91, type: 3}
   m_Name: Hand Pick Up Action
   m_EditorClassIdentifier: 
+  energyCost: 1

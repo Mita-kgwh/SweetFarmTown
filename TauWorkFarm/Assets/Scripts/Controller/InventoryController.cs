@@ -31,6 +31,7 @@ public class InventoryController : MonoBehaviour
     }
     public void ToggleInventory()
     {
+        visible = inventoryPanel.activeInHierarchy;
         visible = !visible;
         inventoryPanel.SetActive(visible);
         //statusPanel.SetActive(visible);

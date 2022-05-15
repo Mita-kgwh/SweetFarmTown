@@ -16,6 +16,7 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] AnimationCurve nightTimeCurve;
     [SerializeField] Color dayLightColor = Color.white;
     [SerializeField] float startAtTime = 21600f;
+    [SerializeField] float morningTime = 28800f;    
 
     float time;
     private int days = 0;
@@ -135,5 +136,19 @@ public class DayTimeController : MonoBehaviour
         timetoskip += 3600 * hours;
         Debug.Log("Add time " + timetoskip);
         time += timetoskip;
+    }
+
+    public void SkipToMorning()
+    {
+        float secondsToSkip = 0f;
+        if (time > morningTime)
+        {
+            secondsToSkip += secondsInDay - time + morningTime;
+        }
+        else
+        {
+            secondsToSkip += morningTime - time;
+        }
+        SkipTime(secondsToSkip);
     }
 }

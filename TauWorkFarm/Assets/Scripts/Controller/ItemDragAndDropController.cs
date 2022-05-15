@@ -41,6 +41,14 @@ public class ItemDragAndDropController : MonoBehaviour
         }
     }
 
+    public bool CheckForSale()
+    {
+        if (slot.item == null) { return false; }
+        if (!slot.item.canBeSold) { return false; }
+
+        return true;
+    }
+
     internal void RemoveItem(int count = 1)
     {
         if (slot == null) { return; }
@@ -99,7 +107,7 @@ public class ItemDragAndDropController : MonoBehaviour
         }
         UpdateIcon();
     }
-    private void UpdateIcon()
+    public void UpdateIcon()
     {
         if (slot.item == null)
         {

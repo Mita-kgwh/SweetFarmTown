@@ -12,7 +12,12 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
 
     int myIndex;
 
-    //public InventoryPanel inventory;
+    ItemPanel itemPanel;
+
+    public void SetItemPanel(ItemPanel source)
+    {
+        itemPanel = source;
+    }
 
     public void SetIndex(int index)
     {
@@ -45,19 +50,9 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        
-        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
-        //Debug.Log(myIndex + " Slot_UI");
-        //if (itemPanel != null)
-        {
-            //Debug.Log("itemPanel found");
-            itemPanel.OnClick(myIndex);
-        }
-        //else
-        //{
-        //    //Debug.Log("itemPanel not found");
-        //}
-            
+
+        itemPanel.OnClick(myIndex);
+     
     }
 
     public void HighLight(bool highlight)

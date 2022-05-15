@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,17 +21,28 @@ public class ItemPanel : MonoBehaviour
 
     public void Init()
     {
+        SetSourcePanel();
         SetIndex();
+        Show();
+    }
+
+    private void SetSourcePanel()
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            slots[i].SetItemPanel(this);
+        }
     }
 
     private void OnEnable()
     {
+        Clear();
         Show();
     }
 
     private void LateUpdate()
     {
-        //if (itemContainer == null) { return; }
+        if (itemContainer == null) { return; }
         if (itemContainer.isChanging)
         {
             Show();
@@ -47,6 +59,8 @@ public class ItemPanel : MonoBehaviour
     }
     public virtual void Show()
     {
+        if (itemContainer == null) { return; }
+
         for (int i = 0; i < itemContainer.slots.Count && i < slots.Count; i++)
         {
             if (itemContainer.slots[i].item == null)
@@ -58,6 +72,19 @@ public class ItemPanel : MonoBehaviour
                 slots[i].SetItem(itemContainer.slots[i]);
             }
         }
+    }
+
+    public void Clear()
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            slots[i].SetEmpty();
+        }
+    }
+
+    public void SetInventory(ItemContainer newContainer)
+    {
+        itemContainer = newContainer;
     }
 
 

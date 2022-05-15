@@ -89,11 +89,11 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsMoving", ismoving);
             if (running)
             {
-                Debug.Log("im running");
+                //Debug.Log("im running");
             }
             if (ismoving)
             {
-                Debug.Log("im movining");
+                //Debug.Log("im movining");
             }
             if (ismoving && running) dust.Play();
             if (ismoving)

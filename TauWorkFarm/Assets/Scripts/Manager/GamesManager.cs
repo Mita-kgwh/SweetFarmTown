@@ -25,4 +25,5 @@ public class GamesManager : MonoBehaviour
     //public InventoryController inventoryController;
     public ItemList itemDB;
     public OnScreenMessageSystem messageSystem;
+    public ScreenTint screenTint;
 }

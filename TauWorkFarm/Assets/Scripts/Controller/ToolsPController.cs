@@ -18,6 +18,7 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] AttackController attackController;
     [SerializeField] ToolsBarController toolsBarController;
     [SerializeField] Animator animator;
+    [SerializeField] int weaponEnergyCost = 5;
 
     Vector3Int selectedTilePosition;
     bool selectable;
@@ -48,9 +49,17 @@ public class ToolsPController : MonoBehaviour
         if (item == null) { return; }
         if (!item.isWeapon) { return; }
 
+        EnergyCost(weaponEnergyCost);
+
         Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;
 
         attackController.Attack(item.damage, player.lastDirection);
+    }
+
+    private void EnergyCost(int energyCost)
+    {
+        //Item item = toolsBarController.GetItem;
+        PlayerManager.Instance.GetTired(energyCost);
     }
 
     private void SelectTile()
@@ -87,6 +96,8 @@ public class ToolsPController : MonoBehaviour
 
         if (complete)
         {
+            EnergyCost(item.onAction.energyCost);
+
             if (item.onItemUsed != null)
             {
                 item.onItemUsed.OnItemUsed(item, GamesManager.Instance.inventoryContainer);
@@ -116,6 +127,8 @@ public class ToolsPController : MonoBehaviour
 
             if (complete)
             {
+                EnergyCost(item.onTileMapAction.energyCost);
+
                 if (item.onItemUsed != null)
                 {
                     item.onItemUsed.OnItemUsed(item, GamesManager.Instance.inventoryContainer);
