@@ -104,4 +104,9 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    private void OnDisable()
+    {
+        rigidbody.velocity = Vector2.zero;
+    }
 }

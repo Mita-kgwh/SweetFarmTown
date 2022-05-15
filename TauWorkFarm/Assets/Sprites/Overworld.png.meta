@@ -319,7 +319,7 @@ TextureImporter:
     second: Overworld_104
   - first:
       213: -8913737552123147707
-    second: Overworld_105
+    second: Skull
   - first:
       213: -7763379118718156081
     second: Overworld_106
@@ -4921,7 +4921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_105
+      name: Skull
       rect:
         serializedVersion: 2
         x: 448

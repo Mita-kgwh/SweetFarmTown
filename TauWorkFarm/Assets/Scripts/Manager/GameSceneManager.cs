@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using System;
 
 public class GameSceneManager : MonoBehaviour
 {
@@ -23,16 +24,31 @@ public class GameSceneManager : MonoBehaviour
     AsyncOperation unload;
     AsyncOperation load;
 
+    bool respawnTransition;
     // Start is called before the first frame update
     void Start()
     {
         currentScene = SceneManager.GetActiveScene().name;
     }
 
+    internal void ReSpawn(Vector3 respawnPointPosition, string respawnPointScene)
+    {
+        respawnTransition = true;
+        if (currentScene != respawnPointScene)
+        {
+            InitSwitchScene(respawnPointScene, respawnPointPosition);
+        }
+        else
+        {
+            MovePlayer(respawnPointPosition);
+        }
+    }
+
     public void InitSwitchScene(string toScene, Vector3 targetPosition)
     {
         StartCoroutine(Transition(toScene, targetPosition));
     }
+
 
     IEnumerator Transition(string toScene, Vector3 targetPosition)
     {
@@ -60,8 +76,13 @@ public class GameSceneManager : MonoBehaviour
         load = SceneManager.LoadSceneAsync(toScene, LoadSceneMode.Additive);
         unload = SceneManager.UnloadSceneAsync(currentScene);
         currentScene = toScene;
+        MovePlayer(targetPosition);
+    }
+
+    private void MovePlayer(Vector3 targetPosition)
+    {
         Transform playerTransform = GamesManager.Instance.player.transform;
-   
+
         CinemachineBrain currentCamera = Camera.main.GetComponent<CinemachineBrain>();
         currentCamera.ActiveVirtualCamera.OnTargetObjectWarped(
             playerTransform,
@@ -72,6 +93,12 @@ public class GameSceneManager : MonoBehaviour
             targetPosition.x,
             targetPosition.y,
             playerTransform.position.z);
-    }
 
+        if (respawnTransition)
+        {
+            PlayerManager.Instance.FullHeal();
+            PlayerManager.Instance.GetComponent<DisableControls>().EnableControl();
+            respawnTransition = false;
+        }
+    }
 }

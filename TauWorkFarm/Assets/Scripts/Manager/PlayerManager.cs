@@ -35,7 +35,7 @@ public class Stat
     }
 }
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour,IDamageable
 {
     private static PlayerManager instance;
     public static PlayerManager Instance
@@ -55,6 +55,15 @@ public class PlayerManager : MonoBehaviour
 
     public bool isDead;
     public bool isExhausted;
+
+    DisableControls disableControls;
+    PlayerRespawn playerRespawn;
+
+    private void Awake()
+    {
+        disableControls = GetComponent<DisableControls>();
+        playerRespawn = GetComponent<PlayerRespawn>();
+    }
 
     private void Start()
     {
@@ -84,13 +93,22 @@ public class PlayerManager : MonoBehaviour
     }
     public void TakeDamage(int amount)
     {
+        if (isDead) { return; }
         hp.Subtract(amount);
         if (hp.curVal < 0)
         {
-            isDead = true;
+            Dead();
         }
         UpdateHPBar();
     }
+
+    private void Dead()
+    {
+        isDead = true;
+        disableControls.DisableControl();
+        playerRespawn.StartRespawn();
+    }
+
     public void Heal(int amount)
     {
         hp.Add(amount);
@@ -124,5 +142,20 @@ public class PlayerManager : MonoBehaviour
     {
         stamina.SetToMax();
         UpdateStaminaBar();
+    }
+
+    public void CalculateDamage(ref int damage)
+    {
+        damage -= 2;
+    }
+
+    public void ApplyDamage(int damage)
+    {
+        TakeDamage(damage);
+    }
+
+    public void CheckState()
+    {
+        
     }
 }

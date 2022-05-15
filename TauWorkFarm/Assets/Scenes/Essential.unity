@@ -1468,11 +1468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7156107965390698091, guid: 497436774be349a4889299118cf62333, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156107965390698091, guid: 497436774be349a4889299118cf62333, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156107965390698091, guid: 497436774be349a4889299118cf62333, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2338,11 +2338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7156107965390698091, guid: 497436774be349a4889299118cf62333, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156107965390698091, guid: 497436774be349a4889299118cf62333, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156107965390698091, guid: 497436774be349a4889299118cf62333, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2931,6 +2931,9 @@ GameObject:
   - component: {fileID: 564566073}
   - component: {fileID: 564566074}
   - component: {fileID: 564566075}
+  - component: {fileID: 564566076}
+  - component: {fileID: 564566077}
+  - component: {fileID: 564566078}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3172,6 +3175,44 @@ MonoBehaviour:
   offsetDistance: 1.2
   attackAreaSize: {x: 1, y: 1}
   rigidbody: {fileID: 564566066}
+--- !u!114 &564566076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564566062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d660f5a1f43f945a967cbc5ed06d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &564566077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564566062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565022e97207b9f468a8dac58ad9face, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &564566078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564566062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb372d9522b31b74dbbaa690a15e8078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPointPosition: {x: 0, y: 0, z: 0}
+  respawnPointScene: StartScene
 --- !u!1 &590546098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7226,7 +7267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1302115662
 RectTransform:
   m_ObjectHideFlags: 0
