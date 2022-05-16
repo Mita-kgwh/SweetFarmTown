@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public bool ismoving;
     bool running;
 
+    public Joystick joystick;
+
     private void Awake()
     {
         if (rigidbody == null) { rigidbody = GetComponent<Rigidbody2D>(); }
@@ -51,6 +53,34 @@ public class PlayerController : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+
+        //if (joystick.Horizontal >= .2f)
+        //{
+        //    horizontal = 1;
+        //}
+        //else if (joystick.Horizontal <= -.2f)
+        //{
+        //    horizontal = -1;
+        //}
+        //else
+        //{
+        //    horizontal = 0;
+        //}
+
+        //if (joystick.Vertical >= .2f)
+        //{
+        //    vertical = 1;
+        //}
+        //else if (joystick.Vertical <= -.2f)
+        //{
+        //    vertical = -1;
+        //}
+        //else
+        //{
+        //    vertical = 0;
+        //}
+
+
 
 
         motionVector.x = horizontal;

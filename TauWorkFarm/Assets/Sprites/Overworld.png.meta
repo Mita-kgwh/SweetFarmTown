@@ -334,7 +334,7 @@ TextureImporter:
     second: Plant
   - first:
       213: -4880669222957850763
-    second: Overworld_110
+    second: BlueFlowerPot
   - first:
       213: 4479181887894498110
     second: Overworld_111
@@ -5026,7 +5026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_110
+      name: BlueFlowerPot
       rect:
         serializedVersion: 2
         x: 528

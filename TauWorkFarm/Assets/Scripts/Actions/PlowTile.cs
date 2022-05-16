@@ -13,26 +13,28 @@ public class PlowTile : ToolsAction
         TileMapReadController tileMapReadController,
         Item item)
     {
-        Debug.Log("OnApplyToTileMap");
+        //Debug.Log("OnApplyToTileMap");
         if (canPlow == null)
         {
             Debug.Log("canPlow null");
             return true;
         }
-        TileBase tileToPlow = tileMapReadController.GetTileBase(gridPosition);
-        if (tileToPlow == null)
-        {
-            Debug.Log("tile to plow null");
-        }
-        //else
-        //{
-        //    Debug.Log(tileToPlow.name);
-        //}
-        if (!canPlow.Contains(tileToPlow))
-        {
-            Debug.Log("not contains");
-            return false;
-        }
+        //check if that tile is center
+        TileBase tileToPlow;
+        Vector3Int positionCheck = new Vector3Int();
+        for (int i = -1; i <= 1; i++)
+            for (int j = -1; j <= 1; j++)
+            {
+                positionCheck.x = gridPosition.x + i;
+                positionCheck.y = gridPosition.y + j;
+
+                tileToPlow = tileMapReadController.GetTileBase(positionCheck);
+                if (!canPlow.Contains(tileToPlow))
+                {
+                    //Debug.Log("not contains");
+                    return false;
+                }
+            }
 
         tileMapReadController.cropsManager.Plow(gridPosition);
 

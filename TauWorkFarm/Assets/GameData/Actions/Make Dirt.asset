@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818cb4559d1e87b4391ef27890228d66, type: 3}
+  m_Name: Make Dirt
+  m_EditorClassIdentifier: 
+  energyCost: 5
+  canMakeDirt:
+  - {fileID: 11400000, guid: ebfaf4f052c83cd478013693cfb51c68, type: 2}
+  - {fileID: 11400000, guid: ed2a6d67fb8914c40865c8cc2d7d93e8, type: 2}
+  onPlowUsed: {fileID: 8300000, guid: 3f5164c49dc99a24688453511a00925a, type: 3}

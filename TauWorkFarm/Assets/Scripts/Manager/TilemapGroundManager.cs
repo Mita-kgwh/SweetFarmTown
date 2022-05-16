@@ -14,7 +14,6 @@ public class TilemapGroundManager : MonoBehaviour
 
     [SerializeField] FencesContainer fencesContainer;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (groundTilemap == null) { groundTilemap = GetComponent<Tilemap>(); }
@@ -22,13 +21,6 @@ public class TilemapGroundManager : MonoBehaviour
         VisualizeMap();
     }
 
-    //private void OnDestroy()
-    //{
-    //    for (int i = 0; i < fencesContainer.fences.Count; i++)
-    //    {
-    //        fencesContainer.fences[i].renderer = null;
-    //    }
-    //}
     private void VisualizeMap()
     {
         for (int i = 0; i < fencesContainer.fences.Count; i++)

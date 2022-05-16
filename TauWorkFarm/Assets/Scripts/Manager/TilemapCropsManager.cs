@@ -59,7 +59,7 @@ public class TilemapCropsManager : TimeAgent
 
             if (cropTile.isComplete)
             {
-                Debug.Log("I'm done growing");
+                //Debug.Log("I'm done growing");
                 continue;
             }
 

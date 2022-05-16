@@ -14,10 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energyCost: 5
   canPlow:
-  - {fileID: 11400000, guid: 87022897bcf71054ab7e1f0933f4cd3a, type: 2}
-  - {fileID: 11400000, guid: 72b65f10b6edaff4e904bd69d22636e4, type: 2}
-  - {fileID: 11400000, guid: b444b10b41787fe498280fcc9743b26b, type: 2}
-  - {fileID: 11400000, guid: b0bc315dc4ffbc443899a45725d5e44c, type: 2}
-  - {fileID: 11400000, guid: 179bcfe56844de3408b08f643c931c7d, type: 2}
   - {fileID: 11400000, guid: ed2a6d67fb8914c40865c8cc2d7d93e8, type: 2}
   onPlowUsed: {fileID: 8300000, guid: 3f5164c49dc99a24688453511a00925a, type: 3}
