@@ -20,6 +20,18 @@ public class DisableControls : MonoBehaviour
 
     }
 
+    public DisableControls DisableToolsPController()
+    {
+        toolsPController.enabled = false;
+        return this;
+    }
+
+    public DisableControls EnableToolsPController()
+    {
+        toolsPController.enabled = true;
+        return this;
+    }
+
     public void DisableControl()
     {
         playerController.enabled = false;

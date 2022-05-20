@@ -13,7 +13,7 @@ public class PlowTile : ToolsAction
         TileMapReadController tileMapReadController,
         Item item)
     {
-        //Debug.Log("OnApplyToTileMap");
+        //Debug.Log("OnApplyToTileMap Plow");
         if (canPlow == null)
         {
             Debug.Log("canPlow null");

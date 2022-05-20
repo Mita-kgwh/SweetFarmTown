@@ -10,6 +10,11 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject additionalPanel;
 
     bool visible;
+    DisableControls disableControls;
+    private void Awake()
+    {
+        disableControls = PlayerManager.Instance.GetComponent<DisableControls>();
+    }
 
     private void Start()
     {
@@ -25,10 +30,16 @@ public class InventoryController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            statusPanel.SetActive(!statusPanel.activeInHierarchy);
+            ToggleCrafting();
         }
 
     }
+
+    public void ToggleCrafting()
+    {
+        statusPanel.SetActive(!statusPanel.activeInHierarchy);
+    }
+
     public void ToggleInventory()
     {
         visible = inventoryPanel.activeInHierarchy;
@@ -36,6 +47,14 @@ public class InventoryController : MonoBehaviour
         inventoryPanel.SetActive(visible);
         //statusPanel.SetActive(visible);
         toolBarPanel.SetActive(!visible);
+        if (visible)
+        {
+            disableControls.DisableToolsPController();
+        }
+        else
+        {
+            disableControls.EnableToolsPController();
+        }
     }
 
     public void Open()

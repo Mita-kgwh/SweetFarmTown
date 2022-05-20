@@ -13,14 +13,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float runspeed;
     public Animator animator;
 
-    //private Vector3 direction;
     public Vector2 lastDirection;
     private Vector2 motionVector;
 
     public bool ismoving;
-    bool running;
+    public bool running;
 
     public Joystick joystick;
+
+    //private float timer;
+    //private float COUNT_DOWN_TO_RUN = 3f;
 
     private void Awake()
     {
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         if (motionVector == null) { motionVector = new Vector2(); }
         dustObject.SetActive(false);
+        lastDirection += Vector2.down;
     }
 
     void Update()
@@ -51,36 +54,45 @@ public class PlayerController : MonoBehaviour
             dustObject.SetActive(false);
         }
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        //float horizontal = Input.GetAxisRaw("Horizontal");
+        //float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = 0; 
+        float vertical = 0;
 
-        //if (joystick.Horizontal >= .2f)
-        //{
-        //    horizontal = 1;
-        //}
-        //else if (joystick.Horizontal <= -.2f)
-        //{
-        //    horizontal = -1;
-        //}
+        if (joystick.Horizontal >= .2f)
+        {
+            horizontal = 1;
+        }
+        else if (joystick.Horizontal <= -.2f)
+        {
+            horizontal = -1;
+        }
         //else
         //{
         //    horizontal = 0;
         //}
 
-        //if (joystick.Vertical >= .2f)
-        //{
-        //    vertical = 1;
-        //}
-        //else if (joystick.Vertical <= -.2f)
-        //{
-        //    vertical = -1;
-        //}
+        if (joystick.Vertical >= .2f)
+        {
+            vertical = 1;
+        }
+        else if (joystick.Vertical <= -.2f)
+        {
+            vertical = -1;
+        }
         //else
         //{
         //    vertical = 0;
         //}
 
-
+        if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
+        {
+            vertical = 0;
+        }
+        else
+        {
+            horizontal = 0;
+        }
 
 
         motionVector.x = horizontal;
@@ -92,10 +104,20 @@ public class PlayerController : MonoBehaviour
         AnimateMovement(motionVector);
         if (ismoving)
         {
+            //timer -= Time.deltaTime;
             lastDirection = new Vector2(horizontal,vertical).normalized;
             animator.SetFloat("lasthorizontal", horizontal);
             animator.SetFloat("lastvertical", vertical);
+            //if (timer <= 0)
+            //{
+            //    running = true;
+            //}
         }
+        //else
+        //{
+        //    timer = COUNT_DOWN_TO_RUN;
+        //    running = false;
+        //}
 
         
     }

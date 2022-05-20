@@ -34,6 +34,7 @@ public class MakeDirt : ToolsAction
                     return false;
                 }
             }
+        bool checknew = true;
 
         for (int i = -1; i <= 1; i++)
             for (int j = -1; j <= 1; j++)
@@ -45,10 +46,14 @@ public class MakeDirt : ToolsAction
                 {
                     tileMapReadController.baseManager.MakeDirt(positionCheck);
                 }
+                else
+                {
+                    checknew = false;
+                }
             }
 
         MusicManager.Instance.PlayEfx(onPlowUsed);
 
-        return true;
+        return checknew;
     }
 }

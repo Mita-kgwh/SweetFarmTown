@@ -9,7 +9,6 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] PlayerController player;
     [SerializeField] Rigidbody2D rgbd2d;
     [SerializeField] float offsetDis = 1f;
-    //[SerializeField] float sizeOfInteractableArea = 0.7f;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float maxDistance = 1.5f;
@@ -29,17 +28,34 @@ public class ToolsPController : MonoBehaviour
         {
             WeaponAction();
         }
-        SelectTile();
-        CanSelectCheck();
-        Marker();
-        if (Input.GetMouseButtonDown(0))
+        if (!player.ismoving)
         {
-            if (UseToolWorld()) 
-            {
-                return;
-            }
-            UseToolGrid();
+            SelectTile();
+            markerManager.Show(true);
+            iconHighlight.CanSelect = true; // setter has function SetActive
+            Marker();
         }
+        else
+        {
+            markerManager.Show(false);
+            iconHighlight.CanSelect = false; // setter has function SetActive
+        }
+        //SelectTile();
+        //CanSelectCheck();
+        //Marker();
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    UseButtonPressed();
+        //}
+    }
+
+    public void UseButtonPressed()
+    {
+        if (UseToolWorld())
+        {
+            return;
+        }
+        UseToolGrid();
     }
 
     private void WeaponAction()
@@ -64,7 +80,10 @@ public class ToolsPController : MonoBehaviour
 
     private void SelectTile()
     {
-        selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
+        //selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
+        Vector2 position = new Vector2(transform.position.x, transform.position.y);
+        position += player.lastDirection;
+        selectedTilePosition = tileMapReadController.GetGridPosition(position, false);
     }
 
     void CanSelectCheck()
@@ -73,7 +92,7 @@ public class ToolsPController : MonoBehaviour
         Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         selectable = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
         markerManager.Show(selectable);
-        iconHighlight.CanSelect = selectable; // setter has function setactive
+        iconHighlight.CanSelect = selectable; // setter has function SetActive
     }
 
     private void Marker()
@@ -109,31 +128,32 @@ public class ToolsPController : MonoBehaviour
 
     private void UseToolGrid()
     {
-        if (selectable)
+        //if (selectable)
+        //{
+            
+        //}
+
+        Item item = toolsBarController.GetItem;
+        if (item == null)
         {
-            Item item = toolsBarController.GetItem;
-            if (item == null) 
+            PickUpTile();
+            return;
+        }
+        if (item.onTileMapAction == null) { return; }
+
+        animator.SetTrigger("Act");
+
+        bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition,
+            tileMapReadController,
+            item);
+
+        if (complete)
+        {
+            EnergyCost(item.onTileMapAction.energyCost);
+
+            if (item.onItemUsed != null)
             {
-                PickUpTile();
-                return; 
-            }
-            if (item.onTileMapAction == null) { return; }
-
-            animator.SetTrigger("Act");
-         
-            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, 
-                tileMapReadController, 
-                item);
-
-            if (complete)
-            {
-                EnergyCost(item.onTileMapAction.energyCost);
-
-                if (item.onItemUsed != null)
-                {
-                    item.onItemUsed.OnItemUsed(item, GamesManager.Instance.inventoryContainer);
-                    //toolsBarController.UpdateQuantity();
-                }
+                item.onItemUsed.OnItemUsed(item, GamesManager.Instance.inventoryContainer);
             }
         }
     }

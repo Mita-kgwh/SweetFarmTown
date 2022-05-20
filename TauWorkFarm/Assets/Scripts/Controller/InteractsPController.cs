@@ -38,6 +38,11 @@ public class InteractsPController : MonoBehaviour
         highlightController.Hide();
     }
 
+    public void InteractPressed()
+    {
+        Interacts();
+    }
+
     private void Interacts()
     {
         Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;

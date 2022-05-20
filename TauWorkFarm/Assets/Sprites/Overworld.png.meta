@@ -70,13 +70,13 @@ TextureImporter:
     second: Overworld_21
   - first:
       213: -1133759038122202709
-    second: Overworld_22
+    second: FloorTopLeft
   - first:
       213: -191729290340861241
-    second: Overworld_23
+    second: FloorTop
   - first:
       213: -5666481261984047100
-    second: Overworld_24
+    second: FloorTopRight
   - first:
       213: -67688370196173548
     second: Overworld_25
@@ -88,10 +88,10 @@ TextureImporter:
     second: Overworld_27
   - first:
       213: 1057873545096308223
-    second: Overworld_28
+    second: FloorCornerBotRight
   - first:
       213: -4390251584830932216
-    second: Overworld_29
+    second: FloorCornerBotLeft
   - first:
       213: 9127930197081173706
     second: Overworld_30
@@ -184,13 +184,13 @@ TextureImporter:
     second: Overworld_59
   - first:
       213: 80637319280397245
-    second: Overworld_60
+    second: FloorLeft
   - first:
       213: 3814160243213279374
-    second: Overworld_61
+    second: FloorCenter
   - first:
       213: -7115452956757331219
-    second: Overworld_62
+    second: FloorRight
   - first:
       213: 778222498693616324
     second: Overworld_63
@@ -202,10 +202,10 @@ TextureImporter:
     second: Overworld_65
   - first:
       213: -6395968899730031133
-    second: Overworld_66
+    second: FloorCornerTopRight
   - first:
       213: 1028809460593705589
-    second: Overworld_67
+    second: FloorCornerTopLeft
   - first:
       213: -7935097258379791595
     second: Overworld_68
@@ -301,13 +301,13 @@ TextureImporter:
     second: Overworld_98
   - first:
       213: 299263487006236579
-    second: Overworld_99
+    second: FloorBotLeft
   - first:
       213: -6360046143910995651
-    second: Overworld_100
+    second: FloorBot
   - first:
       213: 4630787559964711824
-    second: Overworld_101
+    second: FloorBotRight
   - first:
       213: -2752136873808637250
     second: Overworld_102
@@ -3619,7 +3619,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_22
+      name: FloorTopLeft
       rect:
         serializedVersion: 2
         x: 352
@@ -3640,7 +3640,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_23
+      name: FloorTop
       rect:
         serializedVersion: 2
         x: 368
@@ -3661,7 +3661,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_24
+      name: FloorTopRight
       rect:
         serializedVersion: 2
         x: 384
@@ -3745,7 +3745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_28
+      name: FloorCornerBotRight
       rect:
         serializedVersion: 2
         x: 448
@@ -3766,7 +3766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_29
+      name: FloorCornerBotLeft
       rect:
         serializedVersion: 2
         x: 464
@@ -4207,7 +4207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_60
+      name: FloorLeft
       rect:
         serializedVersion: 2
         x: 352
@@ -4228,7 +4228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_61
+      name: FloorCenter
       rect:
         serializedVersion: 2
         x: 368
@@ -4249,7 +4249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_62
+      name: FloorRight
       rect:
         serializedVersion: 2
         x: 384
@@ -4333,7 +4333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_66
+      name: FloorCornerTopRight
       rect:
         serializedVersion: 2
         x: 448
@@ -4354,7 +4354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_67
+      name: FloorCornerTopLeft
       rect:
         serializedVersion: 2
         x: 464
@@ -4795,7 +4795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_99
+      name: FloorBotLeft
       rect:
         serializedVersion: 2
         x: 352
@@ -4816,7 +4816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_100
+      name: FloorBot
       rect:
         serializedVersion: 2
         x: 368
@@ -4837,7 +4837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_101
+      name: FloorBotRight
       rect:
         serializedVersion: 2
         x: 384
