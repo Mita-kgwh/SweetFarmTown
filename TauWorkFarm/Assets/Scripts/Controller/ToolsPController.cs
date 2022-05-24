@@ -11,13 +11,14 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] float offsetDis = 1f;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
-    [SerializeField] float maxDistance = 1.5f;
+    [SerializeField] float maxDistance;
     [SerializeField] ToolsAction onTilePickUp;
     [SerializeField] IconHighlight iconHighlight;
     [SerializeField] AttackController attackController;
     [SerializeField] ToolsBarController toolsBarController;
     [SerializeField] Animator animator;
     [SerializeField] int weaponEnergyCost = 5;
+    [SerializeField] GameObject toolRange;
 
     Vector3Int selectedTilePosition;
     bool selectable;
@@ -31,18 +32,21 @@ public class ToolsPController : MonoBehaviour
         if (!player.ismoving)
         {
             SelectTile();
-            markerManager.Show(true);
-            iconHighlight.CanSelect = true; // setter has function SetActive
+            //markerManager.Show(true);
+            //iconHighlight.CanSelect = true; // setter has function SetActive
+            CanSelectCheck();
             Marker();
+            ShowRange();
         }
         else
         {
             markerManager.Show(false);
             iconHighlight.CanSelect = false; // setter has function SetActive
+            toolRange.SetActive(false);
         }
-        SelectTile();
-        CanSelectCheck();
-        Marker();
+        //SelectTile();
+        //CanSelectCheck();
+        //Marker();
         //if (Input.GetMouseButtonDown(0))
         //{
         //    if (Input.mousePosition.x > (Screen.width / 4) 
@@ -108,7 +112,15 @@ public class ToolsPController : MonoBehaviour
     private void Marker()
     {
         markerManager.markedCellPosition = selectedTilePosition;
-        iconHighlight.cellPosition = selectedTilePosition;
+        iconHighlight.cellPosition = selectedTilePosition;    
+    }
+
+    private void ShowRange()
+    {
+        Item item = toolsBarController.GetItem;
+        if (item == null) { return; }
+        if (item.onAction == null && item.onTileMapAction == null) { return; }
+        toolRange.SetActive(true);
     }
 
     private bool UseToolWorld() // interact with physical object
@@ -178,6 +190,6 @@ public class ToolsPController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 1.5f);
+        Gizmos.DrawWireSphere(transform.position, maxDistance);
     }
 }
