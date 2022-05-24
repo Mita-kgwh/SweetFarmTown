@@ -29,7 +29,7 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
-        Play(playOnStart, true);
+        //Play(playOnStart, true);
         Init();
     }
 

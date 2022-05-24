@@ -25,7 +25,7 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
     }
 
     // Start is called before the first frame update
-    public void SetItem(Slot slot)
+    public virtual void SetItem(Slot slot)
     {
         itemIcon.sprite = slot.item.icon;
         itemIcon.color = new Color(1, 1, 1, 1);
@@ -41,7 +41,7 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void SetEmpty()
+    public virtual void SetEmpty()
     {
         itemIcon.sprite = null;
         itemIcon.color = new Color(1, 1, 1, 0);

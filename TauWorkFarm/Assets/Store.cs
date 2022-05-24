@@ -9,11 +9,14 @@ public class Store : Interactable
     public float buyFromPlayerMultip = 0.5f;
     public float sellToPlayerMultip = 1.5f;
 
+    Trading trading;
+
     public override void Interact(PlayerController player)
     {
-        Trading trading = player.GetComponent<Trading>();
+        trading = player.GetComponent<Trading>();
         if (trading == null) { return; }
         //Debug.Log("interact sucess");
+        trading.ButtonBuy(true).ButtonSell(true);
         trading.BeginTrading(this);
     }
 }

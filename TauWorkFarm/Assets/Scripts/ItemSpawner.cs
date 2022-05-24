@@ -34,8 +34,8 @@ public class ItemSpawner : MonoBehaviour
         {
             if (countup == (productTime / 2))
             {
-                Debug.Log("need take care");
-                NeedTakeCare();
+                Debug.Log("Hurry");
+                Hungry();
             }
             return;
         }
@@ -54,7 +54,7 @@ public class ItemSpawner : MonoBehaviour
         countup = 0;
 
     }
-    private void NeedTakeCare()
+    private void Hungry()
     {
         needcare = -1;
         imageCaution.SetActive(true);

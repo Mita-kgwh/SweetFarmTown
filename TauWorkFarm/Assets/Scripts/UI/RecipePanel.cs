@@ -6,6 +6,9 @@ public class RecipePanel : ItemPanel
 {
     [SerializeField] RecipeList recipeList;
     [SerializeField] Crafting crafting;
+    [SerializeField] RecipeItemListPanel recipeItemListPanel;
+
+    int selectedID;
 
     public override void Show()
     {
@@ -19,6 +22,14 @@ public class RecipePanel : ItemPanel
     {
         if (id >= recipeList.recipes.Count) { return; }
 
-        crafting.Craft(recipeList.recipes[id]);
+        recipeItemListPanel.Show(recipeList.recipes[id].recipeElements);
+
+        selectedID = id;
     }
+
+    public void CraftNow()
+    {
+        crafting.Craft(recipeList.recipes[selectedID]);
+    }
+
 }

@@ -20,15 +20,14 @@ public class ItemDragAndDropController : MonoBehaviour
     private void Update()
     {
         if (dragIcon.activeInHierarchy)
-        {
-            
+        {        
             iconTransform.position = Input.mousePosition;
 
             if (Input.GetMouseButtonDown(0))
             {
                 if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    //Debug.Log("Out");
+                    Debug.Log("Out");
                     // chuyen mouseposition thanh worldposition de spawn item
                     Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     worldPosition.z = 0f; //tranh viec spawn phia sau cameraa

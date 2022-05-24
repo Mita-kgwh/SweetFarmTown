@@ -6,31 +6,31 @@ using UnityEngine;
 public class ItemStorePanel : ItemPanel
 {
     [SerializeField] Trading trading;
-
+    //public List<StoreSlot_UI> storeSlots;
     public override void OnClick(int id)
     {
-        if (GamesManager.Instance.dragAndDropController.slot.item == null)
-        {
-            BuyItem(id);
-        }
-        else
-        {
-            SellItem();
-        }
+        //if (GamesManager.Instance.dragAndDropController.slot.item == null)
+        //{
+        //    ShowQuantityPanel(id);
+        //}
+        //else
+        //{
+        //    SellItem();
+        //}
+        ShowQuantityPanel(id);
         
         Show();
     }
 
-    private void BuyItem(int id)
+    private void ShowQuantityPanel(int id)
     {
-        trading.BuyItem(id);
+        //trading.BuyItem(id);   
+        trading.ShowQuantityPanel(id, itemContainer.slots[id], true).ButtonBuy(true).ButtonSell(false);
     }
 
     private void SellItem()
     {
         trading.SellItem();
     }
-
-
 
 }

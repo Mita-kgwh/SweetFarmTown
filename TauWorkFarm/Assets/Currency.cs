@@ -31,7 +31,7 @@ public class Currency : MonoBehaviour
         return amout >= totalPrice;
     }
 
-    internal void Decrease(int totalPrice)
+    public void Decrease(int totalPrice)
     {
         amout -= totalPrice;
         if (amout < 0) { amout = 0; }

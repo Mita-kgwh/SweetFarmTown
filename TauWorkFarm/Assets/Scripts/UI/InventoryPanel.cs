@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InventoryPanel : ItemPanel
 {
+    [SerializeField] Trading trading;
+    bool inStore;
+
     private void Start()
     {
         //this.slots.ForEach(x =>
@@ -13,11 +16,24 @@ public class InventoryPanel : ItemPanel
         Init();
     }
 
+    private void OnEnable()
+    {
+        inStore = trading.CheckStore();
+        Show();
+    }
+
     public override void OnClick(int id)
     {
         //Debug.Log("Inventory Panel");
-        GamesManager.Instance.dragAndDropController.OnClick(itemContainer.slots[id]);
-        
+        if (inStore)
+        {
+            trading.ShowQuantityPanel(id, itemContainer.slots[id], false).ButtonSell(true).ButtonBuy(false);
+        }
+        else
+        {
+            GamesManager.Instance.dragAndDropController.OnClick(itemContainer.slots[id]);
+        }
+
         Show();
     }
 }

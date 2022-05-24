@@ -9,6 +9,24 @@ public class DisableControls : MonoBehaviour
     InventoryController inventoryController;
     ToolsBarController toolsBarController;
     ItemContainerInteractController interactController;
+    [SerializeField] GameObject inventoryButton;
+    [SerializeField] GameObject craftButton;
+    [SerializeField] GameObject joystickButton;
+    [SerializeField] GameObject interactButton;
+    [SerializeField] GameObject runButton;
+    [SerializeField] GameObject statusPanel;
+
+    private static DisableControls instance;
+    public static DisableControls Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<DisableControls>();
+            return instance;
+        }
+    }
+
 
     private void Awake()
     {
@@ -48,5 +66,34 @@ public class DisableControls : MonoBehaviour
         inventoryController.enabled = true;
         toolsBarController.enabled = true;
         interactController.enabled = true;
+    }
+
+    public DisableControls JoyStick(bool active)
+    {
+        Joystick joystick = joystickButton.GetComponent<Joystick>();
+        joystick.enabled = active;
+        joystickButton.SetActive(active);
+        return this;
+    }
+    public DisableControls ButtonInventory(bool active)
+    {
+        inventoryButton.SetActive(active);
+        return this;
+    }
+    public DisableControls ButtonCraft(bool active)
+    {
+        craftButton.SetActive(active);
+        return this;
+    }
+
+    public DisableControls ButtonInteract(bool active)
+    {
+        interactButton.SetActive(active);
+        return this;
+    }
+    public DisableControls ButtonRun(bool active)
+    {
+        runButton.SetActive(active);
+        return this;
     }
 }

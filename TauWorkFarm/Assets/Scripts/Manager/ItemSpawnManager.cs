@@ -19,6 +19,7 @@ public class ItemSpawnManager : MonoBehaviour
 
     public void SpawnItem(Vector3 position, Item _item, int _count)
     {
+        position.z = 0.1f;
         GameObject spawnObject = Instantiate(pickUpItemPrefab, position, Quaternion.identity);
         spawnObject.GetComponent<Collectable>().Set(_item, _count);
     }

@@ -19,4 +19,6 @@ public class Item : ScriptableObject
     public int damage = 10;
     public int price = 100;
     public bool canBeSold = true;
+    public FoodKind foodKind;
+    public int foodAmount;
 }

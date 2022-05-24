@@ -53,6 +53,8 @@ public class PlayerManager : MonoBehaviour,IDamageable
     public Stat stamina;
     [SerializeField] StatusBar staminaBar;
 
+    [SerializeField] Currency currency;
+
     public bool isDead;
     public bool isExhausted;
 
@@ -61,7 +63,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
 
     private void Awake()
     {
-        disableControls = GetComponent<DisableControls>();
+        disableControls = DisableControls.Instance;
         playerRespawn = GetComponent<PlayerRespawn>();
     }
 
@@ -164,5 +166,15 @@ public class PlayerManager : MonoBehaviour,IDamageable
     public void CheckState()
     {
         
+    }
+
+    public void AddCurrency(int amount)
+    {
+        currency.Add(amount);
+    }
+
+    public void DecreaseCurrency(int amount)
+    {
+        currency.Decrease(amount);
     }
 }

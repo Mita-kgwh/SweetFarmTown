@@ -18,6 +18,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] float timePerLetter = 0.05f;
     float totalTimeToType, currtentTime;
     string lineToShow;
+    public bool doneTalk;
 
     private void Update()
     {
@@ -78,6 +79,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void Initialize(DialogueContainer dialogueContainer)
     {
+        DisableControls.Instance.JoyStick(false).ButtonInventory(false).ButtonCraft(false).DisableControl();
         Show(true);
         currentDialogue = dialogueContainer;
         currentLine = 0;
@@ -99,6 +101,8 @@ public class DialogueSystem : MonoBehaviour
     private void Conclude()
     {
         Debug.Log("The Dialogue has ended.");
+        doneTalk = true;
         Show(false);
+        DisableControls.Instance.JoyStick(true).ButtonInventory(true).ButtonCraft(true).EnableControl();
     }
 }

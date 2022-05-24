@@ -35,10 +35,24 @@ public class PlayerController : MonoBehaviour
         if (motionVector == null) { motionVector = new Vector2(); }
         dustObject.SetActive(false);
         lastDirection += Vector2.down;
+        //joystick.gameObject.SetActive(false);
     }
 
     void Update()
     {
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    if (Input.mousePosition.x < (Screen.width / 2) && Input.mousePosition.y < (Screen.height / 2))
+        //    {
+        //        joystick;
+        //    }
+
+        //}
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    joystick.gameObject.SetActive(false);
+        //}
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             running = true;
@@ -160,5 +174,6 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         rigidbody.velocity = Vector2.zero;
+        motionVector = Vector2.zero;
     }
 }

@@ -13,7 +13,7 @@ public class InventoryController : MonoBehaviour
     DisableControls disableControls;
     private void Awake()
     {
-        disableControls = PlayerManager.Instance.GetComponent<DisableControls>();
+        disableControls = DisableControls.Instance;
     }
 
     private void Start()
@@ -37,7 +37,17 @@ public class InventoryController : MonoBehaviour
 
     public void ToggleCrafting()
     {
-        statusPanel.SetActive(!statusPanel.activeInHierarchy);
+        if (statusPanel.activeInHierarchy)
+        {
+            statusPanel.SetActive(false);
+            disableControls.EnableToolsPController();
+            
+        }
+        else
+        {
+            statusPanel.SetActive(true);
+            disableControls.DisableToolsPController();
+        }
     }
 
     public void ToggleInventory()

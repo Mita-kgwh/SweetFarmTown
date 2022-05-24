@@ -40,13 +40,23 @@ public class ToolsPController : MonoBehaviour
             markerManager.Show(false);
             iconHighlight.CanSelect = false; // setter has function SetActive
         }
-        //SelectTile();
-        //CanSelectCheck();
-        //Marker();
+        SelectTile();
+        CanSelectCheck();
+        Marker();
         //if (Input.GetMouseButtonDown(0))
         //{
-        //    UseButtonPressed();
+        //    if (Input.mousePosition.x > (Screen.width / 4) 
+        //        && Input.mousePosition.x < (Screen.width * 3 / 4)
+        //        && Input.mousePosition.y > (Screen.width / 4) 
+        //        && Input.mousePosition.y < (Screen.width * 3 / 4))
+        //    {
+        //        UseButtonPressed();
+        //    }
         //}
+        if (selectable && Input.GetMouseButtonDown(0))
+        {
+            UseButtonPressed();
+        }
     }
 
     public void UseButtonPressed()
@@ -80,10 +90,10 @@ public class ToolsPController : MonoBehaviour
 
     private void SelectTile()
     {
-        //selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
-        Vector2 position = new Vector2(transform.position.x, transform.position.y);
-        position += player.lastDirection;
-        selectedTilePosition = tileMapReadController.GetGridPosition(position, false);
+        selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
+        //Vector2 position = new Vector2(transform.position.x, transform.position.y);
+        //position += player.lastDirection;
+        //selectedTilePosition = tileMapReadController.GetGridPosition(position, false);
     }
 
     void CanSelectCheck()
@@ -163,5 +173,11 @@ public class ToolsPController : MonoBehaviour
         if (onTilePickUp == null) { return; }
 
         onTilePickUp.OnApplyToTileMap(selectedTilePosition, tileMapReadController, null);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 1.5f);
     }
 }

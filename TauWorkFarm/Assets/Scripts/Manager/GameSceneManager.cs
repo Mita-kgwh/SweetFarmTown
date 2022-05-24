@@ -98,7 +98,7 @@ public class GameSceneManager : MonoBehaviour
         {
             PlayerManager.Instance.FullHeal();
             PlayerManager.Instance.FullRest();
-            PlayerManager.Instance.GetComponent<DisableControls>().EnableControl();
+            DisableControls.Instance.EnableControl();
             respawnTransition = false;
         }
     }
