@@ -23,6 +23,11 @@ public class ToolsPController : MonoBehaviour
     Vector3Int selectedTilePosition;
     bool selectable;
 
+    private void Awake()
+    {
+        toolRange.transform.localScale = new Vector3(maxDistance * 2, maxDistance * 2, 1);
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -118,8 +123,16 @@ public class ToolsPController : MonoBehaviour
     private void ShowRange()
     {
         Item item = toolsBarController.GetItem;
-        if (item == null) { return; }
-        if (item.onAction == null && item.onTileMapAction == null) { return; }
+        if (item == null) 
+        { 
+            toolRange.SetActive(false); 
+            return; 
+        }
+        if (item.onAction == null && item.onTileMapAction == null)
+        {
+            toolRange.SetActive(false);
+            return;
+        }
         toolRange.SetActive(true);
     }
 

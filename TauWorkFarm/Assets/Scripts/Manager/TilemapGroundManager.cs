@@ -8,11 +8,28 @@ public class TilemapGroundManager : MonoBehaviour
 {
     [SerializeField] TileBase fenced;
 
+    [SerializeField] TileBase gated;
+
     [SerializeField] Tilemap groundTilemap; // ground tilemap
 
     //[SerializeField] GameObject fencesSpritePrefab;
 
     [SerializeField] FencesContainer fencesContainer;
+
+    private void Awake()
+    {
+        
+    }
+
+    internal void OpenGate(Vector3Int gridPosition)
+    {
+        groundTilemap.SetColliderType(gridPosition, Tile.ColliderType.None);
+    }
+
+    internal void CloseGate(Vector3Int gridPosition)
+    {
+        groundTilemap.SetColliderType(gridPosition, Tile.ColliderType.Sprite);
+    }
 
     void Start()
     {
@@ -31,7 +48,11 @@ public class TilemapGroundManager : MonoBehaviour
 
     private void VisualizeTile(FenceTile fenceTile)
     {
-        groundTilemap.SetTile(fenceTile.position, fenced);
+        groundTilemap.SetTile(fenceTile.position, fenceTile.isGate? gated : fenced);
+        if (fenceTile.isGate)
+        {
+            groundTilemap.SetColor(fenceTile.position, Color.red);
+        }
     }
     internal bool CheckEmpty(Vector3Int gridPosition)
     {
@@ -44,6 +65,21 @@ public class TilemapGroundManager : MonoBehaviour
         fencesContainer.Add(fenceTile);
 
         fenceTile.position = gridPosition;
+        fenceTile.isGate = false;
+        VisualizeTile(fenceTile);
+    }
+
+    public void PlaceGate(Vector3Int gridPosition)
+    {
+        if (!CheckEmpty(gridPosition))
+        {
+            fencesContainer.Remove(fencesContainer.Get(gridPosition));
+        }
+        FenceTile fenceTile = new FenceTile();
+        fencesContainer.Add(fenceTile);
+
+        fenceTile.position = gridPosition;
+        fenceTile.isGate = true;
         VisualizeTile(fenceTile);
     }
 }

@@ -16,4 +16,9 @@ public class FencesContainer : ScriptableObject
     {
         fences.Add(fenceTile);
     }
+
+    public void Remove(FenceTile fenceTile)
+    {
+        fences.Remove(fenceTile);
+    }
 }

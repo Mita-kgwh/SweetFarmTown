@@ -1210,7 +1210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171011741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 6.68, z: -11}
+  m_LocalPosition: {x: 1.1763834, y: 0.7837192, z: -9.999922}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1868775266}
@@ -3936,7 +3936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 6.68, z: -11}
+  m_LocalPosition: {x: 1.1763834, y: 0.7837192, z: -9.999922}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 47076206}
@@ -4430,7 +4430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564566062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 6.68, z: -1}
+  m_LocalPosition: {x: 1.1763834, y: 0.7837192, z: 0.000078371915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1272912627}
@@ -17337,6 +17337,7 @@ MonoBehaviour:
   itemDB: {fileID: 11400000, guid: 775845d685c809c4087cdba44cc2f98e, type: 2}
   messageSystem: {fileID: 1478431307}
   screenTint: {fileID: 738827743}
+  tileMapReadController: {fileID: 1307524520}
 --- !u!114 &1307524518
 MonoBehaviour:
   m_ObjectHideFlags: 0

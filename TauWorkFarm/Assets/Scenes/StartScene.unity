@@ -32700,6 +32700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fenced: {fileID: 11400000, guid: a5698b0aecebec0498e1873adb08725d, type: 2}
+  gated: {fileID: 11400000, guid: 060adc2a4d9cae847b5a367e1924b5fc, type: 2}
   groundTilemap: {fileID: 941998256}
   fencesContainer: {fileID: 11400000, guid: 48e27c0eb7a841445848614a4377da76, type: 2}
 --- !u!1 &1063056694
@@ -34235,7 +34236,7 @@ GameObject:
   - component: {fileID: 1915946201}
   - component: {fileID: 1915946194}
   m_Layer: 0
-  m_Name: Chicken (1)
+  m_Name: Chicken_ver1
   m_TagString: Chick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

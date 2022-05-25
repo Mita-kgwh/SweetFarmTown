@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hamer
   id: 8
-  stackable: 1
+  stackable: 0
   icon: {fileID: -5210384475397050505, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
   onAction: {fileID: 11400000, guid: 240b6e92cf82ee44cb627b02cfb87d2d, type: 2}
   onTileMapAction: {fileID: 0}
@@ -22,3 +22,9 @@ MonoBehaviour:
   crop: {fileID: 0}
   iconHighlight: 0
   itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 10
+  price: 100
+  canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

@@ -24,4 +24,5 @@ public class GamesManager : MonoBehaviour
     public ItemList itemDB;
     public OnScreenMessageSystem messageSystem;
     public ScreenTint screenTint;
+    public TileMapReadController tileMapReadController;
 }

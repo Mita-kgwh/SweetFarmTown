@@ -75,6 +75,7 @@ public class PetAIMove : MonoBehaviour
                 }
             }
         }
+        
  
         AnimateMovement(motionVector);
         if (ismoving)
