@@ -90,6 +90,6 @@ public class ItemPanel : MonoBehaviour
 
     public virtual void OnClick(int id)
     {
-
+        return;
     }
 }

@@ -11,7 +11,6 @@ public class DisableControls : MonoBehaviour
     ItemContainerInteractController interactController;
     [SerializeField] GameObject inventoryButton;
     [SerializeField] GameObject craftButton;
-    [SerializeField] GameObject joystickButton;
     [SerializeField] GameObject interactButton;
     [SerializeField] GameObject runButton;
     [SerializeField] GameObject statusPanel;
@@ -68,13 +67,6 @@ public class DisableControls : MonoBehaviour
         interactController.enabled = true;
     }
 
-    public DisableControls JoyStick(bool active)
-    {
-        Joystick joystick = joystickButton.GetComponent<Joystick>();
-        joystick.enabled = active;
-        joystickButton.SetActive(active);
-        return this;
-    }
     public DisableControls ButtonInventory(bool active)
     {
         inventoryButton.SetActive(active);

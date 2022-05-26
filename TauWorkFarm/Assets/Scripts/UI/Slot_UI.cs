@@ -50,7 +50,7 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
+        if (itemPanel == null) { return; }
         itemPanel.OnClick(myIndex);
      
     }

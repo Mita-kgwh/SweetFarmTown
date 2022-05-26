@@ -115,7 +115,10 @@ public class FoodTrough : Interactable, IPersistant
         if (collision.CompareTag(data.kind.ToString()))
         {
             PetManager petManager = collision.GetComponent<PetManager>();
-            if (petManager == null) { return; }
+            if (petManager == null) 
+            {
+                return; 
+            }
             petManager.SetTroughPos(
                 new Vector3Int (
                     (int)transform.position.x,

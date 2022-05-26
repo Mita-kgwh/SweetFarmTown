@@ -22,14 +22,22 @@ public class PetManager : MonoBehaviour
 
     [SerializeField] Vector3Int troughPosition;
 
+    bool grabed;
+
+
     private void Start()
     {
+
         thisTimeAgent.onTimeTick += Spawn;
         imageCaution.SetActive(false);
     }
 
     public void Spawn()
     {
+        if (grabed)
+        {
+            return;
+        }
         if (petAIMove.hungry)
         {
             Debug.Log("find food");
@@ -71,6 +79,12 @@ public class PetManager : MonoBehaviour
         imageCaution.SetActive(true);
         petAIMove.hungry = true;
         petAIMove.FindFood(troughPosition);
+    }
+
+    public void Grabed(bool value)
+    {
+        petAIMove.Grabed(value);
+        grabed = value;
     }
 
     public void ShowEmotion()

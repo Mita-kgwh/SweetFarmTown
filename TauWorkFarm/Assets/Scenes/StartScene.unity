@@ -483,9 +483,11 @@ MonoBehaviour:
   motionVector: {x: 0, y: 0}
   ismoving: 0
   timer: 0
+  eatAmount: 0
   waitingTime: 3
   movingTime: 2
   hungry: 0
+  grabed: 0
 --- !u!61 &111118190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34241,7 +34243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1915946194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34261,9 +34263,11 @@ MonoBehaviour:
   motionVector: {x: 0, y: 0}
   ismoving: 0
   timer: 0
+  eatAmount: 0
   waitingTime: 3
   movingTime: 2
   hungry: 0
+  grabed: 0
 --- !u!114 &1915946195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34302,7 +34306,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0156551, y: -0.15655082}
+  m_Offset: {x: -0.0156551, y: -0.16188145}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34313,7 +34317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6138414, y: 0.68689835}
+  m_Size: {x: 0.6138414, y: 0.33511353}
   m_EdgeRadius: 0
 --- !u!50 &1915946199
 Rigidbody2D:

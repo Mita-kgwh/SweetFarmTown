@@ -11,16 +11,18 @@ public class PetAIMove : MonoBehaviour
     public Animator shadow;
 
     public Vector2 lastDirection;
-    [SerializeField] private Vector2 motionVector;
+    [SerializeField] public Vector2 motionVector;
 
     public bool ismoving;
 
     [SerializeField] private float timer = 0f;
+    [SerializeField] int eatAmount;
     public float waitingTime;
     public float movingTime;
 
     public bool hungry;
     bool found;
+    [SerializeField] bool grabed;
     Vector3Int troughPosition;
 
     PetManager manager;
@@ -38,6 +40,10 @@ public class PetAIMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (grabed)
+        {
+            return;
+        }
         if (!hungry)
         {
             timer += Time.deltaTime;
@@ -92,6 +98,12 @@ public class PetAIMove : MonoBehaviour
         }
     }
 
+    internal void Grabed(bool value)
+    {
+        grabed = value;
+        rigidbody.velocity = Vector2.zero;
+    }
+
     public void FindFood(Vector3Int _troughPosition)
     {
         troughPosition = _troughPosition;
@@ -101,8 +113,7 @@ public class PetAIMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        //move the player
+        if (grabed) { return; }
         Moving();
         if (hungry) { return; }
 
@@ -159,9 +170,9 @@ public class PetAIMove : MonoBehaviour
         if (collision.transform.CompareTag("Feeding"))
         {
             FoodTrough foodTrough = collision.transform.GetComponent<FoodTrough>();
-            if (foodTrough.CheckFood(10))
+            if (foodTrough.CheckFood(eatAmount))
             {
-                foodTrough.EatFood(10);
+                foodTrough.EatFood(eatAmount);
                 hungry = false;  
                 manager.Eaten();
                 //motionVector = new Vector2(-lastDirection.x, -lastDirection.y);

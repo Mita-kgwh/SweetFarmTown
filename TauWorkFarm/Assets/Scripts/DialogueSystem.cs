@@ -79,7 +79,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void Initialize(DialogueContainer dialogueContainer)
     {
-        DisableControls.Instance.JoyStick(false).ButtonInventory(false).ButtonCraft(false).DisableControl();
+        DisableControls.Instance.ButtonInventory(false).ButtonCraft(false).DisableControl();
         Show(true);
         currentDialogue = dialogueContainer;
         currentLine = 0;
@@ -103,6 +103,6 @@ public class DialogueSystem : MonoBehaviour
         Debug.Log("The Dialogue has ended.");
         doneTalk = true;
         Show(false);
-        DisableControls.Instance.JoyStick(true).ButtonInventory(true).ButtonCraft(true).EnableControl();
+        DisableControls.Instance.ButtonInventory(true).ButtonCraft(true).EnableControl();
     }
 }

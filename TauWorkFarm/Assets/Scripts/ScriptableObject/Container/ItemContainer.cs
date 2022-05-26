@@ -98,7 +98,7 @@ public class ItemContainer : ScriptableObject
         if (slot == null) { return false; }
         if (checkingItem.item.stackable)
         {
-            return slot.count > checkingItem.count;
+            return slot.count >= checkingItem.count;
         }
         return true;
     }

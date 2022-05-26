@@ -13,7 +13,7 @@ public enum ResourceNodeType
 [CreateAssetMenu(menuName = "Data/Tool Action/Gather Resource Node")]
 public class GatherResourceNode : ToolsAction
 {
-    [SerializeField] float sizeOfInteractableArea = 1f;
+    [SerializeField] float sizeOfInteractableArea = 0.5f;
     [SerializeField] List<ResourceNodeType> canbeHitOfType;
     public override bool OnApply(Vector2 worldPoint)
     {

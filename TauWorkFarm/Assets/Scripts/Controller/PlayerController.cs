@@ -21,9 +21,6 @@ public class PlayerController : MonoBehaviour
 
     public Joystick joystick;
 
-    //private float timer;
-    //private float COUNT_DOWN_TO_RUN = 3f;
-
     private void Awake()
     {
         if (rigidbody == null) { rigidbody = GetComponent<Rigidbody2D>(); }
@@ -40,18 +37,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    if (Input.mousePosition.x < (Screen.width / 2) && Input.mousePosition.y < (Screen.height / 2))
-        //    {
-        //        joystick;
-        //    }
-
-        //}
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    joystick.gameObject.SetActive(false);
-        //}
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {

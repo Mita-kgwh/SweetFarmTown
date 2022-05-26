@@ -15,13 +15,16 @@ public class ToolsPController : MonoBehaviour
     [SerializeField] ToolsAction onTilePickUp;
     [SerializeField] IconHighlight iconHighlight;
     [SerializeField] AttackController attackController;
+    [SerializeField] GrabController grabController;
     [SerializeField] ToolsBarController toolsBarController;
     [SerializeField] Animator animator;
     [SerializeField] int weaponEnergyCost = 5;
     [SerializeField] GameObject toolRange;
+    [SerializeField] GameObject grabArea;
 
     Vector3Int selectedTilePosition;
     bool selectable;
+    bool grabable;
 
     private void Awake()
     {
@@ -34,12 +37,13 @@ public class ToolsPController : MonoBehaviour
         {
             WeaponAction();
         }
+        CanSelectCheck();
         if (!player.ismoving)
         {
             SelectTile();
             //markerManager.Show(true);
             //iconHighlight.CanSelect = true; // setter has function SetActive
-            CanSelectCheck();
+            //CanSelectCheck();
             Marker();
             ShowRange();
         }
@@ -49,6 +53,8 @@ public class ToolsPController : MonoBehaviour
             iconHighlight.CanSelect = false; // setter has function SetActive
             toolRange.SetActive(false);
         }
+
+        ShowGrabArea();
         //SelectTile();
         //CanSelectCheck();
         //Marker();
@@ -65,6 +71,7 @@ public class ToolsPController : MonoBehaviour
         if (selectable && Input.GetMouseButtonDown(0))
         {
             UseButtonPressed();
+            GrabThing();
         }
     }
 
@@ -89,6 +96,18 @@ public class ToolsPController : MonoBehaviour
         Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;
 
         attackController.Attack(item.damage, player.lastDirection);
+    }
+
+    private void GrabThing()
+    {
+        Item item = toolsBarController.GetItem;
+
+        if (item == null) { return; }
+        if (!item.isGrabItem) { return; }
+
+        Debug.Log("grab thing click;");
+        Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;
+        grabController.Grab(position);
     }
 
     private void EnergyCost(int energyCost)
@@ -134,6 +153,23 @@ public class ToolsPController : MonoBehaviour
             return;
         }
         toolRange.SetActive(true);
+    }
+
+    private void ShowGrabArea()
+    {
+        Item item = toolsBarController.GetItem;
+        if (item == null)
+        {
+            grabArea.SetActive(false);
+            return;
+        }
+        if (!item.isGrabItem)
+        {
+            grabArea.SetActive(false);
+            return;
+        }
+        grabArea.transform.position = rgbd2d.position + player.lastDirection * offsetDis;
+        grabArea.SetActive(true);
     }
 
     private bool UseToolWorld() // interact with physical object
@@ -204,5 +240,7 @@ public class ToolsPController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(rgbd2d.position + player.lastDirection * offsetDis, 0.5f);
     }
 }

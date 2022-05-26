@@ -45,7 +45,7 @@ public class TalkAuto : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             detected = true;
-            DisableControls.Instance.JoyStick(false).DisableControl();
+            DisableControls.Instance.DisableControl();
             player = collision.transform;
         }
     }

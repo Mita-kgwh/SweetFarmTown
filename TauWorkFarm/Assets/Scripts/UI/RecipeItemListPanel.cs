@@ -7,10 +7,6 @@ public class RecipeItemListPanel : MonoBehaviour
 {
     public List<Slot_UI> slots = new List<Slot_UI>();
 
-    private void Start()
-    {
-        
-    }
     public void SetIndex()
     {
         for (int i = 0; i < slots.Count; i++)

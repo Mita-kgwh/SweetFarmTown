@@ -7,6 +7,7 @@ TagManager:
   - Chick
   - Feeding
   - NONE
+  - Cow
   layers:
   - Default
   - TransparentFX
