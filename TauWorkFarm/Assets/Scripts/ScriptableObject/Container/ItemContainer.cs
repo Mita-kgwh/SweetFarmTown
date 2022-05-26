@@ -8,7 +8,7 @@ public class ItemContainer : ScriptableObject
 {
     public List<Slot> slots;
     public bool isChanging; //isDirty
-    public int slotCount;
+    //public int slotCount;
     internal void Init()
     {
         slots = new List<Slot>();

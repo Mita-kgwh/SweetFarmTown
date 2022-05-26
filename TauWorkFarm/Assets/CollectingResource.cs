@@ -6,19 +6,18 @@ public class CollectingResource : MissionTargetObject
 {
     public override MissionTargetID ID { get => MissionTargetID.COLLECTING_RESOURCE; }
 
-    public override void Accept()
-    {
-        base.Accept();
-        Debug.Log("accept collecting");
-    }
+    public override MissionData Data { get => MissionData; }
 
-    public override void Decline()
+    public MissionData MissionData 
     {
-        PlayerManager.Instance.DecreaseCurrency(100);
-    }
-
-    public override void Complete()
-    {
-        PlayerManager.Instance.AddCurrency(100);
+        get
+        {
+            MissionData missionData = new MissionData();
+            missionData.item = GamesManager.Instance.itemDB.items[5];
+            missionData.count = 5;
+            missionData.description = "Hay thu thap du cac vat pham nay";
+            missionData.isComplete = false;
+            return missionData;
+        }
     }
 }

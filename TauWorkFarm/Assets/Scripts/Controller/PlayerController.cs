@@ -84,14 +84,14 @@ public class PlayerController : MonoBehaviour
         //    vertical = 0;
         //}
 
-        if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
-        {
-            vertical = 0;
-        }
-        else
-        {
-            horizontal = 0;
-        }
+        //if (Mathf.Abs(joystick.Horizontal) > Mathf.Abs(joystick.Vertical))
+        //{
+        //    vertical = 0;
+        //}
+        //else
+        //{
+        //    horizontal = 0;
+        //}
 
 
         motionVector.x = horizontal;

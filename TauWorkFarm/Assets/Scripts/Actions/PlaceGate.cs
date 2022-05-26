@@ -29,7 +29,7 @@ public class PlaceGate : ToolsAction
             return true;
         }
 
-        return false;
+        //return false;
     }
 
     public override void OnItemUsed(Item useItem, ItemContainer toolbar)

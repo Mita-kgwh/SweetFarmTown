@@ -26,6 +26,8 @@ public class MissionManager : MonoBehaviour
 
     public MissionTargetObject SpawnAMission(MissionTargetID id)
     {
+        Debug.Log("Spawn mission");
+        //MissionTargetObject targetObject = System.Activator.CreateInstance(EnumUtil.GetStringType(id)) as MissionTargetObject;
         return System.Activator.CreateInstance(EnumUtil.GetStringType(id)) as MissionTargetObject;
     }
 }
