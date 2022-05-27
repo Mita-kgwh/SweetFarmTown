@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,5 +16,10 @@ public class DirtsContainer : ScriptableObject
     public void Add(DirtTile dirtTile)
     {
         dirts.Add(dirtTile);
+    }
+
+    internal void Clear()
+    {
+        dirts = new List<DirtTile>();
     }
 }

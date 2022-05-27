@@ -6,35 +6,45 @@ using System;
 
 public class Currency : MonoBehaviour
 {
-    [SerializeField] int amout;
+    [SerializeField] int playerMoney;
     [SerializeField] TextMeshProUGUI text;
 
     private void Start()
     {
-        amout = 1000;
+        playerMoney = 1000;
         UpdateText();
+    }
+
+    public int GetMoney()
+    {
+        return playerMoney;
     }
 
     private void UpdateText()
     {
-        text.text = amout.ToString();
+        text.text = playerMoney.ToString();
     }
 
     public void Add(int moneyGain)
     {
-        amout += moneyGain;
+        playerMoney += moneyGain;
         UpdateText();
     }
 
     public bool Check(int totalPrice)
     {
-        return amout >= totalPrice;
+        return playerMoney >= totalPrice;
     }
 
     public void Decrease(int totalPrice)
     {
-        amout -= totalPrice;
-        if (amout < 0) { amout = 0; }
+        playerMoney -= totalPrice;
+        if (playerMoney < 0) { playerMoney = 0; }
         UpdateText();
+    }
+
+    internal void SetValue(int money)
+    {
+        playerMoney = money;
     }
 }

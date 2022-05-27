@@ -9,4 +9,10 @@ public class CraftingRecipe : ScriptableObject
 {
     public List<Slot> recipeElements;
     public Slot output;
+
+    internal void Clear()
+    {
+        recipeElements.Clear();
+        output = null;
+    }
 }

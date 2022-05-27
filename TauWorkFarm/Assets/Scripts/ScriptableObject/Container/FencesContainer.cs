@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,5 +21,10 @@ public class FencesContainer : ScriptableObject
     public void Remove(FenceTile fenceTile)
     {
         fences.Remove(fenceTile);
+    }
+
+    internal void Clear()
+    {
+        fences = new List<FenceTile>();
     }
 }

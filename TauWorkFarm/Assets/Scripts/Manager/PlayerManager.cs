@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Stat
@@ -33,6 +34,11 @@ public class Stat
     {
         curVal = maxVal;
     }
+
+    internal void SetValue(int value)
+    {
+        curVal = value;
+    }
 }
 
 public class PlayerManager : MonoBehaviour,IDamageable
@@ -47,6 +53,8 @@ public class PlayerManager : MonoBehaviour,IDamageable
             return instance;
         }
     }
+
+    [SerializeField] PlayerData playerData;
 
     public Stat hp;
     [SerializeField] StatusBar hpBar;
@@ -65,6 +73,18 @@ public class PlayerManager : MonoBehaviour,IDamageable
     {
         disableControls = DisableControls.Instance;
         playerRespawn = GetComponent<PlayerRespawn>();
+        InitData();
+    }
+
+    private void InitData()
+    {
+        if (playerData == null)
+        {
+            playerData = new PlayerData();
+        }
+        stamina.SetValue(playerData.curStamina);
+        currency.SetValue(playerData.money);
+        transform.position = playerData.playerPosition;
     }
 
     private void Start()
@@ -83,6 +103,18 @@ public class PlayerManager : MonoBehaviour,IDamageable
         {
             TakeDamage(10);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (playerData == null)
+        {
+            playerData = new PlayerData();
+        }
+        playerData.playerPosition = transform.position;
+        playerData.money = currency.GetMoney();
+        playerData.curStamina = stamina.curVal;
+        playerData.curSceneName = SceneManager.GetActiveScene().name;
     }
 
     private void UpdateHPBar()

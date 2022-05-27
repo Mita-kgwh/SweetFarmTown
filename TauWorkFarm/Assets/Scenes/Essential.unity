@@ -4765,6 +4765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f363e6cdf2b26246a91b7170c48038c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: c98b98ee4e28611468b6cd2598c55b62, type: 2}
   hp:
     maxVal: 100
     curVal: 80

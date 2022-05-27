@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,5 +16,10 @@ public class CropsContainer : ScriptableObject
     public void Add(CropTile _crop)
     {
         crops.Add(_crop);
+    }
+
+    internal void Clear()
+    {
+        crops = new List<CropTile>();
     }
 }

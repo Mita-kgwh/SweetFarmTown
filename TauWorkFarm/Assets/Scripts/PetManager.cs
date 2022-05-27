@@ -21,6 +21,8 @@ public class PetManager : MonoBehaviour
     private int countup = -1;
     private int needeat = 0;
 
+    private int hungryTime;
+
     //FoodTrough foodTrough;
 
     bool grabed;
@@ -31,6 +33,7 @@ public class PetManager : MonoBehaviour
 
         thisTimeAgent.onTimeTick += Spawn;
         imageCaution.SetActive(false);
+        CalculateHungryTime();
     }
 
     public void Spawn()
@@ -42,9 +45,9 @@ public class PetManager : MonoBehaviour
         countup += (1 + needeat);
         if (countup != productTime)
         {
-            if (countup == (productTime / 2))
+            if (countup == hungryTime)
             {
-                Debug.Log("Hurry");
+                //Debug.Log("Hurry");
                 Hungry();
             }
             return;
@@ -63,6 +66,12 @@ public class PetManager : MonoBehaviour
         }
         countup = 0;
 
+    }
+
+    private void CalculateHungryTime()
+    {
+        hungryTime = productTime / 2;
+        //or sth else random.range(1,productTime-1) maybe
     }
 
     private void Hungry()
@@ -87,6 +96,7 @@ public class PetManager : MonoBehaviour
     {
         if (needeat == -1)
         {
+            CalculateHungryTime();
             needeat = 0;
             ShowEmotion();
             imageCaution.SetActive(false);

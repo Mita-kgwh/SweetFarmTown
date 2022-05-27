@@ -33,6 +33,14 @@ public class MissionContainer : ScriptableObject
         }
     }
 
+    internal void Clear()
+    {
+        for (int i = 0; i < missionDatas.Count; i++)
+        {
+            missionDatas[i].Clear();
+        }
+    }
+
     public void AddData(MissionData data)
     {
         isChanging = true;

@@ -35,4 +35,9 @@ public class PlaceableObjectsContainer : ScriptableObject
     {
         placeableObjects.Remove(placedObject);
     }
+
+    internal void Clear()
+    {
+        placeableObjects = new List<PlaceableObject>();
+    }
 }

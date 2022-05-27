@@ -29,4 +29,9 @@ public class JSONStringList : ScriptableObject
         if (idInList >= strings.Count) { return ""; }
         return strings[idInList];
     }
+
+    internal void Clear()
+    {
+        strings = new List<string>();
+    }
 }

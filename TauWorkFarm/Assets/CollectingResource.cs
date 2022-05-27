@@ -14,8 +14,8 @@ public class CollectingResource : MissionTargetObject
         {
             MissionData missionData = new MissionData();
             missionData.item = GamesManager.Instance.itemDB.items[5];
-            missionData.count = 5;
-            missionData.description = "Hay thu thap du cac vat pham nay";
+            missionData.count = Random.Range(5,10);
+            missionData.description = "Hay thu thap du " + missionData.count.ToString() + " vat pham nay";
             missionData.isComplete = false;
             return missionData;
         }

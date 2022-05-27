@@ -16,8 +16,11 @@ public class PetAIMove : MonoBehaviour
 
     [SerializeField] private float timer = 0f;
     [SerializeField] int eatAmount;
-    public float waitingTime;
-    public float movingTime;
+    public float waitingTimeMax;
+    public float movingTimeMax;
+    float waitingTime;
+    float movingTime;
+
 
     public bool hungry;
     [SerializeField] bool grabed;
@@ -173,6 +176,7 @@ public class PetAIMove : MonoBehaviour
         {
             timer = 0;
             ismoving = true;
+            waitingTime = Random.Range(1, waitingTimeMax);
             //Debug.Log("moving");
             // count time we start moving now
             return;
@@ -181,6 +185,7 @@ public class PetAIMove : MonoBehaviour
         {
             timer = 0;
             ismoving = false;
+            movingTime = Random.Range(1, movingTimeMax);
             motionVector = new Vector2(0, 0);
             //Debug.Log("not moving");
         }
