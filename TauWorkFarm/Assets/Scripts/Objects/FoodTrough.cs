@@ -110,20 +110,21 @@ public class FoodTrough : Interactable, IPersistant
         return JsonUtility.ToJson(data);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag(data.kind.ToString()))
-        {
-            PetManager petManager = collision.GetComponent<PetManager>();
-            if (petManager == null) 
-            {
-                return; 
-            }
-            petManager.SetTroughPos(
-                new Vector3Int (
-                    (int)transform.position.x,
-                    (int)transform.position.y,
-                    (int)transform.position.z));
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag(data.kind.ToString()))
+    //    {
+    //        PetManager petManager = collision.GetComponent<PetManager>();
+    //        if (petManager == null) 
+    //        {
+    //            return; 
+    //        }
+    //        //petManager.SetTroughPos(
+    //        //    new Vector3Int (
+    //        //        (int)transform.position.x,
+    //        //        (int)transform.position.y,
+    //        //        (int)transform.position.z));
+    //        //petManager.SetTrough(this);
+    //    }
+    //}
 }

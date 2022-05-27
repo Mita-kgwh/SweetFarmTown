@@ -12,7 +12,6 @@ public class PetAIMove : MonoBehaviour
 
     public Vector2 lastDirection;
     [SerializeField] public Vector2 motionVector;
-
     public bool ismoving;
 
     [SerializeField] private float timer = 0f;
@@ -21,9 +20,11 @@ public class PetAIMove : MonoBehaviour
     public float movingTime;
 
     public bool hungry;
-    bool found;
     [SerializeField] bool grabed;
-    Vector3Int troughPosition;
+    //Vector3Int troughPosition;
+    FoodTrough foodTrough;
+    [SerializeField] float sizeOfFinding;
+    [SerializeField] float eatDistance = 1f;
 
     PetManager manager;
 
@@ -31,7 +32,6 @@ public class PetAIMove : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         ismoving = false;
-        //timer = waitingTime;
         motionVector = new Vector2(0, 0);
         manager = GetComponent<PetManager>();
 
@@ -44,6 +44,11 @@ public class PetAIMove : MonoBehaviour
         {
             return;
         }
+        if (foodTrough == null)
+        {
+            FindFeedTrough();
+        }
+
         if (!hungry)
         {
             timer += Time.deltaTime;
@@ -81,8 +86,12 @@ public class PetAIMove : MonoBehaviour
                 }
             }
         }
-        
- 
+        else
+        {
+            FindFood();
+            EatFood();
+        }
+
         AnimateMovement(motionVector);
         if (ismoving)
         {
@@ -104,11 +113,54 @@ public class PetAIMove : MonoBehaviour
         rigidbody.velocity = Vector2.zero;
     }
 
-    public void FindFood(Vector3Int _troughPosition)
+    public void FindFood()
     {
-        troughPosition = _troughPosition;
-        motionVector = (troughPosition - transform.position).normalized;
+        if (foodTrough == null)
+        {
+            Freeze();
+            return;
+        }
+        if (!foodTrough.CheckFood(eatAmount))
+        {
+            Freeze();
+            return;
+        }
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        Vector3 troughpos = foodTrough.transform.position;
+        motionVector = (troughpos - transform.position).normalized;
         ismoving = true;
+    }
+
+    private void EatFood()
+    {
+        if (foodTrough == null)
+        {
+            return;
+        }
+        Vector2 thispos = transform.position;
+        Vector2 thatpos = foodTrough.transform.position;
+        bool canEat = Vector2.Distance(thatpos, thispos) < eatDistance;
+        if (canEat)
+        {
+            foodTrough.EatFood(eatAmount);
+            hungry = false;
+            manager.Eaten();
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        }
+    }
+
+    public void FindFeedTrough()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, sizeOfFinding);
+        foreach (Collider2D c in colliders)
+        {
+            FoodTrough hit = c.GetComponent<FoodTrough>();
+            if (hit != null)
+            {
+                foodTrough = hit;
+                return;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -165,24 +217,34 @@ public class PetAIMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("enter");
+        //Debug.Log("enter");
         motionVector = new Vector2(-lastDirection.x, -lastDirection.y);
-        if (collision.transform.CompareTag("Feeding"))
-        {
-            FoodTrough foodTrough = collision.transform.GetComponent<FoodTrough>();
-            if (foodTrough.CheckFood(eatAmount))
-            {
-                foodTrough.EatFood(eatAmount);
-                hungry = false;  
-                manager.Eaten();
-                //motionVector = new Vector2(-lastDirection.x, -lastDirection.y);
-            }
-            
-            return;
-        }
-        //if (ismoving)
+        //if (collision.transform.CompareTag("Feeding"))
         //{
-        //    motionVector = new Vector2(-lastDirection.x, -lastDirection.y);
+        //    FoodTrough foodTrough = collision.transform.GetComponent<FoodTrough>();
+        //    if (foodTrough.CheckFood(eatAmount))
+        //    {
+        //        foodTrough.EatFood(eatAmount);
+        //        hungry = false;  
+        //        manager.Eaten();
+        //    }
+        //    else
+        //    {
+        //        Freeze();
+        //    }        
+        //    return;
         //}
+    }
+
+    public void Freeze()
+    {
+        motionVector = Vector2.zero;
+        rigidbody.velocity = motionVector;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, sizeOfFinding);
     }
 }

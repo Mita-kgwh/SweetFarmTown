@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +19,9 @@ public class PetManager : MonoBehaviour
     [SerializeField] TimeAgent thisTimeAgent;
     [SerializeField] int productTime;
     private int countup = -1;
-    private int needcare = 0;
+    private int needeat = 0;
 
-    [SerializeField] Vector3Int troughPosition;
+    //FoodTrough foodTrough;
 
     bool grabed;
 
@@ -38,12 +39,7 @@ public class PetManager : MonoBehaviour
         {
             return;
         }
-        if (petAIMove.hungry)
-        {
-            Debug.Log("find food");
-            petAIMove.FindFood(troughPosition);
-        }
-        countup += (1 + needcare);
+        countup += (1 + needeat);
         if (countup != productTime)
         {
             if (countup == (productTime / 2))
@@ -69,16 +65,11 @@ public class PetManager : MonoBehaviour
 
     }
 
-    public void SetTroughPos(Vector3Int pos)
-    {
-        troughPosition = pos;
-    }
     private void Hungry()
     {
-        needcare = -1;
+        needeat = -1;
         imageCaution.SetActive(true);
         petAIMove.hungry = true;
-        petAIMove.FindFood(troughPosition);
     }
 
     public void Grabed(bool value)
@@ -94,10 +85,9 @@ public class PetManager : MonoBehaviour
     }
     public void Eaten()
     {
-        //Debug.Log("On mouse down");
-        if (needcare == -1)
+        if (needeat == -1)
         {
-            needcare = 0;
+            needeat = 0;
             ShowEmotion();
             imageCaution.SetActive(false);
         }
