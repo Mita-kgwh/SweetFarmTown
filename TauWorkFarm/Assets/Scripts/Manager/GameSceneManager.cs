@@ -69,6 +69,8 @@ public class GameSceneManager : MonoBehaviour
 
         cameraConfiner.UpdateBounds();
         screenTint.UnTint();
+
+        QuestManager.Instance.VisualizeQuest();
     }
 
     public void SwitchScene(string toScene, Vector3 targetPosition)

@@ -39,6 +39,13 @@ public class TilemapBaseManager : MonoBehaviour
         dirtsContainer.Add(dirtTile);
         VisualizeTile(dirtTile);
     }
+
+    internal void PlacePet(Item item, Vector3Int gridPosition)
+    {
+        GameObject pet = Instantiate(item.itemPrefab, gridPosition, Quaternion.identity);
+        PlayerPetManager.Instance.AddPet(pet.GetComponent<PetManager>().GetData());
+    }
+
     internal bool CanDirt(Vector3Int gridPosition)
     {
         return dirtsContainer.Get(gridPosition) == null;

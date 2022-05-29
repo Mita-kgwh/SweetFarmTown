@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Item Container")]
+[CreateAssetMenu(menuName = "Data/Container/Item Container")]
 public class ItemContainer : ScriptableObject
 {
     public List<Slot> slots;

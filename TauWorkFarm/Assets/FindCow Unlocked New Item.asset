@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0a1cfb166cfcc40be0b04dc8293a80, type: 3}
+  m_Name: FindCow Unlocked New Item
+  m_EditorClassIdentifier: 
+  itemContainer: {fileID: 11400000, guid: 4d7fe4e467238be4ebc924930730dccb, type: 2}
+  items:
+  - {fileID: 11400000, guid: 138f25b374c261c45b30fb0819e9faf7, type: 2}
+  amount: 500

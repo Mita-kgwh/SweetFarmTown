@@ -21,7 +21,7 @@ public class PlaceableObject
     }
 }
 
-[CreateAssetMenu(menuName = "Data/Placeable Objects Container")]
+[CreateAssetMenu(menuName = "Data/Container/Placeable Objects Container")]
 public class PlaceableObjectsContainer : ScriptableObject
 {
     public List<PlaceableObject> placeableObjects;

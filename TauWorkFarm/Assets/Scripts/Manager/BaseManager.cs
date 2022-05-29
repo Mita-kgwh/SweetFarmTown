@@ -31,4 +31,14 @@ public class BaseManager : MonoBehaviour
 
         return tilemapBaseManager.CanDirt(gridPosition);
     }
+
+    internal void PlacePet(Item item, Vector3Int gridPosition)
+    {
+        if (tilemapBaseManager == null)
+        {
+            return;
+        }
+
+        tilemapBaseManager.PlacePet(item, gridPosition);
+    }
 }

@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public bool ismoving;
     public bool running;
 
+    [SerializeField] float offsetDis = 1.5f;
+    [SerializeField] GameObject petFollowPoint;
+
     public Joystick joystick;
 
     private void Awake()
@@ -117,7 +120,7 @@ public class PlayerController : MonoBehaviour
         //    timer = COUNT_DOWN_TO_RUN;
         //    running = false;
         //}
-
+        UpdatePetPoint();
         
     }
 
@@ -131,6 +134,13 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rigidbody.velocity = motionVector * (running == true? runspeed : speed);
+    }
+
+    private void UpdatePetPoint()
+    {
+        if (petFollowPoint.transform.position == transform.position) { return; }
+        Vector3 position = new Vector3(lastDirection.x, lastDirection.y, transform.position.z);
+        petFollowPoint.transform.position = transform.position - position * offsetDis;
     }
 
     void AnimateMovement(Vector2 motionVector)

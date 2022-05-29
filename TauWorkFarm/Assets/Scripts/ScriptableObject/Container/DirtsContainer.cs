@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Dirts Container")]
+[CreateAssetMenu(menuName = "Data/Container/Dirts Container")]
 public class DirtsContainer : ScriptableObject
 {
     public List<DirtTile> dirts;

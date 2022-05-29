@@ -15,6 +15,7 @@ public class CartCowMission : MonoBehaviour
             Destroy(collision.gameObject);
             animator.SetTrigger("CanGo");
             GamesManager.Instance.dialogueSystem.Initialize(dialogue);
+            QuestManager.Instance.CompleteQuest();
         }
     }
 }

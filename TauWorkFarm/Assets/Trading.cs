@@ -1,4 +1,4 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +15,9 @@ public class Trading : MonoBehaviour
     [SerializeField] GameObject BuyButton;
     [SerializeField] GameObject SellButton;
 
+    [SerializeField] float spawnArea_width;
+    [SerializeField] float spawnArea_height;
+
     Store store;
 
     Currency money;
@@ -22,6 +25,16 @@ public class Trading : MonoBehaviour
     ItemStorePanel itemStorePanel;
 
     QuantityPanel quantityPanel;
+
+    //bool petStore;
+
+    //PlayerController player;
+
+    //internal void PetStoreMode(bool petStore, PlayerController _player)
+    //{
+    //    this.petStore = petStore;
+    //    this.player = _player;
+    //}
 
     int itemID = -1;
     //Item item;
@@ -112,10 +125,18 @@ public class Trading : MonoBehaviour
         if (money.Check(totalPrice))
         {
             money.Decrease(totalPrice);
-            playerInventory.Add(itemSlot.item, quantityPanel.count);
-            //inventoryItemPanel.Show();
-            //QuantityPanelObject.SetActive(false);
             quantityPanel.ShowAll(false);
+            //if (petStore)
+            //{
+            //    Vector3 position = player.transform.position;
+            //    position.x += Random.Range(-spawnArea_width, spawnArea_width);
+            //    position.y += Random.Range(-spawnArea_height, spawnArea_height);
+            //    GameObject spawnObject = Instantiate(itemSlot.item.itemPrefab, position, Quaternion.identity);
+            //}
+            //else
+            {
+                playerInventory.Add(itemSlot.item, quantityPanel.count);
+            } 
         }
     }
 

@@ -20,4 +20,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(nameEssentialScene, LoadSceneMode.Additive);
         
     }
+
+    public void LoadGame()
+    {
+        PlayerData data = DataManager.Instance.GetPlayerData();
+        SceneManager.LoadScene(data.curSceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene(nameEssentialScene, LoadSceneMode.Additive);
+    }
 }

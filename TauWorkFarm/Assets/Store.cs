@@ -10,6 +10,7 @@ public class Store : Interactable
     public float sellToPlayerMultip = 1.5f;
 
     Trading trading;
+    //[SerializeField] bool petStore;
 
     public override void Interact(PlayerController player)
     {
@@ -18,5 +19,6 @@ public class Store : Interactable
         //Debug.Log("interact sucess");
         trading.ButtonBuy(true).ButtonSell(true);
         trading.BeginTrading(this);
+        //trading.PetStoreMode(petStore, player);
     }
 }

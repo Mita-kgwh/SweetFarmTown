@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Crops Container")]
+[CreateAssetMenu(menuName = "Data/Container/Crops Container")]
 public class CropsContainer : ScriptableObject
 {
     public List<CropTile> crops;

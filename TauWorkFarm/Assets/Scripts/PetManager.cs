@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(TimeAgent))]
 public class PetManager : MonoBehaviour
@@ -18,34 +19,41 @@ public class PetManager : MonoBehaviour
 
     [SerializeField] TimeAgent thisTimeAgent;
     [SerializeField] int productTime;
-    private int countup = -1;
-    private int needeat = 0;
+    [SerializeField] PetData petData;
 
     private int hungryTime;
 
-    //FoodTrough foodTrough;
-
     bool grabed;
-
 
     private void Start()
     {
-
         thisTimeAgent.onTimeTick += Spawn;
-        imageCaution.SetActive(false);
         CalculateHungryTime();
+    }
+    private void OnDestroy()
+    {
+        //petData.needeat = needeat;
+        //petData.countup = countup;
+        petData.position = transform.position;
+        petData.sceneName = SceneManager.GetActiveScene().name;
+        //petData.active = active;
+    }
+
+    public void SetData(PetData data)
+    {
+        petData = data;
     }
 
     public void Spawn()
     {
-        if (grabed)
+        if (grabed)// || petData.active == false)
         {
             return;
         }
-        countup += (1 + needeat);
-        if (countup != productTime)
+        petData.countup += (1 + petData.needeat);
+        if (petData.countup != productTime)
         {
-            if (countup == hungryTime)
+            if (petData.countup == hungryTime)
             {
                 //Debug.Log("Hurry");
                 Hungry();
@@ -64,8 +72,13 @@ public class PetManager : MonoBehaviour
             //ItemSpawnManager.Instance.pickUpItemPrefab = prefabToSpawn;
             ItemSpawnManager.Instance.SpawnItem(position, itemToSpawn, count);
         }
-        countup = 0;
+        petData.countup = 0;
 
+    }
+
+    public PetData GetData()
+    {
+        return petData;
     }
 
     private void CalculateHungryTime()
@@ -76,7 +89,7 @@ public class PetManager : MonoBehaviour
 
     private void Hungry()
     {
-        needeat = -1;
+        petData.needeat = -1;
         imageCaution.SetActive(true);
         petAIMove.hungry = true;
     }
@@ -85,6 +98,7 @@ public class PetManager : MonoBehaviour
     {
         petAIMove.Grabed(value);
         grabed = value;
+        //petData.active = true;
     }
 
     public void ShowEmotion()
@@ -94,10 +108,10 @@ public class PetManager : MonoBehaviour
     }
     public void Eaten()
     {
-        if (needeat == -1)
+        if (petData.needeat == -1)
         {
             CalculateHungryTime();
-            needeat = 0;
+            petData.needeat = 0;
             ShowEmotion();
             imageCaution.SetActive(false);
         }

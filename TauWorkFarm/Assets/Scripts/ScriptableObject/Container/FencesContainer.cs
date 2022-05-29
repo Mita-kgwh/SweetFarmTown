@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Fences Container")]
+[CreateAssetMenu(menuName = "Data/Container/Fences Container")]
 public class FencesContainer : ScriptableObject
 {
     public List<FenceTile> fences;

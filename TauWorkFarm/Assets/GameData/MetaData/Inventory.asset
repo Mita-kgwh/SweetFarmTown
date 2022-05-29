@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   slots:
-  - item: {fileID: 11400000, guid: 380f644ca718bec4e90d4c4bc6ed6829, type: 2}
+  - item: {fileID: 0}
     count: 0
   - item: {fileID: 11400000, guid: 785f2fde0f074d74d8f3364246797816, type: 2}
     count: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     count: 0
   - item: {fileID: 11400000, guid: c80ee6bc202fb1a4997d7840e06ca712, type: 2}
     count: 50
-  - item: {fileID: 11400000, guid: c765d596510aa404db6a3cd465e8fca0, type: 2}
+  - item: {fileID: 11400000, guid: 380f644ca718bec4e90d4c4bc6ed6829, type: 2}
     count: 0
   - item: {fileID: 11400000, guid: 73b04df9cb0cc2443b61a2313ee9d4d4, type: 2}
     count: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
     count: 0
   - item: {fileID: 11400000, guid: dab86151233147143bc03ae3612539af, type: 2}
     count: 0
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: c765d596510aa404db6a3cd465e8fca0, type: 2}
     count: 0
   - item: {fileID: 11400000, guid: 243f474b2094fe14c8f5067f91a97b48, type: 2}
     count: 0
@@ -56,4 +56,3 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 31d47219f1988b740a871a8617a13f4e, type: 2}
     count: 13
   isChanging: 0
-  slotCount: 0
