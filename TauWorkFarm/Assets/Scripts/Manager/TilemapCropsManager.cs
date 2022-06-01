@@ -44,49 +44,88 @@ public class TilemapCropsManager : TimeAgent
     {
         if (targetTilemap == null) { return; }
 
-        foreach (CropTile cropTile in cropsContainer.crops)
+        int index = 0;
+
+        while (index < cropsContainer.crops.Count)
         {
-            if (cropTile.crop == null) { continue; }
+            Debug.Log(index + " " + cropsContainer.crops.Count);
 
-            cropTile.damage += 0.05f;
+            cropsContainer.crops[index].countTimeAlive += 1 + cropsContainer.crops[index].seeded;
 
-            if (cropTile.damage >= 2f)
+            if (cropsContainer.crops[index].countTimeAlive >= 48) // 48 = half day
             {
-                cropTile.Harvested();
-                targetTilemap.SetTile(cropTile.position, plowed);
+                if (cropsContainer.crops[index].crop != null)
+                {
+                    cropsContainer.crops[index].Harvested();                  
+                }
+                targetTilemap.SetTile(cropsContainer.crops[index].position, null);
+                GamesManager.Instance.tileMapReadController.baseManager.UpdateDirt(cropsContainer.crops[index].position);
+                cropsContainer.crops.RemoveAt(index);
                 continue;
             }
 
-            if (cropTile.isComplete)
+            if (cropsContainer.crops[index].crop == null) 
             {
-                //Debug.Log("I'm done growing");
+                index++;
                 continue;
             }
 
-            cropTile.growTimer += 1;
-
-            if (cropTile.growTimer >= cropTile.crop.growthStageTime[cropTile.growStage])
+            if (cropsContainer.crops[index].isComplete)
             {
-                cropTile.renderer.gameObject.SetActive(true);
-                cropTile.renderer.sprite = cropTile.crop.sprites[cropTile.growStage];
-
-                cropTile.growStage += 1;
+                Debug.Log("I'm done growing");
+                cropsContainer.crops[index].seeded = 0;
+                index++;
+                continue;
             }
+
+            cropsContainer.crops[index].growTimer += 1;
+
+            if (cropsContainer.crops[index].growTimer >= cropsContainer.crops[index].crop.growthStageTime[cropsContainer.crops[index].growStage])
+            {
+                cropsContainer.crops[index].renderer.gameObject.SetActive(true);
+                cropsContainer.crops[index].renderer.sprite = cropsContainer.crops[index].crop.sprites[cropsContainer.crops[index].growStage];
+
+                cropsContainer.crops[index].growStage += 1;
+            }
+            index++;
         }
+
+
+        //foreach (CropTile cropTile in cropsContainer.crops)
+        //{
+        //    if (cropTile.crop == null) { continue; }
+
+        //    cropTile.damage += 0.05f;
+
+        //    if (cropTile.damage >= 2f)
+        //    {
+        //        cropTile.Harvested();
+        //        targetTilemap.SetTile(cropTile.position, null);
+        //        continue;
+        //    }
+
+        //    if (cropTile.isComplete)
+        //    {
+        //        //Debug.Log("I'm done growing");
+        //        continue;
+        //    }
+
+        //    cropTile.growTimer += 1;
+
+        //    if (cropTile.growTimer >= cropTile.crop.growthStageTime[cropTile.growStage])
+        //    {
+        //        cropTile.renderer.gameObject.SetActive(true);
+        //        cropTile.renderer.sprite = cropTile.crop.sprites[cropTile.growStage];
+
+        //        cropTile.growStage += 1;
+        //    }
+        //}
     }
 
     internal bool Check(Vector3Int position)
     {
         return cropsContainer.Get(position) != null;
     }
-
-    //list of all crops in scene, when u want to interact
-    //Dictionary<Vector2Int, CropTile> crops;
-
-    //public bool CheckIsPlowed(Vector3Int position)
-    //{
-    //    return crops.ContainsKey((Vector2Int)position);
-    //}
 
     public void Plow(Vector3Int position)
     {
@@ -106,6 +145,7 @@ public class TilemapCropsManager : TimeAgent
         targetTilemap.SetTile(position, seeded);
 
         tile.crop = toSeed;
+        tile.seeded = -1;
 
         return true;
     }

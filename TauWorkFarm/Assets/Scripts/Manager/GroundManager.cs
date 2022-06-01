@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [Serializable]
 public class FenceTile
@@ -13,6 +14,11 @@ public class FenceTile
 public class GroundManager : MonoBehaviour
 {
     public TilemapGroundManager tilemapGroundManager;
+
+    public Tilemap GetTilemap()
+    {
+        return tilemapGroundManager.GetTilemap();
+    }
 
     internal void OpenGate(Vector3 position)
     {
@@ -54,5 +60,15 @@ public class GroundManager : MonoBehaviour
         }
 
         tilemapGroundManager.PlaceGate(gridPosition);
+    }
+
+    public bool DestroyFenced(Vector3Int gridPosition)
+    {
+        if (tilemapGroundManager == null)
+        {
+            return false;
+        }
+
+        return tilemapGroundManager.DestroyFenced(gridPosition);
     }
 }

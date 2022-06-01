@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Axe
   id: 7
   stackable: 0
-  icon: {fileID: -8888418204731768549, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
+  icon: {fileID: 3157683139128596108, guid: 276217119ab470448af8a419cf38a666, type: 3}
   onAction: {fileID: 11400000, guid: efce33e8440b77647a2f650d216d7979, type: 2}
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
   price: 100
   canBeSold: 1
   foodKind: 0

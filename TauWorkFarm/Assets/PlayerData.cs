@@ -9,6 +9,7 @@ public class PlayerData : ScriptableObject
     public int money;
     public int curStamina;
     public string curSceneName;
+    public float curTime;
 
     public PlayerData()
     {
@@ -21,5 +22,6 @@ public class PlayerData : ScriptableObject
         money = 1000;
         curStamina = 100;
         curSceneName = "StartScene";
+        curTime = 21600f;
     }
 }

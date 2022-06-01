@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/NeighborScene.unity
+    path: Assets/Scenes/WildScene.unity
     guid: dada537ffe0b40648acfd04d20a72849
   - enabled: 1
     path: Assets/Scenes/StoreScene.unity
     guid: 96ac15e139ab05849a717598beebeba6
+  - enabled: 1
+    path: Assets/Scenes/CenterScene.unity
+    guid: 58dc618ad1e665145a26a209f60abd18
   m_configObjects: {}

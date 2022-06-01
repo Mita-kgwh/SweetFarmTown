@@ -15,22 +15,22 @@ MonoBehaviour:
   missionDatas:
   - id: 0
     item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
-    count: 5
-    description: Hay thu thap du cac vat pham nay
+    count: 6
+    description: Hay thu thap du 6 vat pham nay
     isComplete: 0
-  - id: 1
+  - id: 0
     item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
     count: 5
-    description: Hay thu thap du cac vat pham nay
+    description: Hay thu thap du 5 vat pham nay
     isComplete: 0
-  - id: 2
+  - id: 0
     item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
-    count: 5
-    description: Hay thu thap du cac vat pham nay
+    count: 6
+    description: Hay thu thap du 6 vat pham nay
     isComplete: 0
-  - id: 3
+  - id: 0
     item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
-    count: 5
-    description: Hay thu thap du cac vat pham nay
+    count: 7
+    description: Hay thu thap du 7 vat pham nay
     isComplete: 0
   isChanging: 0

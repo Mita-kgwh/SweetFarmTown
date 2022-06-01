@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Catcher
   id: 17
   stackable: 0
-  icon: {fileID: -9053378900703536071, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
+  icon: {fileID: -3960259407536092533, guid: f31ce7cd31adf9d49a7ce7c434714e6f, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}

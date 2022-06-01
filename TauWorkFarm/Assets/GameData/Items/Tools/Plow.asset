@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Plow
   id: 9
   stackable: 0
-  icon: {fileID: -2069660456029034469, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
+  icon: {fileID: -5617991812440003619, guid: 276217119ab470448af8a419cf38a666, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 11400000, guid: 1754c965c77c53945b2aafe1fcd17f2d, type: 2}
   onItemUsed: {fileID: 0}
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
   price: 100
   canBeSold: 1
   foodKind: 0

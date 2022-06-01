@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Food Trough
   id: 14
   stackable: 0
-  icon: {fileID: 1336440320741484319, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
+  icon: {fileID: 6333280109086214987, guid: d1b23c689e8a67247bb194185c457d0b, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 11400000, guid: 45765397f2175d8478e9a265e0214bb9, type: 2}
   onItemUsed: {fileID: 11400000, guid: 45765397f2175d8478e9a265e0214bb9, type: 2}
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 9108482903493214296, guid: f862c916d6e7e124bb0c0c4c716ea7f7, type: 3}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
   price: 100
   canBeSold: 1
   foodKind: 0

@@ -7,10 +7,13 @@ using UnityEngine;
 public class DirtTile
 {
     public Vector3Int position;
+    public int countTimeAlive;
+    public int growed;
 }
 public class BaseManager : MonoBehaviour
 {
     public TilemapBaseManager tilemapBaseManager;
+
 
     internal void MakeDirt(Vector3Int gridPosition)
     {
@@ -40,5 +43,25 @@ public class BaseManager : MonoBehaviour
         }
 
         tilemapBaseManager.PlacePet(item, gridPosition);
+    }
+
+    internal void ExtendDirtAlive(Vector3Int gridPosition)
+    {
+        if (tilemapBaseManager == null)
+        {
+            return;
+        }
+
+        tilemapBaseManager.ExtendDirtAlive(gridPosition);
+    }
+
+    internal void UpdateDirt(Vector3Int gridPosition)
+    {
+        if (tilemapBaseManager == null)
+        {
+            return;
+        }
+
+        tilemapBaseManager.UpdateDirt(gridPosition);
     }
 }

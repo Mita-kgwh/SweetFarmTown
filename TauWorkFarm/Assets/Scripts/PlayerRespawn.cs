@@ -11,5 +11,6 @@ public class PlayerRespawn : MonoBehaviour
     internal void StartRespawn()
     {
         GameSceneManager.Instance.ReSpawn(respawnPointPosition, respawnPointScene);
+        GamesManager.Instance.dayTimeController.SkipTime(hours: 2);
     }
 }

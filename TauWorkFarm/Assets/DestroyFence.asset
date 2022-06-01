@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d0c68c6d61ec34ea039889ee8fe6c4, type: 3}
+  m_Name: DestroyFence
+  m_EditorClassIdentifier: 
+  Name: Destroy Fence
+  id: 20
+  stackable: 0
+  icon: {fileID: 21300000, guid: 2e7093a2473bf1f48bb25973551634ee, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: ffaaa817bb8316244a2742f949f3a5d9, type: 2}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}
+  iconHighlight: 0
+  itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 10
+  isGrabItem: 0
+  price: 100
+  canBeSold: 0
+  foodKind: 0
+  foodAmount: 0

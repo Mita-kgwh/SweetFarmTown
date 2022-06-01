@@ -27,6 +27,8 @@ public class DayTimeController : MonoBehaviour
 
     List<TimeAgent> agents;
 
+    private PlayerData playerData;
+
     private void Awake()
     {
         agents = new List<TimeAgent>();
@@ -60,7 +62,13 @@ public class DayTimeController : MonoBehaviour
 
     private void Start()
     {
-        time = startAtTime;
+        playerData = DataManager.Instance.GetPlayerData();
+        time = playerData.curTime;
+    }
+
+    private void OnDestroy()
+    {
+        playerData.curTime = time;
     }
 
     private void Update()

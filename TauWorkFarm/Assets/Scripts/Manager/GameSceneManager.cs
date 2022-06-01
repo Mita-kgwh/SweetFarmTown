@@ -20,6 +20,7 @@ public class GameSceneManager : MonoBehaviour
 
     [SerializeField] ScreenTint screenTint;
     [SerializeField] CameraConfiner cameraConfiner;
+    [SerializeField] Collider2D homeConfiner;
     string currentScene;
     AsyncOperation unload;
     AsyncOperation load;
@@ -40,8 +41,13 @@ public class GameSceneManager : MonoBehaviour
         }
         else
         {
-            MovePlayer(respawnPointPosition);
+            MovePlayerToHome(respawnPointPosition);
         }
+    }
+
+    internal string GetCurrentScene()
+    {
+        return currentScene;
     }
 
     public void InitSwitchScene(string toScene, Vector3 targetPosition)
@@ -71,6 +77,7 @@ public class GameSceneManager : MonoBehaviour
         screenTint.UnTint();
 
         QuestManager.Instance.VisualizeQuest();
+        PlayerPetManager.Instance.VisualizePet();
     }
 
     public void SwitchScene(string toScene, Vector3 targetPosition)
@@ -86,6 +93,46 @@ public class GameSceneManager : MonoBehaviour
         Transform playerTransform = GamesManager.Instance.player.transform;
 
         CinemachineBrain currentCamera = Camera.main.GetComponent<CinemachineBrain>();
+
+        //if (homeConfiner == null)
+        //{
+        //    homeConfiner = GameObject.Find("HomeConfiner").GetComponent<Collider2D>();
+        //}
+        //if (homeConfiner == null) { return; }
+        //cameraConfiner.UpdateNewBounds(homeConfiner);
+
+        currentCamera.ActiveVirtualCamera.OnTargetObjectWarped(
+            playerTransform,
+            targetPosition - playerTransform.position
+        );
+
+        playerTransform.position = new Vector3(
+            targetPosition.x,
+            targetPosition.y,
+            playerTransform.position.z);
+
+        if (respawnTransition)
+        {
+            PlayerManager.Instance.FullHeal();
+            PlayerManager.Instance.FullRest();
+            DisableControls.Instance.EnableControl();
+            respawnTransition = false;
+        }
+    }
+
+    private void MovePlayerToHome(Vector3 targetPosition)
+    {
+        Transform playerTransform = GamesManager.Instance.player.transform;
+
+        CinemachineBrain currentCamera = Camera.main.GetComponent<CinemachineBrain>();
+
+        if (homeConfiner == null)
+        {
+            homeConfiner = GameObject.Find("HomeConfiner").GetComponent<Collider2D>();
+        }
+        if (homeConfiner == null) { return; }
+        cameraConfiner.UpdateNewBounds(homeConfiner);
+
         currentCamera.ActiveVirtualCamera.OnTargetObjectWarped(
             playerTransform,
             targetPosition - playerTransform.position

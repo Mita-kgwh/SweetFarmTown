@@ -1588,6 +1588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryContainer: {fileID: 11400000, guid: 4e7a2b1a78acfb44e95786d00d2b7c1b, type: 2}
+  playerPetContainer: {fileID: 11400000, guid: c755b40db05f23c4183ca93b63068391, type: 2}
   knownRecipeList: {fileID: 11400000, guid: de57a73e7d57228409678d1037b30c6b, type: 2}
   missionContainer: {fileID: 11400000, guid: 1492d3b08d74d9b468929346e8863793, type: 2}
   playerData: {fileID: 11400000, guid: c98b98ee4e28611468b6cd2598c55b62, type: 2}

@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Global Pet Container
   m_EditorClassIdentifier: 
   petDatas:
-  - active: 1
-    kind: 0
-    position: {x: -3, y: 9.66538, z: 0.0009665379}
+  - kind: 0
+    position: {x: -4.368923, y: 8.584, z: 0.00085839996}
     sceneName: StartScene
     countup: 3
     needeat: -1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Find Cow Quest Data
   m_EditorClassIdentifier: 
   isComplete: 0
-  sceneName: NeighborScene
+  sceneName: WildScene
   gameObjects:
   - {fileID: 8363554963988198284, guid: c10634502d0ba9b4987b16d685799d91, type: 3}
   - {fileID: 8223439227041041649, guid: d6a59055f4204b84e9acf5b837ce04ef, type: 3}

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: SuperPlow
   id: 13
   stackable: 0
-  icon: {fileID: -4880669222957850763, guid: 44eb95dc16e2431449d8bb3c575646a3, type: 3}
+  icon: {fileID: -2819001408227374827, guid: a69200fc953884049a407b73c3787394, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 11400000, guid: c2779b69110d32347ae5ee16ecf45ee6, type: 2}
   onItemUsed: {fileID: 0}
@@ -24,5 +24,8 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
   price: 100
   canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

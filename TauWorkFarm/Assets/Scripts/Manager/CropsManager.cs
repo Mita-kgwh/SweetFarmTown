@@ -12,8 +12,9 @@ public class CropTile
     public int growStage;
     public Crop crop; // store base info such as how many stage, how long to grow
     public SpriteRenderer renderer;
-    public float damage;
+    public int seeded;
     public Vector3Int position;
+    public int countTimeAlive;
 
     internal void Clear()
     {
@@ -21,8 +22,9 @@ public class CropTile
         growStage = 0;
         crop = null;
         renderer = null;
-        damage = 0;
+        seeded = 0;
         position = Vector3Int.zero;
+        countTimeAlive = 0;
     }
 
     public bool isComplete
@@ -40,7 +42,7 @@ public class CropTile
         growStage = 0;
         crop = null;
         renderer.gameObject.SetActive(false);
-        damage = 0;
+        seeded = 0;
     }
 }
 public class CropsManager : MonoBehaviour

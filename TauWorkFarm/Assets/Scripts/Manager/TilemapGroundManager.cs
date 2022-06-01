@@ -16,9 +16,9 @@ public class TilemapGroundManager : MonoBehaviour
 
     [SerializeField] FencesContainer fencesContainer;
 
-    private void Awake()
+    public Tilemap GetTilemap()
     {
-        
+        return groundTilemap;
     }
 
     internal void OpenGate(Vector3Int gridPosition)
@@ -81,5 +81,16 @@ public class TilemapGroundManager : MonoBehaviour
         fenceTile.position = gridPosition;
         fenceTile.isGate = true;
         VisualizeTile(fenceTile);
+    }
+
+    public bool DestroyFenced(Vector3Int gridPosition)
+    {
+        if (!CheckEmpty(gridPosition))
+        {
+            fencesContainer.Remove(fencesContainer.Get(gridPosition));
+            groundTilemap.SetTile(gridPosition, null);
+            return true;
+        }
+        return false;
     }
 }

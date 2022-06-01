@@ -36,6 +36,15 @@ public class PlowTile : ToolsAction
                 }
             }
 
+        for (int i = -1; i <= 1; i++)
+            for (int j = -1; j <= 1; j++)
+            {
+                positionCheck.x = gridPosition.x + i;
+                positionCheck.y = gridPosition.y + j;
+
+                tileMapReadController.baseManager.ExtendDirtAlive(positionCheck);
+            }
+
         tileMapReadController.cropsManager.Plow(gridPosition);
 
         MusicManager.Instance.PlayEfx(onPlowUsed);

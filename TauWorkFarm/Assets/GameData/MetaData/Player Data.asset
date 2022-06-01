@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679bbbede30901e45948660c66bcb4ce, type: 3}
   m_Name: Player Data
   m_EditorClassIdentifier: 
-  playerPosition: {x: 0, y: 0, z: 0}
-  money: 0
-  curStamina: 0
+  playerPosition: {x: 0.8799999, y: -1.2800001, z: -0.000128}
+  money: 1000
+  curStamina: 100
+  curSceneName: StartScene
+  curTime: 33840.22

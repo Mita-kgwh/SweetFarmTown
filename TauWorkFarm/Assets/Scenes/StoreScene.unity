@@ -1957,15 +1957,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6188627574751703248, guid: 965708f52cf48f040a84cdf7897d1afb, type: 3}
       propertyPath: targetPosition.x
-      value: 5
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 6188627574751703248, guid: 965708f52cf48f040a84cdf7897d1afb, type: 3}
       propertyPath: targetPosition.y
-      value: 9
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6188627574751703248, guid: 965708f52cf48f040a84cdf7897d1afb, type: 3}
       propertyPath: sceneNameToTransition
-      value: StartScene
+      value: CenterScene
       objectReference: {fileID: 0}
     - target: {fileID: 6188627574751703249, guid: 965708f52cf48f040a84cdf7897d1afb, type: 3}
       propertyPath: m_RootOrder
@@ -2013,7 +2013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6188627574751703254, guid: 965708f52cf48f040a84cdf7897d1afb, type: 3}
       propertyPath: m_Name
-      value: TransitionArea
+      value: TransitionToCenter
       objectReference: {fileID: 0}
     - target: {fileID: 6188627575099988744, guid: 965708f52cf48f040a84cdf7897d1afb, type: 3}
       propertyPath: m_LocalPosition.y

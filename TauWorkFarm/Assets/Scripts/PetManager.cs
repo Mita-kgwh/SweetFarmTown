@@ -29,13 +29,18 @@ public class PetManager : MonoBehaviour
     {
         thisTimeAgent.onTimeTick += Spawn;
         CalculateHungryTime();
+        petData.sceneName = GameSceneManager.Instance.GetCurrentScene();
+        if (petData.needeat == -1)
+        {
+            Hungry();
+        }
     }
     private void OnDestroy()
     {
         //petData.needeat = needeat;
         //petData.countup = countup;
         petData.position = transform.position;
-        petData.sceneName = SceneManager.GetActiveScene().name;
+        //petData.sceneName = GameSceneManager.Instance.GetCurrentScene();
         //petData.active = active;
     }
 
@@ -98,6 +103,7 @@ public class PetManager : MonoBehaviour
     {
         petAIMove.Grabed(value);
         grabed = value;
+        petData.sceneName = GameSceneManager.Instance.GetCurrentScene();
         //petData.active = true;
     }
 

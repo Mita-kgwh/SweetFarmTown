@@ -55,6 +55,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
     }
 
     [SerializeField] PlayerData playerData;
+    [SerializeField] Vector3 startPosition;
 
     public Stat hp;
     [SerializeField] StatusBar hpBar;
@@ -62,6 +63,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
     [SerializeField] StatusBar staminaBar;
 
     [SerializeField] Currency currency;
+    [SerializeField] int respawnCost;
 
     public bool isDead;
     public bool isExhausted;
@@ -111,7 +113,14 @@ public class PlayerManager : MonoBehaviour,IDamageable
         {
             playerData = new PlayerData();
         }
-        playerData.playerPosition = transform.position;
+        if (transform.position.x < -45)
+        {
+            playerData.playerPosition = startPosition;
+        }
+        else
+        {
+            playerData.playerPosition = transform.position;
+        }
         playerData.money = currency.GetMoney();
         playerData.curStamina = stamina.curVal;
         playerData.curSceneName = SceneManager.GetActiveScene().name;
@@ -169,8 +178,10 @@ public class PlayerManager : MonoBehaviour,IDamageable
     private void Exhausted()
     {
         isExhausted = true;
+        currency.Decrease(respawnCost);
         disableControls.DisableControl();
         playerRespawn.StartRespawn();
+
     }
 
     public void Rest(int amount)

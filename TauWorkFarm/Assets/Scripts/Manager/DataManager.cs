@@ -29,7 +29,7 @@ public class DataManager : MonoBehaviour
     }
 
     [SerializeField] ItemContainer inventoryContainer;
-    [SerializeField] PetContainer petContainer;
+    [SerializeField] PetContainer playerPetContainer;
     [SerializeField] RecipeList knownRecipeList;
     [SerializeField] MissionContainer missionContainer;
     [SerializeField] PlayerData playerData;
@@ -44,7 +44,7 @@ public class DataManager : MonoBehaviour
         inventoryContainer.Clear();
         knownRecipeList.Clear();
         missionContainer.Clear();
-        petContainer.Clear();
+        playerPetContainer.Clear();
         playerData.ReSet();
         for (int i = 0; i < cropsContainers.Count; i++)
         {
