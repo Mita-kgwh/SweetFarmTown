@@ -90,12 +90,15 @@ public class ToolsPController : MonoBehaviour
 
         if (item == null) { return; }
         if (!item.isWeapon) { return; }
-
-        EnergyCost(weaponEnergyCost);
-
         Vector2 position = rgbd2d.position + player.lastDirection * offsetDis;
 
-        attackController.Attack(item.damage, player.lastDirection);
+        bool isattack = attackController.Attack(item.damage, player.lastDirection);
+
+        if (isattack)
+        {
+            EnergyCost(weaponEnergyCost);
+        }
+
     }
 
     private void GrabThing()
@@ -164,6 +167,22 @@ public class ToolsPController : MonoBehaviour
             return;
         }
         if (!item.isGrabItem)
+        {
+            grabArea.SetActive(false);
+            return;
+        }
+        grabArea.transform.position = rgbd2d.position + player.lastDirection * offsetDis;
+        grabArea.SetActive(true);
+    }
+    private void ShowAttackArea()
+    {
+        Item item = toolsBarController.GetItem;
+        if (item == null)
+        {
+            grabArea.SetActive(false);
+            return;
+        }
+        if (!item.isWeapon)
         {
             grabArea.SetActive(false);
             return;

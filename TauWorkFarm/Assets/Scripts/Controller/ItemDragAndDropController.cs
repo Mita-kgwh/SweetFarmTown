@@ -31,7 +31,14 @@ public class ItemDragAndDropController : MonoBehaviour
                     // chuyen mouseposition thanh worldposition de spawn item
                     Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     worldPosition.z = 0f; //tranh viec spawn phia sau cameraa
+
+                    GameObject orgItem = ItemSpawnManager.Instance.pickUpItemPrefab;
+                    if (slot.item.itemPrefab != null)
+                    {
+                        ItemSpawnManager.Instance.pickUpItemPrefab = slot.item.itemPrefab;
+                    }
                     ItemSpawnManager.Instance.SpawnItem(worldPosition, slot.item, slot.count);
+                    ItemSpawnManager.Instance.pickUpItemPrefab = orgItem;
 
                     slot.Clear();
                     dragIcon.SetActive(false);

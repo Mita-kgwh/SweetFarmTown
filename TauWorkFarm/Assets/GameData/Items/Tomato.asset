@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tomato
   m_EditorClassIdentifier: 
   Name: Tomato
-  id: 5
+  id: 0
   stackable: 1
   icon: {fileID: 2134584563556110807, guid: 10ed91d960b97db428ccd19526feff6f, type: 3}
   onAction: {fileID: 0}
@@ -22,3 +22,10 @@ MonoBehaviour:
   crop: {fileID: 0}
   iconHighlight: 0
   itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 10
+  isGrabItem: 0
+  price: 100
+  canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

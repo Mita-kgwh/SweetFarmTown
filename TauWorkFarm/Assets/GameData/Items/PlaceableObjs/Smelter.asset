@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Smelter
   m_EditorClassIdentifier: 
   Name: Smelter
-  id: 10
+  id: 23
   stackable: 0
   icon: {fileID: -2910770786380248794, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
   onAction: {fileID: 0}
@@ -22,3 +22,10 @@ MonoBehaviour:
   crop: {fileID: 0}
   iconHighlight: 1
   itemPrefab: {fileID: 4335436869282929930, guid: c0eee35ad826d1a4ca7aab98ca4b71b4, type: 3}
+  isWeapon: 0
+  damage: 10
+  isGrabItem: 0
+  price: 100
+  canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

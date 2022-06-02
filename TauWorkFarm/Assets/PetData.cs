@@ -11,4 +11,5 @@ public class PetData
     public string sceneName;
     public int countup;
     public int needeat;
+    public bool inDark;
 }

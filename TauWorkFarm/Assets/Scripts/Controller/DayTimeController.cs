@@ -18,7 +18,7 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] float startAtTime = 21600f;
     [SerializeField] float morningTime = 28800f;    
 
-    float time;
+    private float time;
     private int days = 0;
 
     [SerializeField] TextMeshProUGUI timeText;
@@ -28,6 +28,9 @@ public class DayTimeController : MonoBehaviour
     List<TimeAgent> agents;
 
     private PlayerData playerData;
+
+    private bool isInside;
+    private bool isIndark;
 
     private void Awake()
     {
@@ -117,11 +120,41 @@ public class DayTimeController : MonoBehaviour
         return (int)(time / phaseLength) + (int)(days * phaseInDay); 
     }
 
+    public void PlayerInside(bool value)
+    {
+        isInside = value;
+    }
+
+    public void PlayerInDark(bool value)
+    {
+        isIndark = value;
+    }
+
     private void DayLight()
     {
-        float value = nightTimeCurve.Evaluate(Hours);
-        Color color = Color.Lerp(dayLightColor, nightLightColor, value);
+        Color color;
+        if (isInside)
+        {
+            color = dayLightColor;
+        }
+        else
+        {
+            if (isIndark)
+            {
+                color = nightLightColor;
+            }
+            else
+            {
+                float value = GetTimeCurve();
+                color = Color.Lerp(dayLightColor, nightLightColor, value);
+            }
+        }
         globalLight.color = color;
+    }
+
+    public float GetTimeCurve()
+    {
+        return nightTimeCurve.Evaluate(Hours);
     }
 
     private void TimeValueCaculation()

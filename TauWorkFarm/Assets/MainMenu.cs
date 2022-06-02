@@ -18,7 +18,6 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(nameNewGameStartScene, LoadSceneMode.Single);
         SceneManager.LoadScene(nameEssentialScene, LoadSceneMode.Additive);
-        
     }
 
     public void LoadGame()

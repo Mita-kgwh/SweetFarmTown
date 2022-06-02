@@ -5115,10 +5115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petAIMove: {fileID: 5710304026671725832}
-  prefabToSpawn: {fileID: 1675209092775632102, guid: eda5798ec7d2bfa4295d950f55a23226, type: 3}
+  prefabToSpawn: {fileID: 5381043384743110649, guid: 47bc07f06cc96cc4ca513d327d4e7254, type: 3}
   emotion: {fileID: 5710304026667160976}
   imageCaution: {fileID: 5710304026283658962}
-  itemToSpawn: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
+  itemToSpawn: {fileID: 11400000, guid: fd11349a2b7eab6439fc2fd56cf589b9, type: 2}
   count: 1
   spread: 2
   probability: 1
@@ -5130,6 +5130,7 @@ MonoBehaviour:
     sceneName: 
     countup: 0
     needeat: 0
+    inDark: 0
 --- !u!114 &5710304026671725832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5154,5 +5155,8 @@ MonoBehaviour:
   movingTimeMax: 3
   hungry: 0
   grabed: 0
+  foodTrough: {fileID: 0}
   sizeOfFinding: 5
   eatDistance: 1
+  fireInteractable: {fileID: 0}
+  inDark: 0

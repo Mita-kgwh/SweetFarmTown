@@ -231,19 +231,19 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1675209092775632102, guid: eda5798ec7d2bfa4295d950f55a23226, type: 3}
   emotion: {fileID: 9194040118198486841}
   imageCaution: {fileID: 9194040117016217640}
-  itemToSpawn: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
+  itemToSpawn: {fileID: 11400000, guid: 878c6867b76196e42ac5f43c48a9ebba, type: 2}
   count: 1
   spread: 2
   probability: 1
   thisTimeAgent: {fileID: 9194040116658912662}
   productTime: 10
   petData:
-    active: 0
     kind: 1
     position: {x: 0, y: 0, z: 0}
     sceneName: 
     countup: 0
     needeat: 0
+    inDark: 0
 --- !u!114 &9194040116658912660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,8 +268,11 @@ MonoBehaviour:
   movingTimeMax: 4
   hungry: 0
   grabed: 0
+  foodTrough: {fileID: 0}
   sizeOfFinding: 5
   eatDistance: 2
+  fireInteractable: {fileID: 0}
+  inDark: 0
 --- !u!1 &9194040117014790222
 GameObject:
   m_ObjectHideFlags: 0

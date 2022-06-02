@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0d6b1246943714a9059354569ba488, type: 3}
+  m_Name: Global JSON String List
+  m_EditorClassIdentifier: 
+  strings:
+  - '{"spawnedObjectDatas":[{"objectId":0,"worldPosition":{"x":4.6056060791015629,"y":11.405567169189454,"z":0.0011405566474422813}},{"objectId":0,"worldPosition":{"x":7.306471824645996,"y":12.115493774414063,"z":0.0012115493882447482}},{"objectId":0,"worldPosition":{"x":2.2580881118774416,"y":14.5390043258667,"z":0.0014539003605023027}},{"objectId":0,"worldPosition":{"x":5.17606782913208,"y":15.506353378295899,"z":0.0015506353229284287}},{"objectId":0,"worldPosition":{"x":4.821835994720459,"y":11.91384506225586,"z":0.0011913845082744957}},{"objectId":0,"worldPosition":{"x":7.735739707946777,"y":10.90949535369873,"z":0.0010909495176747442}},{"objectId":0,"worldPosition":{"x":2.332036018371582,"y":14.352383613586426,"z":0.001435238285921514}}]}'
+  - '{"spawnedObjectDatas":[{"objectId":0,"worldPosition":{"x":29.041677474975587,"y":-9.423447608947754,"z":-0.0009423447190783918}},{"objectId":0,"worldPosition":{"x":27.165611267089845,"y":-14.019524574279786,"z":-0.0014019524678587914}},{"objectId":0,"worldPosition":{"x":29.836938858032228,"y":-9.833000183105469,"z":-0.0009833000367507339}},{"objectId":0,"worldPosition":{"x":25.813400268554689,"y":-18.53545379638672,"z":-0.001853545312769711}},{"objectId":0,"worldPosition":{"x":25.662185668945314,"y":-16.42601776123047,"z":-0.0016426016809418798}},{"objectId":0,"worldPosition":{"x":29.455615997314454,"y":-11.593982696533204,"z":-0.001159398234449327}},{"objectId":0,"worldPosition":{"x":24.914443969726564,"y":-15.523765563964844,"z":-0.0015523765468969942}},{"objectId":0,"worldPosition":{"x":24.810317993164064,"y":-18.307504653930665,"z":-0.0018307503778487445}},{"objectId":0,"worldPosition":{"x":29.61630630493164,"y":-14.889315605163575,"z":-0.0014889314770698548}},{"objectId":0,"worldPosition":{"x":24.533023834228517,"y":-10.116024017333985,"z":-0.0010116023477166892}}]}'
+  - 
+  - '{"spawnedObjectDatas":[{"objectId":2,"worldPosition":{"x":-2.152482032775879,"y":4.510274887084961,"z":0.0}},{"objectId":1,"worldPosition":{"x":-7.5095319747924809,"y":4.590638160705566,"z":0.0}}]}'
+  - '{"spawnedObjectDatas":[{"objectId":1,"worldPosition":{"x":10.30473518371582,"y":-0.4340181350708008,"z":0.0}},{"objectId":0,"worldPosition":{"x":3.473330497741699,"y":0.8701052665710449,"z":0.0}},{"objectId":0,"worldPosition":{"x":2.329425811767578,"y":2.8927841186523439,"z":0.0}},{"objectId":2,"worldPosition":{"x":8.14145565032959,"y":-0.08895635604858399,"z":0.0}},{"objectId":1,"worldPosition":{"x":9.329503059387207,"y":-1.6517629623413087,"z":0.0}},{"objectId":2,"worldPosition":{"x":10.436071395874024,"y":0.5361690521240234,"z":0.0}}]}'
+  - '{"spawnedObjectDatas":[{"objectId":2,"worldPosition":{"x":2.4747486114501955,"y":12.575392723083496,"z":0.0}},{"objectId":0,"worldPosition":{"x":-8.223682403564454,"y":9.628158569335938,"z":0.0}}]}'

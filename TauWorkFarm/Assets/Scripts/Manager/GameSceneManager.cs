@@ -21,6 +21,8 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField] ScreenTint screenTint;
     [SerializeField] CameraConfiner cameraConfiner;
     [SerializeField] Collider2D homeConfiner;
+    [SerializeField] List<string> insideScene;
+    [SerializeField] List<string> indarkScene;
     string currentScene;
     AsyncOperation unload;
     AsyncOperation load;
@@ -42,6 +44,7 @@ public class GameSceneManager : MonoBehaviour
         else
         {
             MovePlayerToHome(respawnPointPosition);
+            GamesManager.Instance.dayTimeController.PlayerInside(true);
         }
     }
 
@@ -76,6 +79,23 @@ public class GameSceneManager : MonoBehaviour
         cameraConfiner.UpdateBounds();
         screenTint.UnTint();
 
+        if (insideScene.Contains(toScene))
+        {
+            GamesManager.Instance.dayTimeController.PlayerInside(true);
+        }
+        else
+        {
+            GamesManager.Instance.dayTimeController.PlayerInside(false);
+            if (indarkScene.Contains(toScene))
+            {
+                GamesManager.Instance.dayTimeController.PlayerInDark(true);
+            }
+            else
+            {
+                GamesManager.Instance.dayTimeController.PlayerInDark(false);
+            }
+            
+        }
         QuestManager.Instance.VisualizeQuest();
         PlayerPetManager.Instance.VisualizePet();
     }

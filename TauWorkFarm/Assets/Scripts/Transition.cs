@@ -46,6 +46,15 @@ public class Transition : MonoBehaviour
                     destination.position - toTransition.position
                 );
 
+                if (sceneNameToTransition == "StartScene" && destination.position.x < -45)
+                {
+                    GamesManager.Instance.dayTimeController.PlayerInside(true);
+                }
+                else
+                {
+                    GamesManager.Instance.dayTimeController.PlayerInside(false);
+                }
+
                 toTransition.position = new Vector3(
                     destination.position.x,
                     destination.position.y,

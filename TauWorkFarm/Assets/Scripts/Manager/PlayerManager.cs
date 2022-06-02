@@ -168,7 +168,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
     {
         stamina.Subtract(amount);
 
-        if (stamina.curVal < 0)
+        if (stamina.curVal <= 0)
         {
             Exhausted();
         }

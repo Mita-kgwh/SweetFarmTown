@@ -13,23 +13,27 @@ public class QuestContainer : ScriptableObject
     {
         for (int i = 0; i < questDatas.Count; i++)
         {
-            questDatas[i].isComplete = true;
+            questDatas[i].isComplete = false;
         }
     }
 
     public void VisualizeQuest()
     {
         string curScene = SceneManager.GetActiveScene().name;
-        QuestData questData = questDatas.Find(x => x.sceneName == curScene);
-        if (questData == null) { return; }
+        List<QuestData> questDataList = questDatas.FindAll(x => x.sceneName == curScene);
+        if (questDataList == null) { return; }
         //Debug.Log("Found quest");
-        questData.Visualize();
+        for (int i = 0; i < questDataList.Count; i++)
+        {
+            questDataList[i].Visualize();
+        }
+        
     }
 
-    internal void CompleteQuest()
+    internal void CompleteQuest(string _questName)
     {
-        string curScene = SceneManager.GetActiveScene().name;
-        QuestData questData = questDatas.Find(x => x.sceneName == curScene);
+        //string curScene = SceneManager.GetActiveScene().name;
+        QuestData questData = questDatas.Find(x => x.questName == _questName);
         if (questData == null) { return; }
         questData.CompleteQuest();
     }

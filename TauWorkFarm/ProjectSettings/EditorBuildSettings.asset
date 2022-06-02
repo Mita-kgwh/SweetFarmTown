@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CenterScene.unity
     guid: 58dc618ad1e665145a26a209f60abd18
+  - enabled: 1
+    path: Assets/Scenes/BeachScene.unity
+    guid: 93dfb930ad186f9489f3e852729ddfe7
+  - enabled: 1
+    path: Assets/Scenes/CaveScene.unity
+    guid: a20b431aa37c53646b49aae82f5db914
   m_configObjects: {}

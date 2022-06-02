@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isComplete: 0
   sceneName: WildScene
+  questName: Find Cow Quest
   gameObjects:
   - {fileID: 8363554963988198284, guid: c10634502d0ba9b4987b16d685799d91, type: 3}
   - {fileID: 8223439227041041649, guid: d6a59055f4204b84e9acf5b837ce04ef, type: 3}
   - {fileID: 4371029945274823561, guid: 37df2a20b42be6c4c90a85b397a29764, type: 3}
+  - {fileID: 3423393408854173948, guid: 4f8a5460cc2f56a42a6d4e2fa683efb2, type: 3}
+  - {fileID: 5702853192627031540, guid: dc27b572d470c6a4090d39ebeff8ff5f, type: 3}
   rewards:
   - {fileID: 11400000, guid: 2d33fbb15a104824b8330eb3b83e4cea, type: 2}

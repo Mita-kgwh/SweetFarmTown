@@ -13,12 +13,19 @@ MonoBehaviour:
   m_Name: Iron Ingot
   m_EditorClassIdentifier: 
   Name: Iron Ingot
-  id: 1
+  id: 7
   stackable: 1
-  icon: {fileID: -933708202724517508, guid: 18ec5e5acf3b2104fa00f8f0fcf39dc4, type: 3}
+  icon: {fileID: 7310834761641906395, guid: 9f0bbbe85ccc5cf4baffd84fbd97fd6f, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}
   crop: {fileID: 0}
   iconHighlight: 0
   itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 10
+  isGrabItem: 0
+  price: 100
+  canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

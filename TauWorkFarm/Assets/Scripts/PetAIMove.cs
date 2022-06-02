@@ -24,12 +24,14 @@ public class PetAIMove : MonoBehaviour
 
     public bool hungry;
     [SerializeField] bool grabed;
-    //Vector3Int troughPosition;
-    FoodTrough foodTrough;
+    [SerializeField] FoodTrough foodTrough;
     [SerializeField] float sizeOfFinding;
     [SerializeField] float eatDistance = 1f;
+    [SerializeField] FireInteractable fireInteractable;
 
     PetManager manager;
+
+    public bool inDark;
 
     void Start()
     {
@@ -52,48 +54,60 @@ public class PetAIMove : MonoBehaviour
             FindFeedTrough();
         }
 
-        if (!hungry)
+        if (inDark)
         {
-            timer += Time.deltaTime;
-            if (!ismoving && timer >= waitingTime)
+            if (!PetInDark())
             {
-                // Time to go my animal
-                int move = Random.Range(0, 7);
-                //Debug.Log(move);
-                switch (move)
-                {
-                    case 0:
-                        motionVector = Vector2.up;
-                        break;
-                    case 1:
-                        motionVector = Vector2.right;
-                        break;
-                    case 2:
-                        motionVector = Vector2.down;
-                        break;
-                    case 3:
-                        motionVector = Vector2.left;
-                        break;
-                    case 4:
-                        motionVector = Vector2.up;
-                        break;
-                    case 5:
-                        motionVector = Vector2.right;
-                        break;
-                    case 6:
-                        motionVector = Vector2.down;
-                        break;
-                    case 7:
-                        motionVector = Vector2.left;
-                        break;
-                }
+                manager.Warmed();
             }
         }
         else
         {
-            FindFood();
-            EatFood();
+            if (!hungry)
+            {
+                timer += Time.deltaTime;
+                if (!ismoving && timer >= waitingTime)
+                {
+                    // Time to go my animal
+                    int move = Random.Range(0, 7);
+                    //Debug.Log(move);
+                    switch (move)
+                    {
+                        case 0:
+                            motionVector = Vector2.up;
+                            break;
+                        case 1:
+                            motionVector = Vector2.right;
+                            break;
+                        case 2:
+                            motionVector = Vector2.down;
+                            break;
+                        case 3:
+                            motionVector = Vector2.left;
+                            break;
+                        case 4:
+                            motionVector = Vector2.up;
+                            break;
+                        case 5:
+                            motionVector = Vector2.right;
+                            break;
+                        case 6:
+                            motionVector = Vector2.down;
+                            break;
+                        case 7:
+                            motionVector = Vector2.left;
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                FindFood();
+                EatFood();
+
+            }
         }
+
 
         AnimateMovement(motionVector);
         if (ismoving)
@@ -107,6 +121,42 @@ public class PetAIMove : MonoBehaviour
                 shadow.SetFloat("lastvertical", motionVector.y);
             }
 
+        }
+    }
+
+    internal bool PetInDark()
+    {
+        if (fireInteractable == null)
+        {
+            FindFireCamp();
+            if (fireInteractable == null)
+            {
+                inDark = true;
+                return true;
+            }
+        }
+
+        if (!fireInteractable.GetData().onFire)
+        {
+            inDark = true;
+            return true;
+        }
+        inDark = false;
+        return false;
+
+    }
+
+    private void FindFireCamp()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, sizeOfFinding);
+        foreach (Collider2D c in colliders)
+        {
+            FireInteractable hit = c.GetComponent<FireInteractable>();
+            if (hit != null)
+            {
+                fireInteractable = hit;
+                return;
+            }
         }
     }
 
@@ -150,7 +200,7 @@ public class PetAIMove : MonoBehaviour
             manager.Eaten();
             gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         }
-    }
+    } 
 
     public void FindFeedTrough()
     {
@@ -165,6 +215,7 @@ public class PetAIMove : MonoBehaviour
             }
         }
     }
+
 
     private void FixedUpdate()
     {

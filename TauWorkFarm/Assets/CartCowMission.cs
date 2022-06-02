@@ -7,6 +7,7 @@ public class CartCowMission : MonoBehaviour
     [SerializeField] string collectTag;
     [SerializeField] Animator animator;
     [SerializeField] DialogueContainer dialogue;
+    [SerializeField] string questName = "Find Cow Quest";
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +16,7 @@ public class CartCowMission : MonoBehaviour
             Destroy(collision.gameObject);
             animator.SetTrigger("CanGo");
             GamesManager.Instance.dialogueSystem.Initialize(dialogue);
-            QuestManager.Instance.CompleteQuest();
+            QuestManager.Instance.CompleteQuest(questName);
         }
     }
 }

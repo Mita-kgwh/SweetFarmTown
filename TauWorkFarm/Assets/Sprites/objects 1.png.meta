@@ -25,10 +25,10 @@ TextureImporter:
     second: objects 1_6
   - first:
       213: 1808211770506698806
-    second: objects 1_7
+    second: CutableTree
   - first:
       213: -4148667895854711244
-    second: objects 1_8
+    second: firebase
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -289,7 +289,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects 1_7
+      name: CutableTree
       rect:
         serializedVersion: 2
         x: 132
@@ -310,7 +310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects 1_8
+      name: firebase
       rect:
         serializedVersion: 2
         x: 163

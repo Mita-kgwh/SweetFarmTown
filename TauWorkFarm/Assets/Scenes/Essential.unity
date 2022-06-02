@@ -18975,6 +18975,10 @@ MonoBehaviour:
   messageSystem: {fileID: 1478431307}
   screenTint: {fileID: 738827743}
   tileMapReadController: {fileID: 1307524520}
+  insideScene:
+  - StoreScene
+  indarkScene:
+  - CaveScene
 --- !u!114 &1307524518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19019,7 +19023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTilemap: {fileID: 0}
-  groundTilemap: {fileID: 0}
   baseManager: {fileID: 1307524525}
   cropsManager: {fileID: 1307524521}
   groundManager: {fileID: 1307524524}
@@ -19052,6 +19055,10 @@ MonoBehaviour:
   screenTint: {fileID: 738827743}
   cameraConfiner: {fileID: 171011744}
   homeConfiner: {fileID: 0}
+  insideScene:
+  - StoreScene
+  indarkScene:
+  - CaveScene
 --- !u!114 &1307524523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31629,6 +31636,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6555119383115876166, guid: 5fedf1b694d125d4da36a206981cdd3b, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6555119383115876167, guid: 5fedf1b694d125d4da36a206981cdd3b, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -31676,6 +31687,10 @@ PrefabInstance:
     - target: {fileID: 6555119383115876185, guid: 5fedf1b694d125d4da36a206981cdd3b, type: 3}
       propertyPath: m_Name
       value: Global Light 2D
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555119383115876185, guid: 5fedf1b694d125d4da36a206981cdd3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fedf1b694d125d4da36a206981cdd3b, type: 3}

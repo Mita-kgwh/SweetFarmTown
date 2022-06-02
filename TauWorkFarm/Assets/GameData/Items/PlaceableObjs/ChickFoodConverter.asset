@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ChickFoodConverter
   m_EditorClassIdentifier: 
   Name: ChickFoodConverter
-  id: 16
+  id: 20
   stackable: 0
   icon: {fileID: 0}
   onAction: {fileID: 0}
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 7724712286062242856, guid: 5153d7f73450660429eab6d41cf56357, type: 3}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
   price: 100
   canBeSold: 1
   foodKind: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   Name: Sword
-  id: 11
+  id: 18
   stackable: 0
   icon: {fileID: -8913737552123147707, guid: 44eb95dc16e2431449d8bb3c575646a3, type: 3}
   onAction: {fileID: 0}
@@ -24,3 +24,8 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   isWeapon: 1
   damage: 10
+  isGrabItem: 0
+  price: 100
+  canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

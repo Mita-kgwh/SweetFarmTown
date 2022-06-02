@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ResourceNode: ToolHit
 {
-    [SerializeField] GameObject itemDrop;
+    //[SerializeField] GameObject itemDrop;
     [SerializeField] float spread =0.7f;
 
     [SerializeField] Item item;
@@ -22,8 +22,15 @@ public class ResourceNode: ToolHit
             position.x += spread * UnityEngine.Random.value - spread / 2;
             position.y += spread * UnityEngine.Random.value - spread / 2;
 
+            GameObject orgItem = ItemSpawnManager.Instance.pickUpItemPrefab;
+            if (item.itemPrefab != null)
+            {
+                ItemSpawnManager.Instance.pickUpItemPrefab = item.itemPrefab;
+            }
             ItemSpawnManager.Instance.SpawnItem(position, item, itemCountInOneDrop);
-            
+            ItemSpawnManager.Instance.pickUpItemPrefab = orgItem;
+
+
         }
 
         Destroy(gameObject);

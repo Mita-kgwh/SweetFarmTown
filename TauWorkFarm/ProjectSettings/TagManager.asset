@@ -8,6 +8,7 @@ TagManager:
   - Feeding
   - NONE
   - Cow
+  - FireBunk
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fence
   m_EditorClassIdentifier: 
   Name: Fence
-  id: 12
+  id: 24
   stackable: 1
   icon: {fileID: 8876550384976954016, guid: dad7df88d489ac944b779ef938f9bcbc, type: 3}
   onAction: {fileID: 0}
@@ -24,3 +24,8 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
+  price: 100
+  canBeSold: 1
+  foodKind: 0
+  foodAmount: 0

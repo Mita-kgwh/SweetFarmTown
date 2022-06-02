@@ -26,4 +26,9 @@ public class SpawnedObject : MonoBehaviour
     {
         transform.parent.GetComponent<ObjectSpawner>().SpawnedObjectDestroyed(this);
     }
+
+    private void OnDestroy()
+    {
+        SpawnedObjectDestroyed();
+    }
 }

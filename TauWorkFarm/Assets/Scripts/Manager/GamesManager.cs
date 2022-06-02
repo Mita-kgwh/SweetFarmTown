@@ -25,4 +25,21 @@ public class GamesManager : MonoBehaviour
     public OnScreenMessageSystem messageSystem;
     public ScreenTint screenTint;
     public TileMapReadController tileMapReadController;
+    [SerializeField] List<string> insideScene;
+    [SerializeField] List<string> indarkScene;
+    private void Awake()
+    {
+        if (insideScene.Contains(DataManager.Instance.GetPlayerData().curSceneName))
+        {
+            dayTimeController.PlayerInside(true);
+        }
+        else
+        {
+            //dayTimeController.PlayerInside(false);
+            if (indarkScene.Contains(DataManager.Instance.GetPlayerData().curSceneName))
+            {
+                dayTimeController.PlayerInDark(true);
+            }
+        }
+    }
 }

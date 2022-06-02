@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: Chest Crafting Recipe
   m_EditorClassIdentifier: 
   recipeElements:
-  - item: {fileID: 11400000, guid: f07860ab1bb8a1c4a969403de745feb2, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: cc7e4baf3b7a6604caf8b1cf8fc61caf, type: 2}
-    count: 2
+  - item: {fileID: 11400000, guid: 724e4d95a88b1cd48ad1b5a2ba2dbd12, type: 2}
+    count: 10
   output:
     item: {fileID: 11400000, guid: 243f474b2094fe14c8f5067f91a97b48, type: 2}
     count: 1

@@ -37,9 +37,9 @@ public class QuestManager : MonoBehaviour
         questContainer.VisualizeQuest();
     }
 
-    public void CompleteQuest()
+    public void CompleteQuest(string questName)
     {
-        questContainer.CompleteQuest();
+        questContainer.CompleteQuest(questName);
     }
 
     public void ResetQuestAll()

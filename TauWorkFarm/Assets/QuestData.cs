@@ -8,6 +8,8 @@ public class QuestData : ScriptableObject
 {
     public bool isComplete;
     public string sceneName;
+    public string questName;
+    //public bool canDo;
     public List<GameObject> gameObjects;
     public List<RewardActions> rewards;
 
@@ -24,7 +26,7 @@ public class QuestData : ScriptableObject
 
     internal void Visualize()
     {
-        if (isComplete)
+        if (isComplete)// || canDo == false)
         {
             return;
         }

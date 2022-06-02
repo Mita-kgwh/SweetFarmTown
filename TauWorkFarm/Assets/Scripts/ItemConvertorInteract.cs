@@ -100,7 +100,7 @@ public class ItemConvertorInteract : Interactable, IPersistant
         {
             //Debug.Log("Da tru");
             slotToProcess.count -= 1;
-            if (slotToProcess.count < 0)
+            if (slotToProcess.count <= 0)
             {
                 slotToProcess.Clear();
             }

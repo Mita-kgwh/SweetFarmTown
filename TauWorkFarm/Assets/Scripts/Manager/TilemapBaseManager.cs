@@ -49,6 +49,10 @@ public class TilemapBaseManager : TimeAgent
 
     private void VisualizeMap()
     {
+        if (dirtsContainer == null)
+        {
+            return;
+        }
         for (int i = 0; i < dirtsContainer.dirts.Count; i++)
         {
             VisualizeTile(dirtsContainer.dirts[i]);
@@ -57,6 +61,10 @@ public class TilemapBaseManager : TimeAgent
 
     internal void UpdateDirt(Vector3Int gridPosition)
     {
+        if (dirtsContainer == null)
+        {
+            return;
+        }
         DirtTile dirtToUpdate;
         Vector3Int positionCheck = new Vector3Int();
         for (int i = -1; i <= 1; i++)
@@ -73,11 +81,19 @@ public class TilemapBaseManager : TimeAgent
 
     private void VisualizeTile(DirtTile dirtTile)
     {
+        if (dirtsContainer == null)
+        {
+            return;
+        }
         baseTilemap.SetTile(dirtTile.position, dirted);
     }
 
     internal void MakeDirt(Vector3Int gridPosition)
     {
+        if (dirtsContainer == null)
+        {
+            return;
+        }
         DirtTile dirtTile = new DirtTile();
         dirtTile.position = gridPosition;
 
@@ -87,6 +103,10 @@ public class TilemapBaseManager : TimeAgent
 
     internal void ExtendDirtAlive(Vector3Int gridPosition)
     {
+        if (dirtsContainer == null)
+        {
+            return;
+        }
         DirtTile dirtTile = dirtsContainer.Get(gridPosition);
         dirtTile.countTimeAlive = 0;
         dirtTile.growed += 1;
@@ -100,6 +120,10 @@ public class TilemapBaseManager : TimeAgent
 
     internal bool CanDirt(Vector3Int gridPosition)
     {
+        if (dirtsContainer == null)
+        {
+            return false;
+        }
         return dirtsContainer.Get(gridPosition) == null;
     }
 }

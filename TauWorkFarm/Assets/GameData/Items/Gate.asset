@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gate
   m_EditorClassIdentifier: 
   Name: Gate
-  id: 15
+  id: 25
   stackable: 1
   icon: {fileID: -8747652899597623461, guid: dad7df88d489ac944b779ef938f9bcbc, type: 3}
   onAction: {fileID: 0}
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   isWeapon: 0
   damage: 10
+  isGrabItem: 0
   price: 100
   canBeSold: 1
   foodKind: 0

@@ -9,10 +9,10 @@ public class AttackController : MonoBehaviour
 
     [SerializeField] Rigidbody2D rigidbody;
 
-    public void Attack(int damage, Vector2 lastdirection)
+    public bool Attack(int damage, Vector2 lastdirection)
     {
         Vector2 position = rigidbody.position + lastdirection * offsetDistance;
-
+        
         Collider2D[] targets = Physics2D.OverlapBoxAll(position, attackAreaSize, 0f);
 
         foreach (Collider2D col in targets)
@@ -23,5 +23,7 @@ public class AttackController : MonoBehaviour
                 damageable.TakeDamage(damage);
             }
         }
+
+        return targets.Length > 1;
     }
 }

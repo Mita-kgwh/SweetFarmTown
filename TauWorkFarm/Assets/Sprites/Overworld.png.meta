@@ -595,7 +595,7 @@ TextureImporter:
     second: GrassSandBotright
   - first:
       213: -3085000837880981780
-    second: Overworld_197
+    second: wood
   - first:
       213: -4898110375821382468
     second: Overworld_198
@@ -961,7 +961,7 @@ TextureImporter:
     second: Overworld_318
   - first:
       213: 6220518269059328209
-    second: Overworld_319
+    second: RockWater_1
   - first:
       213: -6102184283811817706
     second: Overworld_320
@@ -1078,7 +1078,7 @@ TextureImporter:
     second: Overworld_357
   - first:
       213: 5247709061104044271
-    second: Overworld_358
+    second: RockWater_2
   - first:
       213: -7566510596784653768
     second: Overworld_359
@@ -1186,10 +1186,10 @@ TextureImporter:
     second: Overworld_393
   - first:
       213: -2773315107586596147
-    second: SandWaterTopRight
+    second: SandWaterCornerTopRight
   - first:
       213: 9014389871967877759
-    second: SandWaterTopleft
+    second: SandWaterCornerTopleft
   - first:
       213: 8707285183721296483
     second: Overworld_396
@@ -1267,7 +1267,7 @@ TextureImporter:
     second: O_botright_grasscliff
   - first:
       213: 8860831932780837911
-    second: Overworld_421
+    second: Cavegatetop
   - first:
       213: 5688151423550280332
     second: Overworld_422
@@ -1372,7 +1372,7 @@ TextureImporter:
     second: O_topright_Moucliff
   - first:
       213: 6699491708720139510
-    second: Overworld_456
+    second: CaveGate
   - first:
       213: 1551073165797542418
     second: Overworld_457
@@ -6013,12 +6013,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_197
+      name: wood
       rect:
         serializedVersion: 2
         x: 48
         y: 480
-        width: 16
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6029,48 +6029,6 @@ TextureImporter:
       bones: []
       spriteID: ce6525e3510ef25d0800000000000000
       internalID: -3085000837880981780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_198
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbce282809a660cb0800000000000000
-      internalID: -4898110375821382468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_199
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f38ac432602ae6370800000000000000
-      internalID: 8317763709045614655
       vertices: []
       indices: 
       edges: []
@@ -7798,48 +7756,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_284
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 448
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 446678efdb2776480800000000000000
-      internalID: -8906023577757194684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_285
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1bb834844b8ff760800000000000000
-      internalID: 7493861431360142108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Overworld_286
       rect:
         serializedVersion: 2
@@ -8533,13 +8449,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_319
+      name: RockWater_1
       rect:
         serializedVersion: 2
         x: 176
         y: 432
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8549,69 +8465,6 @@ TextureImporter:
       bones: []
       spriteID: 1d8eb127868b35650800000000000000
       internalID: 6220518269059328209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_320
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 432
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 617dc6189bfa05ba0800000000000000
-      internalID: -6102184283811817706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_321
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 432
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9c3bd3486c3f7780800000000000000
-      internalID: -8683155138034320230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_322
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 432
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 105e3068ae98af520800000000000000
-      internalID: 2736651363944752385
       vertices: []
       indices: 
       edges: []
@@ -9352,13 +9205,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_358
+      name: RockWater_2
       rect:
         serializedVersion: 2
         x: 208
         y: 416
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9368,27 +9221,6 @@ TextureImporter:
       bones: []
       spriteID: fe884b7669b93d840800000000000000
       internalID: 5247709061104044271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_359
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 416
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83afb6983ba5ef690800000000000000
-      internalID: -7566510596784653768
       vertices: []
       indices: 
       edges: []
@@ -10108,7 +9940,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SandWaterTopRight
+      name: SandWaterCornerTopRight
       rect:
         serializedVersion: 2
         x: 240
@@ -10129,7 +9961,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SandWaterTopleft
+      name: SandWaterCornerTopleft
       rect:
         serializedVersion: 2
         x: 256
@@ -10675,7 +10507,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_421
+      name: Cavegatetop
       rect:
         serializedVersion: 2
         x: 112
@@ -11410,7 +11242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_456
+      name: CaveGate
       rect:
         serializedVersion: 2
         x: 112

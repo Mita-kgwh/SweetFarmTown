@@ -34,7 +34,12 @@ public class PetManager : MonoBehaviour
         {
             Hungry();
         }
+        if (petData.inDark)
+        {
+            petAIMove.inDark = petData.inDark;
+        }
     }
+
     private void OnDestroy()
     {
         //petData.needeat = needeat;
@@ -50,17 +55,31 @@ public class PetManager : MonoBehaviour
     }
 
     public void Spawn()
-    {
-        if (grabed)// || petData.active == false)
+    {  
+        if (grabed)
         {
             return;
         }
+
+        if (CheckNightTime())
+        {
+            petData.inDark = PetInDark();
+            if (petData.inDark)
+            {
+                return;
+            }
+        }
+        else
+        {
+            petData.inDark = false;
+            petAIMove.inDark = false;
+        }
+
         petData.countup += (1 + petData.needeat);
         if (petData.countup != productTime)
         {
             if (petData.countup == hungryTime)
             {
-                //Debug.Log("Hurry");
                 Hungry();
             }
             return;
@@ -74,11 +93,33 @@ public class PetManager : MonoBehaviour
             position.y += spread * UnityEngine.Random.value - spread / 2;
             position.z = 0.1f;
 
-            //ItemSpawnManager.Instance.pickUpItemPrefab = prefabToSpawn;
+            GameObject orgItem = ItemSpawnManager.Instance.pickUpItemPrefab;
+            if (itemToSpawn.itemPrefab != null)
+            {
+                ItemSpawnManager.Instance.pickUpItemPrefab = itemToSpawn.itemPrefab;
+            }
             ItemSpawnManager.Instance.SpawnItem(position, itemToSpawn, count);
+            ItemSpawnManager.Instance.pickUpItemPrefab = orgItem;
         }
         petData.countup = 0;
 
+    }
+
+    internal void Warmed()
+    {
+        petData.inDark = false;
+        petAIMove.inDark = false;
+    }
+
+    private bool CheckNightTime()
+    {
+        float nightvalue = GamesManager.Instance.dayTimeController.GetTimeCurve();
+        return nightvalue > 0.5f;
+    }
+
+    private bool PetInDark()
+    {
+        return petAIMove.PetInDark();
     }
 
     public PetData GetData()
